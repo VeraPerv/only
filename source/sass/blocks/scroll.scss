@@ -1,0 +1,40 @@
+.scroll {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    width: 59px;
+    height: 59px;
+    position: absolute;
+    z-index: 200;
+    top: 9.5%;
+    right: 31px;
+
+
+    .scroll__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      background-color: $color-white;
+      cursor: pointer;
+      padding: none;
+      border: none;
+      outline: 1px solid #f0f0f0;
+      border-radius: 30px;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 12px;
+        mask-image: url("/__spritemap#sprite-scroll-arrow-view");
+        mask-size: 20px 12px;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        background-color: $color-primary;
+      }
+    }
+  }
+}

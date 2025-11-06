@@ -1,0 +1,21 @@
+.recommendation-slider__list {
+  @media (min-width: $desktop-width) {
+    min-height: 600px;
+  }
+}
+
+.recommendation-slider__scrollbar {
+  padding: 0 8px;
+}
+
+.recommendation-slider__img-wrapper {
+  @media (min-width: $desktop-width) {
+    height: 600px;
+  }
+}
+
+.recommendation-slider__img {
+  @media (min-width: $desktop-width) {
+    height: 600px;
+  }
+}

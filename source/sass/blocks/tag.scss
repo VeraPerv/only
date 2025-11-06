@@ -1,0 +1,21 @@
+.tag {
+  display: flex;
+  padding: 3px 10px 2px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $socials-color;
+  background-color: $accent-color;
+  border-radius: 90px;
+  min-width: 50px;
+  min-height: 25px;
+  max-width: size(150px);
+
+  @media (min-width: $desktop-width) {
+    padding: 5px 10px;
+  }
+}

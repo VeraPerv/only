@@ -1,31 +1,875 @@
 <!DOCTYPE html>
-<html lang="ru" data-validate="html">
+<html lang="ru">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internship</title>
-    <link rel="stylesheet" href="sass/style.scss">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Сайт Paratype.">
+  <title>Paratype</title>
 
-  <body class="page-body">
-    <!-- пример использования спрайта -->
-    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-    <svg>
-      <use href="/__spritemap#sprite-user"></use>
-    </svg>
-    <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="hero">hero</div>
-    <div data-test="about">about</div>
-    <div data-test="programs">programs</div>
-    <div data-test="grant">grant</div>
-    <div data-test="news">news</div>
-    <div data-test="FAQ">FAQ</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="contacts">contacts</div>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
-    <script type="module" src="js/main.js"></script>
-  </body>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon.png">
+  <link rel="icon" href="favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/pragmatica-next_vf.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="sass/style.scss">
+</head>
 
+<body>
+  <header class="header">
+    <nav class="header__nav header-nav">
+      <div class="header-nav__wrapper">
+        <a class="header__info" href="#">
+          <span class="header__discount header-discount">25% Sale</span>
+          <span class="header__sale">Осенняя распродажа шрифтов</span>
+        </a>
+        <div class="header-nav__logo logo">
+          <span class="logo__img-wrapper">
+            <picture>
+              <source media="(min-width:920px)" srcset="img/logo-desktop.svg" width="230" height="60" type="image/svg+xml">
+              <img class="logo__img" width="40" height="33" src="img/logo-mobile.svg" alt="Логотип компании Paratype.">
+            </picture>
+          </span>
+          <span class="logo__text">Основано в 1998</span>
+        </div>
+        <button class="header-nav__toggle" type="button" id="toggle-btn">
+          <span class="visually-hidden">Кнопка закрытия,открытия меню.</span>
+        </button>
+        <a class="header-nav__link header-nav__link--favorites" href="#">
+          <span class="visually-hidden">Избранное.</span>
+          <span class="header-nav__text">0</span>
+        </a>
+        <a class="header-nav__link header-nav__link--cart" href="#">
+          <span class="visually-hidden">Корзина.</span>
+          <span class="header-nav__text">0</span>
+        </a>
+        <a class="header-nav__link header-nav__link--user" href="#">
+          <span class="visually-hidden">Корзина.</span>
+          <span class="header-nav__text header-nav__text--account">Мой аккаунт</span>
+        </a>
+        <div class="header-nav__menu-wrapper">
+          <ul class="header-nav__menu-primary menu-primary">
+            <li class="menu-primary__item">
+              <a class="menu-primary__link menu-primary__link--current" href="#">Главная</a>
+            </li>
+            <li class="menu-primary__item">
+              <a class="menu-primary__link" href="#">Каталог</a>
+              <span class="menu-primary__text menu-primary__catalog-quantity">988</span>
+            </li>
+            <li class="menu-primary__item">
+              <a class="menu-primary__link menu-primary__link--active" href="#">Коллекции</a>
+              <span class="menu-primary__text menu-primary__collection-quantity">45</span>
+            </li>
+          </ul>
+          <ul class="header-nav__menu-secondary menu-secondary">
+            <li class="menu-secondary__item">
+              <a class="menu-secondary__link" href="#">Компания</a>
+            </li>
+            <li class="menu-secondary__item">
+              <a class="menu-secondary__link" href="#">Справочник</a>
+            </li>
+          </ul>
+          <div class="header-nav__profile profile">
+            <a class="profile__link" href="#">Мой профиль</a>
+            <ul class="profile__menu profile-menu">
+              <li class="profile-menu__item">
+                <a class="profile-menu__link" href="#">Войти</a>
+              </li>
+              <li class="profile-menu__item">
+                <a class="profile-menu__link" href="#">Зарегистрироваться</a>
+              </li>
+            </ul>
+          </div>
+          <ul class="header-nav__rules rules-list">
+            <li class="rules-list__item">
+              <a class="rules-list__link" href="#">FAQ</a>
+            </li>
+            <li class="rules-list__item">
+              <a class="rules-list__link" href="#">Лицензии</a>
+            </li>
+            <li class="rules-list__item">
+              <a class="rules-list__link" href="#">Правила продажи</a>
+            </li>
+            <li class="rules-list__item">
+              <a class="rules-list__link" href="#">Возврат и замена</a>
+            </li>
+            <li class="rules-list__item">
+              <a class="rules-list__link" href="#">Контакты</a>
+            </li>
+          </ul>
+            <div class="header-nav__footer nav-footer">
+            <ul class="nav-footer__socials-list socials-list">
+              <li class="socials-list__item">
+                <a class="socials-list__link socials-list__link--telegram" href="https://t.me/paratype_fonts"
+                  target="_blank" rel="noopener noreferrer">
+                  <span class="visually-hidden">Телеграм.</span>
+                </a>
+              </li>
+              <li class="socials-list__item">
+                <a class="socials-list__link socials-list__link--vk" href="https://vk.com/paratypefoundry"
+                  target="_blank" rel="noopener noreferrer">
+                  <span class="visually-hidden">В контакте.</span>
+                </a>
+              </li>
+            </ul>
+            <div class="nav-footer__copyright-wrapper">
+              <ul class="nav-footer__copyright copyright-list">
+                <li class="nav-footer__info copyright-list__item">© 1998–2022.Паратайп.</li>
+                <li class="nav-footer__info copyright-list__item">Все авторские права защищены.</li>
+              </ul>
+              <a class="nav-footer__design design-company" href="https://wemakefab.ru/" target="_blank"
+                rel="noopener noreferrer">Дизайн Wemakefab</a>
+            </div>
+          </div>
+          <label class="header-nav__theme-switcher theme-switcher" for="theme"
+            aria-label="переключатель цветовой схемы">
+            <input class="theme-switcher__input visually-hidden" type="checkbox"  name="theme"
+              id="theme">
+            <span class="theme-switcher__slider">
+              <span class="theme-switcher__light">
+                <span class="theme-switcher__text">Дневная тема</span>
+              </span>
+              <span class="theme-switcher__night">
+                <span class="theme-switcher__text">Ночная тема</span>
+              </span>
+            </span>
+          </label>
+        </div>
+        <a class="header-nav__link header-nav__link--search" href="#">
+          <span class="visually-hidden">Кнопка поиска по сайту.</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+  <main class="main">
+    <h1 class="visually-hidden">Сайт компании Paratype.</h1>
+    <section class="promo">
+      <div class="promo__wrapper">
+        <h2 class="visually-hidden">Актуальные акции.</h2>
+        <div class="promo__slider promo-slider">
+          <ul class="promo__slider-list">
+            <li class="promo__slider-item promo__slider-item--current promo-card">
+              <a class="promo__slider-card promo__slider-card--dark" href="#">
+                <span class="promo-card__quantity">280</span>
+                <h3 class="promo-card__caption">Распродажа</h3>
+                <span class="promo-card__discount discount-mark">45</span>
+              </a>
+            </li>
+            <li class="promo__slider-item  promo-card">
+              <a class="promo__slider-card promo__slider-card--light" href="#">
+                <span class="promo-card__quantity">20</span>
+                <h3 class="promo-card__caption ">Хиты продаж</h3>
+                <span class="promo-card__discount"></span>
+              </a>
+            </li>
+          </ul>
+          <div class="promo__swiper-pagination swiper-pagination">
+            <button class="swiper-pagination__bullet swiper-pagination__bullet--active" type="button">
+              <span class="visually-hidden">Кнопка переключения слайдов.</span>
+            </button>
+            <button class="swiper-pagination__bullet" type="button">
+              <span class="visually-hidden">Кнопка переключения слайдов.</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="category">
+      <div class="category__wrapper">
+        <h2 class="visually-hidden">Категории шрифтов.</h2>
+        <ul class="category__list category-list">
+          <li class="category-list__item">
+            <a class="category-list__card category-card" href="#">
+              <span class="category-card__total-count">340</span>
+              <span class="category-card__new-count">6</span>
+              <div class="category-card__img-wrapper">
+                <svg class="category-card__img category-card__img--grotesk" width="61" height="35" role="img" aria-label="Гротеск.">
+                  <use href="/__spritemap#sprite-letter-grotesk"></use>
+                </svg>
+              </div>
+              <h3 class="category-card__caption">Гротески</h3>
+            </a>
+          </li>
+          <li class="category-list__item">
+            <a class="category-list__card category-card" href="#">
+              <span class="category-card__total-count">89</span>
+              <div class="category-card__img-wrapper">
+                <svg class="category-card__img category-card__img--antique" width="57" height="34" role="img" aria-label="Антика.">
+                  <use href="/__spritemap#sprite-letter-antique"></use>
+                </svg>
+              </div>
+              <h3 class="category-card__caption">Антиквы</h3>
+            </a>
+          </li>
+          <li class="category-list__item">
+            <a class="category-list__card category-card" href="#">
+              <span class="category-card__total-count">129</span>
+              <span class="category-card__new-count">2</span>
+              <div class="category-card__img-wrapper">
+                <svg class="category-card__img category-card__img--brusque" width="57" height="34" role="img" aria-label="Брусковые.">
+                  <use href="/__spritemap#sprite-letter-brusque"></use>
+                </svg>
+              </div>
+              <h3 class="category-card__caption">Брусковые</h3>
+            </a>
+          </li>
+          <li class="category-list__item">
+            <a class="category-list__card category-card" href="#">
+              <span class="category-card__total-count">278</span>
+              <div class="category-card__img-wrapper">
+                <svg class="category-card__img category-card__img--accidental" width="57" height="34" role="img" aria-label="Акцидентные.">
+                  <use href="/__spritemap#sprite-letter-accidental"></use>
+                </svg>
+              </div>
+              <h3 class="category-card__caption">Акцидентные</h3>
+            </a>
+          </li>
+          <li class="category-list__item">
+            <a class="category-list__card category-card" href="#">
+              <span class="category-card__total-count">23</span>
+              <div class="category-card__img-wrapper">
+                <svg class="category-card__img category-card__img--handwritten" width="57" height="34" role="img" aria-label="Рукописные.">
+                  <use href="/__spritemap#sprite-letter-handwritten"></use>
+                </svg>
+              </div>
+              <h3 class="category-card__caption">Рукописные</h3>
+            </a>
+          </li>
+          <li class="category-list__item">
+            <a class="category-list__card category-card" href="#">
+              <span class="category-card__total-count">8</span>
+              <div class="category-card__img-wrapper">
+                <svg class="category-card__img category-card__img--non-alphabetic" width="57" height="34" role="img" aria-label="Неалфавитные.">
+                  <use href="/__spritemap#sprite-letter-non-alphabetic"></use>
+                </svg>
+              </div>
+              <h3 class="category-card__caption">Неалфавитные</h3>
+            </a>
+          </li>
+          <li class="category-list__item">
+            <a class="category-list__card category-card" href="#">
+              <span class="category-card__total-count">280</span>
+              <div class="category-card__img-wrapper">
+                <svg class="category-card__img category-card__img--monospaced" width="57" height="34" role="img" aria-label="Моноширинные.">
+                  <use href="/__spritemap#sprite-letter-monospaced"></use>
+                </svg>
+              </div>
+              <h3 class="category-card__caption">Моноширинные</h3>
+            </a>
+          </li>
+          <li class="category-list__item">
+            <a class="category-list__card category-card" href="#">
+              <span class="category-card__total-count">56</span>
+              <div class="category-card__img-wrapper">
+                <svg class="category-card__img category-card__img--historical" width="57" height="34" role="img" aria-label="Исторические.">
+                  <use href="/__spritemap#sprite-letter-historical"></use>
+                </svg>
+              </div>
+              <h3 class="category-card__caption">Исторические</h3>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="products">
+      <div class="products__wrapper">
+        <h2 class="visually-hidden">Все категории шрифтов в одном разделе.</h2>
+        <div class="products__select sale-select" aria-label="Сортировка." tabindex="0">
+          <div class="sale-select__select-wrapper">
+            <div class="sale-select__screen">Все новинки</div>
+            <ul class="products__select-list select-list">
+              <li class="select-list__item  ">
+                <button class="select-list__button select-button select-button--current" type="button" id="new">Все
+                  новинки</button>
+              </li>
+              <li class="select-list__item">
+                <button class="select-list__button select-button" type="button" id="sale">Распродажа</button>
+              </li>
+              <li class="select-list__item">
+                <button class="select-list__button select-button" type="button"
+                  id="recommendations">Рекомендуем</button>
+              </li>
+              <li class="select-list__item">
+                <button class="select-list__button select-button" type="button" id="bestsellers">Бестселлеры</button>
+              </li>
+            </ul>
+            <div class="sale-select__buttons">
+              <button class="sale-select__button layout-button layout-button--current layout-button--two-columns"
+                type="button" id="layout-two">
+                <span class="visually-hidden">Раскладка карточек по две в ряд.</span>
+              </button>
+              <button class="sale-select__button layout-button layout-button--three-columns" id="layout-three"
+                type="button">
+                  <span class="visually-hidden">Раскладка карточек по три в ряд.</span>
+                <span class="layout-button__span" aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <section class="products__sale sale">
+          <div class="sale__wrapper">
+            <article class="sale__card products-card products-card--open">
+              <a class="products-card__link" href="#">
+                <span class="visually-hidden">Карточка описания</span>
+              </a>
+              <header class="products-card__header">
+                <span class="products-card__category">Распродажа</span>
+                <span class="products-card__discount">30%</span>
+                <button class="products-card__button button-favourites" type="button">
+                  <span class="visually-hidden">Добавить в избранное.</span>
+                </button>
+              </header>
+              <h3 class="products-card__caption products-caption">
+                Pragmatica Next VF</h3>
+              <div class="products-card__about">
+                <div class="products-card__about-wrapper">
+                  <h4 class="products-card__format-caption format-caption">Opentype</h4>
+                  <ul class="products-card__list">
+                    <li class="products-card__item">
+                      <span class="products-card__termin">Начертаний</span>
+                      <span class="products-card__description">8</span>
+                    </li>
+                    <li class="products-card__item">
+                      <span class="products-card__termin">Языки</span>
+                      <span class="products-card__description">92</span>
+                    </li>
+                  </ul>
+                  <p class="products-card__classification">Гротеск</p>
+                  <p class="products-card__price-text">
+                    <span class="products-card__text">От</span>
+                    <span class="products-card__price">2 250 ₽</span>
+                  </p>
+                  <h4 class="products-card__tag-caption">Теги</h4>
+                  <ul class="products-card__tag-list tag-list">
+                    <li class="tag-list__item tag">Десктоп
+                    </li>
+                    <li class="tag-list__item tag">Вэб
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <div class="sale__slider sale-slider products-slider">
+              <div class="products-slider__scrollbar sale-slider__scrollbar ">
+                <a class="products-slider__scrollbar-link products-slider__scrollbar-link--active" href="#">
+                  <span class="visually-hidden">Переход к следующему слайду.</span>
+                </a>
+                <a class="products-slider__scrollbar-link" href="#">
+                  <span class="visually-hidden">Переход к следующему слайду.</span>
+                </a>
+                <a class="products-slider__scrollbar-link" href="#">
+                  <span class="visually-hidden">Переход к следующему слайду.</span>
+                </a>
+              </div>
+              <button class="sale-slider__toggle-button slider-toggle products-slider__toggle" id="sale-toggle"
+                type="button">
+                <span class="visually-hidden">Открыть карточку шрифта.</span>
+              </button>
+              <ul class="sale-slider__list products-slider__list">
+                <li class="sale-slider__item products-slider__list-item sale-card">
+                  <div class="sale-slider__img-wrapper products-slider__img-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1600px)"
+                        srcset="img/sale/pragmatica-desktop@1x.webp, img/sale/pragmatica-desktop@2x.webp 2x"
+                        width="1580" height="800">
+                      <source type="image/webp" srcset="img/sale/pragmatica@1x.webp, img/sale/pragmatica@2x.webp 2x"
+                        width="370" height="300">
+                      <source media="(min-width: 1600px)"
+                        srcset="img/sale/pragmatica-desktop@1x.jpg, img/sale/pragmatica-desktop@2x.jpg 2x"
+                        type="image/jpg" width="1580" height="800">
+                      <img class="sale-slider__img products-slider__img" width="370" height="300"
+                        src="img/sale/pragmatica@1x.jpg" srcset="img/sale/pragmatica@2x.jpg 2x" alt="Шрифт Pragmatica."
+                        loading="lazy">
+                    </picture>
+                  </div>
+                </li>
+                <li class="products-slider__item sale-slider__item  sale-card">
+                  <div class="products-slider__img-wrapper sale-slider__img-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1600px)"
+                        srcset="img/sale/proxima-desktop@1x.webp, img/sale/proxima-desktop@2x.webp 2x" width="1580"
+                        height="800">
+                      <source type="image/webp"
+                        srcset="img/sale/proxima-mobile@1x.webp, img/sale/proxima-mobile@2x.webp 2x" width="370"
+                        height="300">
+                      <source media="(min-width: 1600px)"
+                        srcset="img/sale/proxima-desktop@1x.jpg, img/sale/proxima-desktop@2x.jpg 2x" type="image/jpg"
+                        width="1580" height="800">
+                      <img class="products-slider__img sale-slider__img" width="370" height="300"
+                        src="img/sale/proxima-mobile@1x.jpg" srcset="img/sale/proxima-mobile@2x.jpg 2x"
+                        alt="Шрифт Proxima PT." loading="lazy">
+                    </picture>
+                  </div>
+                </li>
+                <li class="products-slider__item sale-slider__item sale-card">
+                  <div class="products-slider__img-wrapper sale-slider__img-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1600px)"
+                        srcset="img/sale/magistral-desktop@1x.webp, img/sale/magistral-desktop@2x.webp 2x" width="1580"
+                        height="800">
+                      <source type="image/webp"
+                        srcset="img/sale/magistral-mobile@1x.webp, img/sale/magistral-mobile@2x.webp 2x" width="370"
+                        height="300">
+                      <source media="(min-width: 1600px)"
+                        srcset="img/sale/magistral-desktop@1x.jpg, img/sale/magistral-desktop@2x.jpg 2x"
+                        type="image/jpg" width="1580" height="800">
+                      <img class="products-slider__img sale-slider__img" width="370" height="300"
+                        src="img/sale/magistral-mobile@1x.jpg" srcset="img/sale/magistral-mobile@2x.jpg 2x"
+                        alt="Шрифт Magistral." loading="lazy">
+                    </picture>
+                  </div>
+                </li>
+              </ul>
+              <div class="products__swiper-pagination sale__swiper-pagination swiper-pagination">
+                <button class="swiper-pagination__bullet swiper-pagination__bullet--active" type="button"
+                  aria-label="Перейти к слайду 1">
+                  <span class="visually-hidden">Кнопка переключения слайдов.</span>
+                </button>
+                <button class="swiper-pagination__bullet" type="button"
+                  aria-label="Перейти к слайду 1">
+                  <span class="visually-hidden">Кнопка переключения слайдов.</span>
+                </button>
+                <button class="swiper-pagination__bullet" type="button"
+                  aria-label="Перейти к слайду 1">
+                  <span class="visually-hidden">Кнопка переключения слайдов.</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="products__bestseller bestseller">
+          <div class="bestseller__wrapper">
+            <article class="bestseller__card products-card">
+                <a class="products-card__link" href="#">
+                <span class="visually-hidden">Карточка описания</span>
+              </a>
+              <header class="products-card__header">
+                <span class="products-card__category">Бестселлер</span>
+                <button class="products-card__button button-favourites" type="button">
+                  <span class="visually-hidden">Добавить в избранное.</span>
+                </button>
+              </header>
+              <h3 class="products-card__caption products-caption">Proxima Nova</h3>
+              <div class="products-card__about">
+                <div class="products-card__about-wrapper">
+                  <h4 class="products-card__format-caption format-caption">Opentype</h4>
+                  <ul class="products-card__list">
+                    <li class="products-card__item">
+                      <span class="products-card__termin">Начертаний</span>
+                      <span class="products-card__description">8</span>
+                    </li>
+                    <li class="products-card__item">
+                      <span class="products-card__termin">Языки</span>
+                      <span class="products-card__description">92</span>
+                    </li>
+                  </ul>
+                  <p class="products-card__classification">Гротеск</p>
+                  <p class="products-card__price-text">
+                    <span class="products-card__text">От</span>
+                    <span class="products-card__price">2 250 ₽</span>
+                  </p>
+                  <h4 class="products-card__tag-caption">Теги</h4>
+                  <ul class="products-card__tag-list tag-list">
+                    <li class="tag-list__item tag">Десктоп
+                    </li>
+                    <li class="tag-list__item tag">Вэб
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <div class="products-slider bestseller__slider bestseller-slider ">
+
+              <div class="products-slider__scrollbar bestseller-slider__scrollbar ">
+                <a class="products-slider__scrollbar-link products-slider__scrollbar-link--active" href="#">
+                  <span class="visually-hidden">Переход к следующему слайду.</span>
+                </a>
+                <a class="products-slider__scrollbar-link" href="#">
+                  <span class="visually-hidden">Переход к следующему слайду.</span>
+                </a>
+                <a class="products-slider__scrollbar-link" href="#">
+                  <span class="visually-hidden">Переход к следующему слайду.</span>
+                </a>
+              </div>
+              <button class="products-slider__toggle bestseller-slider__toggle-button slider-toggle"
+                id="bestseller-toggle" type="button">
+                <span class="visually-hidden">Открыть карточку шрифта.</span>
+              </button>
+              <ul class="products-slider__list bestseller-slider__list">
+                <li class="products-slider__item bestseller-slider__item bestseller-card">
+                  <div class="products-slider__img-wrapper bestseller-slider__img-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1600px)"
+                        srcset="img/sale/proxima-desktop@1x.webp, img/sale/proxima-desktop@2x.webp 2x" width="1580"
+                        height="800">
+                      <source type="image/webp"
+                        srcset="img/sale/proxima-mobile@1x.webp, img/sale/proxima-mobile@2x.webp 2x" width="370"
+                        height="300">
+                      <source media="(min-width: 1600px)"
+                        srcset="img/sale/proxima-desktop@1x.jpg, img/sale/proxima-desktop@2x.jpg 2x" type="image/jpg"
+                        width="1580" height="800">
+
+                      <img class="products-slider__img bestseller-slider__img" width="370" height="300"
+                        src="img/sale/proxima-mobile@1x.jpg" srcset="img/sale/proxima-mobile@2x.jpg 2x"
+                        alt="Шрифт Proxima PT." loading="lazy">
+                    </picture>
+                  </div>
+                </li>
+                <li class="products-slider__item bestseller-slider__item bestseller-card">
+                  <div class="products-slider__img-wrapper bestseller-slider__img-wrapper">
+
+
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1600px)"
+                        srcset="img/sale/magistral-desktop@1x.webp, img/sale/magistral-desktop@2x.webp 2x" width="1580"
+                        height="800">
+                      <source type="image/webp"
+                        srcset="img/sale/magistral-mobile@1x.webp, img/sale/magistral-mobile@2x.webp 2x" width="370"
+                        height="300">
+                      <source media="(min-width: 1600px)"
+                        srcset="img/sale/magistral-desktop@1x.jpg, img/sale/magistral-desktop@2x.jpg 2x"
+                        type="image/jpg" width="1580" height="800">
+
+                      <img class="products-slider__img bestseller-slider__img" width="370" height="300"
+                        src="img/sale/magistral-mobile@1x.jpg" srcset="img/sale/magistral-mobile@2x.jpg 2x"
+                        alt="Шрифт Magistral." loading="lazy">
+                    </picture>
+
+
+                  </div>
+                </li>
+                <li class="products-slider__item bestseller-slider__item bestseller-card">
+                  <div class="products-slider__img-wrapper bestseller-slider__img-wrapper">
+
+
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1600px)"
+                        srcset="img/sale/pragmatica-desktop@1x.webp, img/sale/pragmatica-desktop@2x.webp 2x"
+                        width="1580" height="800">
+                      <source type="image/webp" srcset="img/sale/pragmatica@1x.webp, img/sale/pragmatica@2x.webp 2x"
+                        width="370" height="300">
+                      <source media="(min-width: 1600px)"
+                        srcset="img/sale/pragmatica-desktop@1x.jpg, img/sale/pragmatica-desktop@2x.jpg 2x"
+                        type="image/jpg" width="1580" height="800">
+
+                      <img class="products-slider__img bestseller-slider__img" width="370" height="300"
+                        src="img/sale/pragmatica@1x.jpg" srcset="img/sale/pragmatica@2x.jpg 2x" alt="Шрифт Pragmatica."
+                        loading="lazy">
+                    </picture>
+                  </div>
+                </li>
+              </ul>
+              <div class="products__swiper-pagination bestseller__swiper-pagination swiper-pagination">
+                <button class="swiper-pagination__bullet swiper-pagination__bullet--active" type="button"
+                  aria-label="Перейти к слайду 1">
+                  <span class="visually-hidden">Кнопка переключения слайдов.</span>
+                </button>
+                <button class="swiper-pagination__bullet" type="button"
+                  aria-label="Перейти к слайду 1">
+                  <span class="visually-hidden">Кнопка переключения слайдов.</span>
+                </button>
+                <button class="swiper-pagination__bullet" type="button"
+                  aria-label="Перейти к слайду 1">
+                  <span class="visually-hidden">Кнопка переключения слайдов.</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="products__recommendation recommendation">
+          <div class="recommendation__wrapper">
+            <article class="recommendation__card products-card">
+            <a class="products-card__link" href="#">
+                <span class="visually-hidden">Карточка описания</span>
+              </a>
+              <header class="products-card__header">
+                <span class="products-card__category">Рекомендуем</span>
+                <button class="products-card__button button-favourites" type="button">
+                  <span class="visually-hidden">Добавить в избранное.</span>
+                </button>
+              </header>
+              <h3 class="products-card__caption products-caption">
+                Magistral<br class="products-caption__break">pt</h3>
+              <div class="products-card__about products-card__about--open">
+                <div class="products-card__about-wrapper">
+                  <h4 class="products-card__format-caption format-caption">Opentype</h4>
+                  <ul class="products-card__list">
+                    <li class="products-card__item">
+                      <span class="products-card__termin">Начертаний</span>
+                      <span class="products-card__description">8</span>
+                    </li>
+                    <li class="products-card__item">
+                      <span class="products-card__termin">Языки</span>
+                      <span class="products-card__description">92</span>
+                    </li>
+                  </ul>
+                  <p class="products-card__classification">Гротеск</p>
+                  <p class="products-card__price-text">
+                    <span class="products-card__text">От</span>
+                    <span class="products-card__price">2 250 ₽</span>
+                  </p>
+                  <h4 class="products-card__tag-caption">Теги</h4>
+                  <ul class="products-card__tag-list tag-list">
+                    <li class="tag-list__item tag">Десктоп</li>
+                    <li class="tag-list__item tag">Вэб</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <div class="products-slider recommendation__slider recommendation-slider">
+              <div class="products-slider__scrollbar recommendation-slider__scrollbar ">
+                <a class="products-slider__scrollbar-link products-slider__scrollbar-link--active" href="#">
+                  <span class="visually-hidden">Переход к следующему слайду.</span>
+                </a>
+                <a class="products-slider__scrollbar-link" href="#">
+                  <span class="visually-hidden">Переход к следующему слайду.</span>
+                </a>
+                <a class="products-slider__scrollbar-link" href="#">
+                  <span class="visually-hidden">Переход к следующему слайду.</span>
+                </a>
+              </div>
+
+              <button
+                class="products-slider__toggle recommendation-slider__toggle-button slider-toggle slider-toggle--open"
+                id="recommendation-toggle" type="button">
+                <span class="visually-hidden">Открыть карточку шрифта.</span>
+              </button>
+              <ul class="products-slider__list recommendation-slider__list">
+                <li class="products-slider__item recommendation-slider__item recommendation-card">
+                  <div class="products-slider__img-wrapper recommendation-slider__img-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1600px)"
+                        srcset="img/sale/magistral-desktop@1x.webp, img/sale/magistral-desktop@2x.webp 2x" width="1580"
+                        height="800">
+                      <source type="image/webp"
+                        srcset="img/sale/magistral-mobile@1x.webp, img/sale/magistral-mobile@2x.webp 2x" width="370"
+                        height="300">
+                      <source media="(min-width: 1600px)"
+                        srcset="img/sale/magistral-desktop@1x.jpg, img/sale/magistral-desktop@2x.jpg 2x"
+                        type="image/jpg" width="1580" height="800">
+
+                      <img class="products-slider__img recommendation-slider__img" width="370" height="300"
+                        src="img/sale/magistral-mobile@1x.jpg" srcset="img/sale/magistral-mobile@2x.jpg 2x"
+                        alt="Шрифт Magistral." loading="lazy">
+                    </picture>
+                  </div>
+                </li>
+                <li class="products-slider__item recommendation-slider__item recommendation-card">
+                  <div class="products-slider__img-wrapper recommendation-slider__img-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1600px)"
+                        srcset="img/sale/proxima-desktop@1x.webp, img/sale/proxima-desktop@2x.webp 2x" width="1580"
+                        height="800">
+                      <source type="image/webp"
+                        srcset="img/sale/proxima-mobile@1x.webp, img/sale/proxima-mobile@2x.webp 2x" width="370"
+                        height="300">
+                      <source media="(min-width: 1600px)"
+                        srcset="img/sale/proxima-desktop@1x.jpg, img/sale/proxima-desktop@2x.jpg 2x" type="image/jpg"
+                        width="1580" height="800">
+
+                      <img class="products-slider__img recommendation-slider__img" width="370" height="300"
+                        src="img/sale/proxima-mobile@1x.jpg" srcset="img/sale/proxima-mobile@2x.jpg 2x"
+                        alt="Шрифт Proxima PT." loading="lazy">
+                    </picture>
+                  </div>
+                </li>
+                <li class="products-slider__item recommendation-slider__item recommendation-card">
+                  <div class="products-slider__img-wrapper recommendation-slider__img-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1600px)"
+                        srcset="img/sale/pragmatica-desktop@1x.webp, img/sale/pragmatica-desktop@2x.webp 2x"
+                        width="1580" height="800">
+                      <source type="image/webp" srcset="img/sale/pragmatica@1x.webp, img/sale/pragmatica@2x.webp 2x"
+                        width="370" height="300">
+                      <source media="(min-width: 1600px)"
+                        srcset="img/sale/pragmatica-desktop@1x.jpg, img/sale/pragmatica-desktop@2x.jpg 2x"
+                        type="image/jpg" width="1580" height="800">
+
+                      <img class="products-slider__img recommendation-slider__img" width="370" height="300"
+                        src="img/sale/pragmatica@1x.jpg" srcset="img/sale/pragmatica@2x.jpg 2x" alt="Шрифт Pragmatica."
+                        loading="lazy">
+                    </picture>
+                  </div>
+                </li>
+
+
+              </ul>
+
+              <div class="products__swiper-pagination recommendation__swiper-pagination swiper-pagination">
+                <button class="swiper-pagination__bullet swiper-pagination__bullet--active" type="button"
+                  aria-label="Перейти к слайду 1">
+                  <span class="visually-hidden">Кнопка переключения слайдов.</span>
+                </button>
+                <button class="swiper-pagination__bullet" type="button"
+                  aria-label="Перейти к слайду 1">
+                  <span class="visually-hidden">Кнопка переключения слайдов.</span>
+                </button>
+                <button class="swiper-pagination__bullet" type="button"
+                  aria-label="Перейти к слайду 1">
+                  <span class="visually-hidden">Кнопка переключения слайдов.</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+        <div class="products__scroll scroll">
+    <button class="scroll__button" type="button">
+      <span class="visually-hidden">Кнопка скролла наверх.</span>
+    </button>
+  </div>
+    </section>
+    <section class="category">
+      <div class="category__wrapper">
+        <h2 class="visually-hidden">Категории шрифтов.</h2>
+        <ul class="category__list category-list">
+          <li class="category-list__item">
+            <a class="category-list__card category-card" href="#">
+              <span class="category-card__total-count">340</span>
+              <span class="category-card__new-count">6</span>
+              <div class="category-card__img-wrapper">
+                <svg class="category-card__img category-card__img--grotesk" width="61" height="35" role="img" aria-label="Гротески.">
+                  <use href="/__spritemap#sprite-letter-grotesk"></use>
+                </svg>
+              </div>
+              <h3 class="category-card__caption">Гротески</h3>
+            </a>
+          </li>
+          <li class="category-list__item">
+            <a class="category-list__card category-card" href="#">
+              <span class="category-card__total-count">89</span>
+              <div class="category-card__img-wrapper">
+                <svg class="category-card__img category-card__img--antique" width="57" height="34" role="img" aria-label="Антиквы.">
+                  <use href="/__spritemap#sprite-letter-antique"></use>
+                </svg>
+              </div>
+              <h3 class="category-card__caption">Антиквы</h3>
+            </a>
+          </li>
+          <li class="category-list__item">
+            <a class="category-list__card category-card" href="#">
+              <span class="category-card__total-count">129</span>
+              <span class="category-card__new-count">2</span>
+              <div class="category-card__img-wrapper">
+                <svg class="category-card__img category-card__img--brusque" width="57" height="34" role="img" aria-label="Брусковые.">
+                  <use href="/__spritemap#sprite-letter-brusque"></use>
+                </svg>
+              </div>
+              <h3 class="category-card__caption">Брусковые</h3>
+            </a>
+          </li>
+          <li class="category-list__item">
+            <a class="category-list__card category-card" href="#">
+              <span class="category-card__total-count">278</span>
+              <div class="category-card__img-wrapper">
+                <svg class="category-card__img category-card__img--accidental" width="57" height="34" role="img" aria-label="Акцидентные.">
+                  <use href="/__spritemap#sprite-letter-accidental"></use>
+                </svg>
+              </div>
+              <h3 class="category-card__caption">Акцидентные</h3>
+            </a>
+          </li>
+          <li class="category-list__item">
+            <a class="category-list__card category-card" href="#">
+              <span class="category-card__total-count">23</span>
+              <div class="category-card__img-wrapper">
+                <svg class="category-card__img category-card__img--handwritten" width="57" height="34" role="img" aria-label="Рукописные.">
+                  <use href="/__spritemap#sprite-letter-handwritten"></use>
+                </svg>
+              </div>
+              <h3 class="category-card__caption">Рукописные</h3>
+            </a>
+          </li>
+          <li class="category-list__item">
+            <a class="category-list__card category-card" href="#">
+              <span class="category-card__total-count">8</span>
+              <div class="category-card__img-wrapper">
+                <svg class="category-card__img category-card__img--non-alphabetic" width="57" height="34" role="img" aria-label="Неалфавитные.">
+                  <use href="/__spritemap#sprite-letter-non-alphabetic"></use>
+                </svg>
+              </div>
+              <h3 class="category-card__caption">Неалфавитные</h3>
+            </a>
+          </li>
+          <li class="category-list__item">
+            <a class="category-list__card category-card" href="#">
+              <span class="category-card__total-count">280</span>
+              <div class="category-card__img-wrapper">
+                <svg class="category-card__img category-card__img--monospaced" width="57" height="34" role="img" aria-label="Моноширинные.">
+                  <use href="/__spritemap#sprite-letter-monospaced"></use>
+                </svg>
+              </div>
+              <h3 class="category-card__caption">Моноширинные</h3>
+            </a>
+          </li>
+          <li class="category-list__item">
+            <a class="category-list__card category-card" href="#">
+              <span class="category-card__total-count">56</span>
+              <div class="category-card__img-wrapper">
+                <svg class="category-card__img category-card__img--historical" width="57" height="34" role="img" aria-label="Исторические.">
+                  <use href="/__spritemap#sprite-letter-historical"></use>
+                </svg>
+              </div>
+              <h3 class="category-card__caption">Исторические</h3>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <ul class="footer__menu-list footer-menu">
+        <li class="footer-menu__item">
+          <a class="footer-menu__link" href="#">Faq</a>
+        </li>
+        <li class="footer-menu__item">
+          <a class="footer-menu__link" href="#">Лицензии</a>
+        </li>
+        <li class="footer-menu__item footer-menu__item--additional">
+          <a class="footer-menu__link" href="#">Правила продажи</a>
+        </li>
+        <li class="footer-menu__item footer-menu__item--additional">
+          <a class="footer-menu__link" href="#">Возврат и замена</a>
+        </li>
+      </ul>
+      <ul class="footer__contacts footer-contacts">
+        <li class="footer-contacts__item">
+          <a class="footer-contacts__link" href="#">Контакты</a>
+        </li>
+      </ul>
+      <div class="footer__form form">
+        <h3 class="form__caption">Новости Paratype</h3>
+        <form class="form__footer-form footer-form" action="https://echo.htmlacademy.ru/" method="post" novalidate>
+          <label class="visually-hidden" for="email">Введите Ваш email.</label>
+          <input class="footer-form__input email-input" id="email" type="email" name="email" placeholder="Ваш email" required>
+          <button class="footer-form__button button" type="submit">Подписаться</button>
+        </form>
+      </div>
+      <ul class="footer__socials-list socials-list">
+        <li class="socials-list__item">
+          <a class="socials-list__link socials-list__link--telegram" href="https://t.me/paratype_fonts" target="_blank"
+            rel="noopener noreferrer">
+            <span class="visually-hidden">Телеграм.</span>
+          </a>
+        </li>
+        <li class="socials-list__item">
+          <a class="socials-list__link socials-list__link--vk" href="https://vk.com/paratypefoundry" target="_blank"
+            rel="noopener noreferrer">
+            <span class="visually-hidden">В контакте.</span>
+          </a>
+        </li>
+      </ul>
+      <div class="footer__copyright-wrapper">
+        <ul class="footer__copyright copyright-list">
+          <li class="footer__info copyright-list__item">© 1998–2022.Паратайп.</li>
+          <li class="footer__info copyright-list__item">Все авторские права защищены.</li>
+        </ul>
+        <a class="footer__design design-company" href="https://wemakefab.ru/" target="_blank" rel="noopener noreferrer">Дизайн Wemakefab</a>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="js/main.js"></script>
+</body>
 </html>

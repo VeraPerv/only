@@ -1,0 +1,38 @@
+.copyright-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  letter-spacing: 0.01em;
+  color: $background-bullet;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+}
+
+.copyright-list__item {
+  display: block;
+  font-weight: 500;
+  font-size: size(12px);
+  line-height: size(14px);
+  letter-spacing: 0.01em;
+  color: $background-bullet;
+  max-width: 250px;
+
+  @media (max-width: $mobile-width-only) {
+    line-height: size(15px);
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: size(10px);
+    line-height: size(12px);
+    max-width: 190px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 12px;
+    max-width: 250px;
+  }
+}

@@ -1,0 +1,8 @@
+.sale-card {
+  width: size(370px);
+  min-width: 100%;
+
+  @media (min-width: $desktop-width) {
+    width: 1580px;
+  }
+}

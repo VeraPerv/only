@@ -1,0 +1,9 @@
+.nav-footer__socials-list {
+  margin-bottom: 21px;
+}
+
+.nav-footer__copyright {
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 15px;
+  }
+}

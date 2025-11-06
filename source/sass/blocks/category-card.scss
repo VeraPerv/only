@@ -1,0 +1,141 @@
+.category-card {
+  display: flex;
+  flex-direction: column;
+  padding: size(12px) size(10px) size(14px);
+  background-color: $background-catalog;
+  width: size(105px);
+  min-height: size(120px);
+  border-radius: 10px;
+  position: relative;
+  color: $color-primary;
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    min-height: 200px;
+    padding: 16px 21px 28px;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    background-color: $accent-color;
+    outline: none;
+    color: $color-white;
+  }
+}
+
+.category-card__total-count {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: inherit;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    color: inherit;
+    max-width: 100px;
+  }
+}
+
+.category-card__caption {
+  margin: 0;
+  font-weight: 500;
+  font-size: size(12px);
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: inherit;
+
+  @media (min-width: $desktop-width) {
+    font-size: 14px;
+    letter-spacing: 0.01em;
+  }
+}
+
+.category-card__img-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  width: size(85px);
+  height: size(74px);
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    margin-top: -14px;
+  }
+}
+
+.category-card__new-count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $accent-color;
+  border-radius: 50%;
+  width: size(20px);
+  height: size(20px);
+  font-weight: 500;
+  font-size: size(10px);
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: $color-white;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  @media (min-width: $desktop-width) {
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+  }
+}
+
+.category-card__img {
+  width: size(61px);
+  height: size(35px);
+
+  @media (min-width: $desktop-width) {
+    width: 136px;
+    height: 96px;
+
+    &--grotesk {
+      width: 102px;
+      height: 59px;
+    }
+
+    &--antique {
+      width: 95px;
+      height: 57px;
+    }
+
+    &--brusque {
+      width: 94px;
+      height: 55px;
+    }
+
+    &--accidental {
+      width: 65px;
+      height: 75px;
+    }
+
+    &--handwritten {
+      width: 91px;
+      height: 96px;
+    }
+
+    &--monospaced {
+      width: 76px;
+      height: 67px;
+    }
+
+    &--non-alphabetic {
+      width: 136px;
+      height: 63px;
+    }
+
+    &--historical {
+      width: 93px;
+      height: 52px;
+    }
+  }
+}

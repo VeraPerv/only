@@ -1,0 +1,10 @@
+.discount-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: $accent-color;
+  color: $color-white;
+  font-size: size(12px);
+  line-height: size(14px);
+}

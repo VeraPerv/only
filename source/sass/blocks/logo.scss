@@ -1,0 +1,76 @@
+.logo {
+  padding: 11px 10px 10px 25px;
+  width: 100%;
+  height: size(59px);
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    gap: 6px;
+    height: size(68px);
+    width: size(290px);
+    padding: 17px 5px 17px 30px;
+    border-right: size(1px) solid $socials-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 16px 5px 17px 301px;
+    width: 100%;
+    min-height: 120px;
+    position: relative;
+  }
+}
+
+.logo__img {
+  display: block;
+  width: size(40px);
+  height: size(33px);
+
+  @media (min-width: $tablet-width) {
+    width: size(180px);
+    height: size(60px);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 290px;
+    height: 60px;
+  }
+}
+
+.logo__img-wrapper {
+  width: size(40px);
+  height: size(33px);
+
+  @media (min-width: $tablet-width) {
+    width: size(180px);
+    height: size(60px);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 14px;
+    width: 290px;
+    height: 60px;
+    position: absolute;
+    top: 16px;
+    left: 0;
+  }
+}
+
+.logo__text {
+  font-weight: 500;
+  font-size: size(12px);
+  letter-spacing: 0.01em;
+
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: size(8px);
+    width: size(86px);
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 12px;
+    width: 100px;
+  }
+}

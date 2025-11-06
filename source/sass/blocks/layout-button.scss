@@ -1,0 +1,161 @@
+.layout-button {
+  width: size(30px);
+  height: size(30px);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
+
+  &--two-columns {
+    gap: size(8px);
+  }
+
+  &--two-columns::before {
+    content: "";
+    display: block;
+    width: size(18px);
+    height: size(5px);
+    outline: size(2px) solid $color-primary;
+    border-radius: size(1px);
+  }
+
+
+  &--two-columns::after {
+    content: "";
+    display: block;
+    width: size(18px);
+    height: size(5px);
+    outline: size(2px) solid $color-primary;
+    border-radius: size(1px);
+  }
+
+
+  &--three-columns {
+    gap: size(6px);
+
+    @media (min-width: $desktop-width) {
+      gap: 6px;
+    }
+  }
+
+  &--three-columns::after {
+    content: "";
+    display: block;
+    width: size(18px);
+    height: size(2px);
+    outline: size(2px) solid $color-primary;
+    border-radius: size(1px);
+  }
+
+
+  &--three-columns::before {
+    content: "";
+    display: block;
+    width: size(18px);
+    height: size(2px);
+    outline: size(2px) solid $color-primary;
+    border-radius: size(1px);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 25px;
+    height: 25px;
+  }
+
+  &:hover::before,
+  &:hover::after,
+  &:hover .layout-button__span,
+  &:focus::before,
+  &:focus::after,
+  &:focus .layout-button__span,
+  &:focus-visible::before,
+  &:focus-visible::after,
+  &:focus-visible .layout-button__span {
+    outline-color: $accent-color;
+  }
+
+  &:active::before,
+  &:active::after,
+  &:active .layout-button__span {
+    outline-color: $background-bullet;
+  }
+
+  &:disabled {
+    pointer-events: none;
+
+    &::before,
+    &::after,
+    .layout-button__span {
+      outline-color: $background-disabled;
+    }
+  }
+
+  &--current {
+    &:hover::before,
+    &:hover::after,
+    &:hover .layout-button__span,
+    &:focus::before,
+    &:focus::after,
+    &:focus .layout-button__span,
+    &:focus-visible::before,
+    &:focus-visible::after,
+    &:focus-visible .layout-button__span {
+      background-color: $color-primary;
+      outline-color: $color-primary;
+    }
+
+    &:active::before,
+    &:active::after,
+    &:active .layout-button__span {
+      outline-color: $background-bullet;
+      background-color: $background-bullet;
+    }
+
+    &:disabled {
+      pointer-events: none;
+    }
+
+    &:disabled::before,
+    &:disabled::after {
+      outline-color: $background-disabled;
+      background-color: $background-disabled;
+    }
+  }
+
+  &--current:disabled .layout-button__span {
+    outline-color: $background-disabled;
+    background-color: $background-disabled;
+  }
+
+  &--current::before {
+    background-color: $accent-color;
+    outline: size(2px) solid $accent-color;
+  }
+
+  &--current::after {
+    background-color: $accent-color;
+    outline: size(2px) solid $accent-color;
+  }
+
+  &--current .layout-button__span {
+    background-color: $accent-color;
+    outline: size(2px) solid $accent-color;
+  }
+}
+
+.layout-button__span {
+  display: block;
+  outline: size(2px) solid $color-primary;
+  width: size(18px);
+  height: size(2px);
+  border-radius: size(1px);
+}

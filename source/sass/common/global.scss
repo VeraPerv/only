@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+$fz-default: 12px;
+$max-size-1: 42px; // Максимальный размер до 919px
+$max-size-2: 42px; // Максимальный размер до 1599px
+
+html {
+  scrollbar-gutter: stable;
+  font-size: size-mobile($fz-default);
+  line-height: size(20px);
+
+  @include vp-389 { //min-width: $vp-1600
+    font-size: $fz-default;
+  }
+
+  @include vp-1600 { //min-width: $vp-1600
+    font-size: $fz-default;
+  }
+
+  font-size: calc((100% - 390px - 17px) / (919 - 390) * ($max-size-1 - $fz-default) + $fz-default);
+  line-height: 20px;
+
+  @media (min-width: 920px) and (max-width: 1599px) {
+    // Сбрасываем шрифт к базовому при начале нового диапазона
+    font-size: $fz-default;
+    // Затем повторный плавный скейлинг в новом диапазоне
+    font-size: calc((100% - 920px - 17px) / (1599 - 920) * ($max-size-2 - $fz-default) + $fz-default);
+    font-size: size-tablet($fz-default);
+  }
+
+  @media (min-width: 1600px) {
+    // Заканчиваем скейлинг максимальным размером
+    font-size: $fz-default;
+  }
+}
+
+body {
+  font-family: $font-primary;
+  color: $color-primary;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-width: 390px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+main {
+  flex-grow: 1;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

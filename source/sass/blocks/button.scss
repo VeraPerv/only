@@ -1,0 +1,28 @@
+.button {
+  display: block;
+  border: none;
+  background-color: $accent-color;
+  font-weight: 600;
+  font-size: size(14px);
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-white;
+  width: size(160px);
+  min-height: size(50px);
+  border-radius: size(25px);
+  padding: 13px 10px 9px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $background-hover;
+  }
+
+  &:disabled {
+    background-color: $background-disabled;
+    pointer-events: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 175px;
+  }
+}

@@ -1,0 +1,31 @@
+.swiper-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: size(8px);
+  border-radius: size(10px);
+  min-height: size(20px);
+  bottom: 0;
+  min-width: size(32px);
+  padding: size(7px);
+  background-color: $color-white;
+  cursor: pointer;
+}
+
+.swiper-pagination__bullet {
+  display: block;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  width: size(4px);
+  height: size(4px);
+  background-color: $background-bullet;
+  cursor: pointer;
+
+  &--active {
+    background-color: $accent-color;
+    width: size(6px);
+    height: size(6px);
+  }
+}

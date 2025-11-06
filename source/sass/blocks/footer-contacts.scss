@@ -1,0 +1,45 @@
+.footer-contacts {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-weight: 600;
+  font-size: size(12px);
+  text-transform: uppercase;
+  text-align: right;
+  color: $color-primary;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 30px;
+}
+
+.footer-contacts__item {
+  font-size: size(12px);
+  line-height: size(14px);
+  max-width: size(120px);
+
+  @media (min-width: $tablet-width) {
+    font-size: size(10px);
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 12px;
+  }
+}
+
+.footer-contacts__link {
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: $accent-color;
+    outline: none;
+  }
+
+  &:active {
+    color: $background-bullet;
+  }
+
+  &--disabled {
+    pointer-events: none;
+    color: $background-disabled;
+  }
+}

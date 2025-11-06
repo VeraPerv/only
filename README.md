@@ -43,11 +43,9 @@ npm run test
 
 В проекте используется множество дополнительных инструментов для самопроверки. Используйте их во время работы и перед отправкой вашего проекта:
 
-- `npm run w3c`: проверяет валидность HTML;
 - `npm run linthtml`: проверяет разметку по правилам linthtml;
 - `npm run html-validate`: проверяет HTML;
-- `npm run lint-bem`: проверяет БЭМ;
-- `npm run stylelint`: проверяет стили по правилам stylelint;
+- `npm run lint`: проверяет стили по правилам stylelint;
 - `npm run lint-js`: проверяет скрипты по правилам eslint;
 - `npm run ls-lint`: проверяет именование файлов и папок;
 - `npm run editorconfig`: проверяет editorconfig.

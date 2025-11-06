@@ -1,0 +1,22 @@
+.footer-form {
+  @media (min-width: $tablet-width) {
+    max-width: size(760px);
+    padding-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 760px;
+    padding-top: 14px;
+  }
+}
+
+.footer-form__input {
+  margin-bottom: size(10px);
+}
+
+.footer-form__button {
+  margin: 0 auto 10px;
+}

@@ -1,0 +1,15 @@
+.header-discount {
+  display: block;
+  font-weight: 600;
+  font-size: size(12px);
+  text-transform: uppercase;
+  color: $accent-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: size(12px);
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: $fz-default;
+  }
+}
