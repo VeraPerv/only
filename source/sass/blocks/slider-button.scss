@@ -1,0 +1,72 @@
+.slider-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  padding: 0;
+  width: 48px;
+  height: 48px;
+  background-color: $color-white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.4s ease, opacity 0.4s ease;
+
+  @media(min-width: $tablet-desktop-between) {
+    border-radius: 15px;
+    padding: 20px;
+    width: 55px;
+    height: 55px;
+  }
+
+  @media(min-width: $desktop-width) {
+    border-radius: size(15px);
+    padding: size(20px);
+    width: size(61px);
+    height: size(61px);
+  }
+
+  svg {
+    stroke: $color-primary;
+    transition: stroke 0.4s ease;
+
+    @media(min-width: $desktop-width) {
+      width: size(20px);
+      height: size(20px);
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      outline: none;
+      background-color: $color-primary;
+      transition: background-color 0.4s ease;
+
+      svg {
+        stroke: $color-white;
+        transition: stroke 0.4s ease;
+      }
+    }
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    background-color: $color-primary;
+    transition: background-color 0.4s ease;
+
+    svg {
+      stroke: $color-white;
+      transition: stroke 0.4s ease;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: opacity 0.4s ease;
+  }
+
+  &:disabled {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+}

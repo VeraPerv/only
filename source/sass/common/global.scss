@@ -11,44 +11,53 @@ $max-size-2: 42px; // Максимальный размер до 1599px
 
 html {
   scrollbar-gutter: stable;
-  font-size: size-mobile($fz-default);
+  scroll-behavior: smooth;
+
+  font-size: size-desktop($fz-default);
   line-height: size(20px);
 
-  @include vp-389 { //min-width: $vp-1600
+  // @include vp-389 { //min-width: $vp-1600
+  //   font-size: $fz-default;
+  // }
+
+  // @include vp-1600 { //min-width: $vp-1600
+  //   font-size: $fz-default;
+  // }
+
+  // // максимальное значение 1439
+  @include vp-1439 {
     font-size: $fz-default;
   }
 
-  @include vp-1600 { //min-width: $vp-1600
-    font-size: $fz-default;
-  }
 
-  font-size: calc((100% - 390px - 17px) / (919 - 390) * ($max-size-1 - $fz-default) + $fz-default);
-  line-height: 20px;
+  // font-size: calc((100% - 390px - 17px) / (919 - 390) * ($max-size-1 - $fz-default) + $fz-default);
+  // line-height: 20px;
 
-  @media (min-width: 920px) and (max-width: 1599px) {
-    // Сбрасываем шрифт к базовому при начале нового диапазона
-    font-size: $fz-default;
-    // Затем повторный плавный скейлинг в новом диапазоне
-    font-size: calc((100% - 920px - 17px) / (1599 - 920) * ($max-size-2 - $fz-default) + $fz-default);
-    font-size: size-tablet($fz-default);
-  }
+  // @media (min-width: 920px) and (max-width: 1599px) {
+  //   // Сбрасываем шрифт к базовому при начале нового диапазона
+  //   font-size: $fz-default;
+  //   // Затем повторный плавный скейлинг в новом диапазоне
+  //   font-size: calc((100% - 920px - 17px) / (1599 - 920) * ($max-size-2 - $fz-default) + $fz-default);
+  //   font-size: size-tablet($fz-default);
+  // }
 
-  @media (min-width: 1600px) {
-    // Заканчиваем скейлинг максимальным размером
-    font-size: $fz-default;
-  }
+  // @media (min-width: 1600px) {
+  //   // Заканчиваем скейлинг максимальным размером
+  //   font-size: $fz-default;
+  // }
 }
 
 body {
   font-family: $font-primary;
   color: $color-primary;
+  background-color: $background-primary;
   font-weight: 400;
   font-style: normal;
   margin: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-width: 390px;
+  min-width: 375px;
 }
 
 img {
@@ -60,6 +69,7 @@ img {
 main {
   flex-grow: 1;
   position: relative;
+  overflow: hidden;
 }
 
 a {

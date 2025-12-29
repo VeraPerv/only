@@ -1,0 +1,23 @@
+.company-about {
+  font-family: $font-secondary;
+  color: $color-primary;
+  font-weight: 450;
+  font-size: 15px;
+  line-height: 21px;
+  letter-spacing: -0.02em;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 21px;
+    padding-bottom: 10px;
+    letter-spacing: -0.03em;
+  }
+
+  @media(min-width: $desktop-width) {
+    font-weight: 400;
+    font-size: size(16px);
+    line-height: size(22px);
+    letter-spacing: -0.02em;
+    padding-left: size(27px);
+    padding-bottom: size(10px);
+  }
+}

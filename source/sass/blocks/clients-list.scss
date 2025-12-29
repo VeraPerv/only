@@ -1,0 +1,457 @@
+.clients-list {
+  margin: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0 6px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 41.5px;
+  }
+
+  @media (min-width: $tablet-desktop-between) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  //   grid-template-areas:
+  //     "a b c d e"
+  //     "f g h i j"
+  //     "k l m n o";
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 size(65px);
+  }
+}
+
+.clients-list__item {
+  &--severstal {
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: a;
+    }
+  }
+
+  &--sibur {
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: b;
+    }
+  }
+
+  &--rostech {
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: f;
+    }
+  }
+
+  &--uralhim {
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: g;
+    }
+  }
+
+  &--nlmk {
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: e;
+    }
+  }
+
+  &--rosatom {
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: d;
+    }
+  }
+
+  &--tektorg {
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: c;
+    }
+  }
+
+  &--farmstandart {
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: 0;
+    }
+  }
+
+  &--vk {
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: l;
+    }
+  }
+
+  &--schlumberger {
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: h;
+    }
+  }
+
+  &--sber {
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: n;
+    }
+
+    @media (min-width: $desktop-width) {
+      // grid-area: m;
+    }
+  }
+
+  &--otkritie {
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: m;
+    }
+
+    @media (min-width: $desktop-width) {
+      // grid-area: n;
+    }
+  }
+
+  &--mr {
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: i;
+    }
+  }
+
+  &--coldy {
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: j;
+    }
+  }
+
+  &--glavstroy {
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: k;
+    }
+  }
+}
+
+.clients-list__link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 111px;
+  height: 100px;
+
+  @media (min-width: $tablet-width) {
+    width: 215px;
+    height: 150px;
+  }
+
+  @media (min-width: $desktop-width) {
+      width: size(250px);
+      height: size(180px);
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    opacity: 0;
+    transform: scale(0);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: $color-white;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+
+    @media(min-width: $tablet-width) {
+      width: 203px;
+      height: 203px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: size(242px);
+      height: size(242px);
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover::before {
+      transform: scale(1);
+      opacity: 1;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+      z-index: -1;
+    }
+  }
+
+  &:focus::before,
+  &:focus-visible::before {
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    z-index: -1;
+  }
+
+  &:active::before {
+    transform: scale(0.8);
+    opacity: 1;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    z-index: -1;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &--severstal {
+    img {
+      @media (min-width: $tablet-width) {
+        width: 142px;
+        height: 45px;
+      }
+
+      @media(min-width: $desktop-width) {
+        width: size(162px);
+        height: size(52px);
+      }
+    }
+
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: a;
+    }
+  }
+
+  &--sibur {
+    img {
+      @media (min-width: $tablet-width) {
+        width: 156px;
+        height: 20px;
+        @media(min-width: $desktop-width) {
+          width: size(123px);
+          height: size(24px);
+        }
+      }
+    }
+
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: b;
+    }
+  }
+
+  &--rostech {
+    img {
+      @media (min-width: $tablet-width) {
+        width: 127px;
+        height: 39px;
+      }
+      @media(min-width: $desktop-width) {
+        width: size(149px);
+        height: size(46px);
+      }
+    }
+
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: f;
+    }
+  }
+
+  &--uralhim {
+    img {
+      @media (min-width: $tablet-width) {
+        width: 156px;
+        height: 20px;
+      }
+      @media (min-width: $desktop-width) {
+        width: size(185px);
+        height: size(23px);
+      }
+    }
+
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: g;
+    }
+  }
+
+  &--nlmk {
+    img {
+      @media (min-width: $tablet-width) {
+        width: 109px;
+        height: 50px;
+      }
+
+      @media(min-width: $desktop-width) {
+        width: size(108px);
+        height: size(60px);
+      }
+    }
+
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: e;
+    }
+  }
+
+  &--rosatom {
+    img {
+      @media (min-width: $tablet-width) {
+        width: 117px;
+        height: 53px;
+      }
+
+      @media(min-width: $desktop-width) {
+        width: size(125px);
+        height: size(56px);
+      }
+    }
+
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: d;
+    }
+  }
+
+  &--tektorg {
+    img {
+      @media (min-width: $tablet-width) {
+        width: 132px;
+        height: 31px;
+      }
+      @media(min-width: $desktop-width) {
+        width: size(157px);
+        height: size(38px);
+      }
+    }
+
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: c;
+    }
+  }
+
+  &--farmstandart {
+    img {
+      @media (min-width: $tablet-width) {
+        width: 135px;
+        height: 31px;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: size(160px);
+        height: size(37px);
+      }
+    }
+
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: 0;
+    }
+  }
+
+  &--vk {
+    img {
+      @media (min-width: $tablet-width) {
+        width: 52px;
+        height: 53px;
+      }
+
+        @media (min-width: $desktop-width) {
+        width: size(63px);
+        height: size(63px);
+      }
+    }
+
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: l;
+    }
+  }
+
+  &--schlumberger {
+    img {
+      @media (min-width: $tablet-width) {
+        width: 130px;
+        height: 30px;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: size(151px);
+        height: size(37px);
+      }
+    }
+
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: h;
+    }
+  }
+
+  &--sber {
+    img {
+      @media (min-width: $tablet-width) {
+        width: 121px;
+        height: 45px;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: size(134px);
+        height: size(37px);
+      }
+    }
+
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: n;
+    }
+  }
+
+  &--otkritie {
+    img {
+      @media (min-width: $tablet-width) {
+        width: 156px;
+        height: 30px;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: size(184px);
+        height: size(36px);
+      }
+    }
+
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: m;
+    }
+  }
+
+  &--mr {
+    img {
+      @media (min-width: $tablet-width) {
+        width: 130px;
+        height: 30px;
+      }
+      @media (min-width: $desktop-width) {
+        width: size(146px);
+        height: size(82px);
+      }
+    }
+
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: i;
+    }
+  }
+
+  &--coldy {
+    img {
+      @media (min-width: $tablet-width) {
+        width: 114px;
+        height: 19px;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: size(121px);
+        height: size(20px);
+      }
+    }
+
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: j;
+    }
+  }
+
+  &--glavstroy {
+    img {
+      @media (min-width: $tablet-width) {
+        width: 172px;
+        height: 21px;
+      }
+      @media (min-width: $desktop-width) {
+        width: size(194px);
+        height: size(24px);
+      }
+    }
+
+    @media (min-width: $tablet-desktop-between) {
+      // grid-area: k;
+    }
+  }
+}

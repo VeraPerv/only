@@ -1,0 +1,92 @@
+.projects-box {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+
+  @media(min-width: $desktop-width) {
+    gap: size(2px);
+  }
+}
+
+.projects-box__img-wrapper {
+  display: block;
+  width: 65px;
+  height: 65px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    width: 75px;
+    height: 75px;
+    border-radius: 12px;
+  }
+
+  @media (min-width: $tablet-desktop-between) {
+    width: 60px;
+    height: 60px;
+  }
+
+  @media(min-width: $desktop-width) {
+    width: size(67px);
+    height: size(67px);
+    border-radius: size(12px);
+  }
+
+  img {
+    display: block;
+    object-fit: cover;
+
+    @media (min-width: $tablet-width) {
+      width: 75px;
+      height: 75px;
+    }
+
+    @media (min-width: $tablet-desktop-between) {
+      width: 60px;
+      height: 60px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: size(64px);
+      height: size(64px);
+    }
+  }
+
+  &--logo {
+    border: 2.5px solid $white-35;
+
+    @media(min-width: $desktop-width) {
+      border: size(2.5px) solid $white-35;
+    }
+  }
+}
+
+.projects-box__quantity {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-primary;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: -0.03em;
+  text-transform: lowercase;
+  color: $color-white;
+}
+
+.projects-box__img-wrapper--severstal-logo {
+  border: 2.5px solid $color-white7;
+
+  @media(min-width: $desktop-width) {
+      border: size(2.5px) solid $white-35;
+  }
+}

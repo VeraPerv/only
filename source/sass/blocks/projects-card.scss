@@ -1,0 +1,170 @@
+.projects-card {
+  display: block;
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 20px;
+  width: 315px;
+  min-height: 240px;
+  flex-shrink: 0;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    width: 357px;
+    min-height: 280px;
+    border-radius: 20px;
+  }
+
+  @media (min-width: $tablet-desktop-between) {
+    width: 295px;
+    min-height: 300px;
+    border-radius: 25px;
+    scale: 1;
+    transition: border-radius 0.4s ease, scale 0.4s ease;
+
+    @media (hover: hover) {
+    &:hover {
+      & {
+        border-radius: 46px;
+        transition: border-radius 0.3s ease, scale 0.3s ease;
+      }
+      & .projects-card__link {
+        scale: 1.04;
+        transition: border-radius 0.3s ease, scale 0.3s ease;
+      }
+    }
+  }
+
+  
+  }
+
+  @media(min-width: $desktop-width) {
+    width: size(330px);
+    min-height: size(320px);
+    border-radius: size(30px);
+    padding: size(30px) size(25px) size(30px) size(29px);
+
+    @media (hover: hover) {
+    &:hover {
+      & {
+        border-radius: size(52px);
+        transition: border-radius 0.3s ease, scale 0.3s ease;
+      }
+      & .projects-card__link {
+        scale: 1.04;
+        transition: border-radius 0.3s ease, scale 0.3s ease;
+      }
+
+    }
+  }
+  }
+}
+
+.projects-card__category {
+  margin: 0 0 5px;
+  font-family: $font-secondary;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+  color: $color-primary-opacity6;
+
+  @media (min-width: $tablet-width) {
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0 0 7px;
+  }
+
+  @media(min-width: $tablet-desktop-between) {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.02em;
+  }
+
+  @media(min-width: $desktop-width) {
+    font-size: size(12px);
+    line-height: size(16px);
+    margin-bottom: size(7px);
+  }
+}
+
+.projects-card__caption {
+  margin: 0 0 5px;
+  font-family: $font-primary;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: -0.03em;
+  color: $color-primary;
+
+  @media (min-width: $tablet-width) {
+    font-size: 15px;
+    line-height: 19px;
+  }
+
+  @media(min-width: $tablet-desktop-between) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media(min-width: $desktop-width) {
+    font-size: size(18px);
+    line-height: size(23px);
+    margin-bottom: size(5px);
+  }
+}
+
+.projects-card__about {
+  font-family: $font-secondary;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 21px;
+  letter-spacing: -0.02em;
+  color: $color-primary-opacity6;
+  margin: 0;
+
+  @media(min-width: $tablet-desktop-between) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  @media(min-width: $desktop-width) {
+    font-size: size(16px);
+    line-height: size(22px);
+    max-width: size(273px);
+  }
+}
+
+.projects-card__box {
+  margin-bottom: 69px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 97px;
+  }
+
+  @media(min-width: $tablet-desktop-between) {
+    margin-bottom: 106px;
+  }
+
+  @media(min-width: $desktop-width) {
+    margin-bottom: size(96px);
+  }
+}
+
+.projects-card__link {
+  display: block;
+  transition: scale 0.3s ease;
+
+  &:focus,
+  &:focus-visible {
+  &:focus,
+&:focus-visible {
+      outline: none;
+      scale: 1.04;
+      transition: border-radius 0.3s ease, scale 0.3s ease;
+
+  }
+  }
+}

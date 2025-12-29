@@ -1,0 +1,30 @@
+.companies {
+  padding-left: 15px;
+  padding-top: 9px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+    padding-top: 41px;
+  }
+
+  @media (min-width: $tablet-desktop-between) {
+    padding-top: 52px;
+  }
+
+  @media(min-width: $desktop-width) {
+    padding-top: size(62px);
+  }
+}
+
+.companies__caption {
+  font-family: $font-primary;
+  margin: 0 0 39px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.03em;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}

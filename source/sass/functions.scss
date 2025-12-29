@@ -1,5 +1,5 @@
 
-
+// сюда передается переменноая  $size-in-px  - раз мер элемента в пикселях делится на размер шрифта и умножается на 1 рем
 @function size($size-in-px) {
   @return calc($size-in-px / $fz-default * 1rem);
 }
@@ -9,5 +9,13 @@
 }
 
 @function size-tablet($size-in-px) {
-  @return calc($size-in-px / $vp-920 * 100vw);
+  @return calc($size-in-px / $vp-768 * 100vw); // относительно этой ширины будет происходить масштабирование
+}
+
+@function size-tablet-desktop($size-in-px) {
+  @return calc($size-in-px / $vp-1280 * 100vw); // относительно этой ширины будет происходить масштабирование
+}
+
+@function size-desktop($size-in-px) {
+  @return calc($size-in-px / $vp-1440 * 100vw); // относительно этой ширины будет происходить масштабирование
 }

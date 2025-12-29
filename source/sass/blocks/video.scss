@@ -1,0 +1,101 @@
+// .video {
+//   border-radius: 15px;
+//   min-width: 225px;
+//   display: flex;
+//   min-height: 135px;
+//   // background-repeat: no-repeat;
+//   // background-size: 98%;
+//   overflow: hidden;
+
+//   @media (min-width: $tablet-width) {
+//     // width: 416px;
+//     // height: 226px;
+//     width: 100%;
+//     // max-height: 226px;
+//     min-height: 226px;
+//     border-radius: 12px;
+//     height: size-tablet(226px);
+//   }
+
+//   @media (min-width: $tablet-desktop-between) {
+//     // width: 456px;
+//     // height: 230px;
+//     min-width: 456px;
+//     // min-height: 230px;
+//     max-height: unset;
+//     height: size-tablet-desktop(226px);
+//   }
+
+//   @media(min-width: $desktop-width) {
+//     border-radius: size(20px);
+//     height: size-desktop(230px);
+//     width: size-desktop(456px);
+//   }
+// }
+
+.video__video {
+  border-radius: 15px;
+  display: block;
+  min-height: 100%;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    border-radius: 12px;
+  }
+
+  @media (min-width: $tablet-desktop-between) {
+    border-radius: 15px;
+  }
+  @media (min-width: $desktop-width) {
+    border-radius: size(15px);
+  }
+}
+
+//////
+
+// .hero__video {
+//   position: relative;
+//   z-index: 5;
+// }
+
+// .video__video {
+//   width: 225px;
+//   height: 135px;
+//   object-fit: cover;
+//   transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1); /* Плавное изменение */
+// }
+
+// .video__video {
+//   width: 225px;
+//   height: 135px;
+//   object-fit: cover;
+//   transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1); /* Плавное изменение */
+// }
+
+// .video__video {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 225px;
+//   height: 135px;
+//   object-fit: cover;
+//   z-index: 10;
+//   pointer-events: none; /* Видео не перехватывает события мыши */
+//   transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+// }
+// .hero__video {
+//   max-width: 100vw;
+//   position: sticky;
+//   top: 0;
+//   width: 100%;
+//   transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+// }
+
+// .video__video {
+//   width: 100%;
+//   height: auto;
+//   object-fit: cover;
+//   transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+// }

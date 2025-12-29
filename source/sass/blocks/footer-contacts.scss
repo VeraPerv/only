@@ -1,45 +1,239 @@
-.footer-contacts {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  font-weight: 600;
-  font-size: size(12px);
-  text-transform: uppercase;
-  text-align: right;
+.footer-contacts__text {
+  display: none;
+
+  @media(min-width: $tablet-width) {
+    display: block;
+    margin: 0 0 25px;
+    font-family: $font-secondary;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+    letter-spacing: -0.02em;
+    color: $color-primary;
+  }
+
+  @media(min-width: $desktop-width) {
+    font-size: size(16px);
+    line-height: size(22px);
+    margin: 0 0 size(32px);
+  }
+}
+
+.footer-contacts__mail {
+  display: block;
+  border-bottom: 1px solid $color-primary;
+  width: min-content;
+  font-family: $font-secondary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration-skip-ink: none;
   color: $color-primary;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px 30px;
-}
+  margin-bottom: 15px;
 
-.footer-contacts__item {
-  font-size: size(12px);
-  line-height: size(14px);
-  max-width: size(120px);
-
-  @media (min-width: $tablet-width) {
-    font-size: size(10px);
+  @media(min-width: $tablet-width) {
+    margin-bottom: 4px;
   }
 
-  @media (min-width: $desktop-width) {
-    font-size: 12px;
+  @media(min-width: $desktop-width) {
+    font-size: size(22px);
+    line-height: size(26px);
   }
-}
 
-.footer-contacts__link {
-  &:hover,
+   @media (hover: hover) {
+    &:hover {
+      color: $color-primary-opacity6;
+      outline: none;
+      transition: color 0.3s ease, border-color 0.3s ease;
+      border-color: $color-primary-opacity6;
+    }
+  }
+
   &:focus,
   &:focus-visible {
-    color: $accent-color;
+    color: $color-primary-opacity6;
+    transition: color 0.3s ease;
     outline: none;
+    border-color: $color-primary-opacity6;
+    transition: color 0.3s ease, border-color 0.3s ease;
   }
 
   &:active {
-    color: $background-bullet;
+    color: $color-primary-opacity3;
+     border-color: $color-primary-opacity3;
+    transition: color 0.3s ease, border-color 0.3s ease;
   }
 
   &--disabled {
+    opacity: 0.2;
     pointer-events: none;
-    color: $background-disabled;
+  }
+}
+
+.footer-contacts__phone {
+  display: inline-block;
+  border-bottom: 1px solid $color-primary;
+  font-family: $font-secondary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: $color-primary;
+  margin-bottom: 15px;
+
+  @media(min-width: $desktop-width) {
+    font-size: size(22px);
+    line-height: size(26px);
+    margin-bottom: size(4px);
+  }
+
+   @media (hover: hover) {
+    &:hover {
+      color: $color-primary-opacity6;
+      outline: none;
+      transition: color 0.3s ease, border-color 0.3s ease;
+      border-color: $color-primary-opacity6;
+    }
+  }
+
+  &:focus,
+  &:focus-visible {
+    color: $color-primary-opacity6;
+    transition: color 0.3s ease;
+    outline: none;
+    border-color: $color-primary-opacity6;
+    transition: color 0.3s ease, border-color 0.3s ease;
+  }
+
+  &:active {
+    color: $color-primary-opacity3;
+     border-color: $color-primary-opacity3;
+    transition: color 0.3s ease, border-color 0.3s ease;
+  }
+
+  &--disabled {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+}
+
+.footer-contacts__phone-mail {
+  display: inline-block;
+
+  @media(min-width: $desktop-width) {
+    margin-bottom: size(15px);
+  }
+}
+
+.footer-contacts__telegram {
+  font-family: $font-secondary;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: -0.01em;
+  color: $color-primary;
+  margin-top: 9px;
+
+  @media(min-width: $tablet-width) {
+    margin-top: 4px;
+  }
+
+  @media(min-width: $desktop-width) {
+    margin-top: size(18px);
+    padding-left: 0;
+    font-size: size(24px);
+    line-height: size(29px);
+  }
+
+  &--box {
+    @media(min-width: $desktop-width) {
+      margin-top: size(7px);
+    }
+  }
+
+   @media (hover: hover) {
+      &:hover {
+        color: $color-primary-opacity6;
+        border-color: $color-primary-opacity6;
+        transition: color 0.3s ease, border-color 0.3s ease;
+        .footer-contacts__telegram-address {
+          border-color: $color-primary-opacity6;
+          transition: color 0.3s ease, border-color 0.3s ease;
+        }
+      }
+    }
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+      color: $color-primary-opacity6;
+      border-color: $color-primary-opacity6;
+      transition: color 0.3s ease, border-color 0.3s ease;
+
+        .footer-contacts__telegram-address {
+          border-color: $color-primary-opacity6;
+          transition: color 0.3s ease, border-color 0.3s ease;
+        }
+    }
+
+    &:active {
+      color: $color-primary-opacity3;
+      border-color: $color-primary-opacity3;
+      transition: color 0.3s ease, border-color 0.3s ease;
+        .footer-contacts__telegram-address {
+          border-color: $color-primary-opacity3;
+          transition: color 0.3s ease, border-color 0.3s ease;
+        }
+    }
+
+    &--disabled {
+      opacity: 0.2;
+      pointer-events: none;
+    }
+}
+
+.footer-contacts__telegram-text {
+  display: none;
+  @media(min-width: $tablet-width) {
+    font-family: $font-primary;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 14px;
+    letter-spacing: -0.04em;
+    text-transform: lowercase;
+    color: $color-primary-opacity6;
+    display: block;
+  }
+
+  @media(min-width: $desktop-width) {
+    margin-bottom: size(7px);
+    font-size: size(13px);
+    line-height: size(14px);
+  }
+}
+
+.footer-contacts__image-wrapper {
+  svg {
+    width: 16px;
+    height: 16px;
+
+    @media(min-width: $tablet-width) {
+      display: none;
+    }
+  }
+}
+
+
+.footer-contacts__telegram-address {
+  border-bottom: 1px solid $color-primary;
+  transition: color 0.3s ease, border-color 0.3s ease;
+
+  @media(min-width: $tablet-width) {
+    margin-top: 5px;
+    display: block;
+  }
+
+  @media(min-width: $desktop-width) {
+    border-width: size(1px);
+    margin-top: 0;
   }
 }

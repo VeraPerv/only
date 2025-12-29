@@ -1,0 +1,22 @@
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media(min-width: $tablet-width) {
+      justify-content: flex-start;
+    }
+
+    img {
+
+      @media(min-width: $tablet-width) {
+        width: 154px;
+        height: 24px;
+      }
+
+      @media(min-width: $desktop-width) {
+        width: size(188px);
+        height: size(30px);
+      }
+    }
+  }

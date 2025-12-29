@@ -1,0 +1,110 @@
+.rating-card {
+  width: 190px;
+  min-height: 190px;
+  padding: 23px 20px 20px;
+  background-color: $color-white;
+  border-radius: 15px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  @media (min-width: $tablet-width) {
+    // width: 170px;
+    width: 100%;
+    min-height: 170px;
+    padding: 21px 20px 20px;
+    border-radius: 20px;
+  }
+
+  @media(min-width: $desktop-width) {
+    border-radius: size(30px);
+    min-height: size(298px);
+    padding: size(30px) size(20px) size(29px) size(31px);
+  }
+}
+
+.rating-card__place {
+  font-family: $font-primary;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.03em;
+  text-align: right;
+  color: $color-primary;
+  margin-bottom: 4px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 7px;
+  }
+
+  @media(min-width: $tablet-desktop-between) {
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: size(26px);
+    line-height: size(31px);
+  }
+}
+
+.rating-card__organisation {
+  margin: 0;
+  font-family: $font-secondary;
+  font-weight: 500;
+  font-size: 15px;
+  flex-grow: 1;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: $color-primary-opacity6;
+
+  @media(min-width: $tablet-desktop-between) {
+    margin-bottom: 22px;
+  }
+
+  @media(min-width: $desktop-width) {
+    max-width: size(541px);
+    margin-bottom: size(22px);
+    font-size: size(15px);
+    line-height: size(20px);
+  }
+}
+
+.rating-card__category {
+  margin: 0;
+  font-family: $font-primary;
+  font-weight: 600;
+  font-size: 13px;
+
+  line-height: 16px;
+  letter-spacing: -0.03em;
+  text-transform: lowercase;
+  color: $color-primary;
+  max-width: 158px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 12px;
+    line-height: 14px;
+    max-width: 260px;
+  }
+
+  @media(min-width: $tablet-desktop-between) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  @media(min-width: $desktop-width) {
+    font-size: size(14px);
+    line-height: size(17px);
+    max-width: 100%;
+  }
+}
+
+.rating-card__break {
+  display: none;
+  @media(min-width: $desktop-width) {
+    display: inherit;
+  }
+}

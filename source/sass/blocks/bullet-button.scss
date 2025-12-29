@@ -1,0 +1,50 @@
+.bullet-button {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: $color-primary-opacity3;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  scale: 1;
+  transition: scale 0.3s ease;
+
+  @media(min-width: $tablet-desktop-between) {
+    width: 8px;
+    height: 8px;
+  }
+
+  @media(min-width: $desktop-width) {
+    width: size(10px);
+    height: size(10px);
+  }
+
+  &--current {
+    background-color: $color-primary;
+    opacity: 1;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      scale: 1.2;
+      transition:  scale 0.3s ease;
+    }
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    scale: 1.2;
+    transition: scale 0.3s ease;
+  }
+
+  &:active {
+    scale: 0.8;
+    transition: scale 0.3s ease;
+  }
+
+  &:disabled {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+}

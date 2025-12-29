@@ -1,0 +1,46 @@
+.clients {
+  padding: 32px 15px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 20px;
+  }
+
+  @media(min-width: $desktop-width) {
+    padding: 0 size(30px);
+    padding-top: size(130px);
+  }
+}
+
+.clients__about {
+  margin: 0;
+  display: none;
+  font-family: $font-primary;
+  color: $color-primary;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: $color-primary;
+    max-width: 500px;
+    margin: 0 auto 60px;
+  }
+
+  @media(min-width: $tablet-desktop-between) {
+    font-size: 24px;
+    line-height: 29px;
+    max-width: 580px;
+  }
+
+  @media( min-width: $desktop-width) {
+    font-weight: 600;
+    font-size: size(26px);
+    line-height: size(31px);
+    text-align: center;
+    max-width: size(676px);
+    margin: 0 auto size(80px);
+  }
+}

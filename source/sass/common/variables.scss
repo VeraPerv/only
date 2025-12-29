@@ -1,31 +1,50 @@
-$desktop-width: 1600px;
-$mobile-width-only: 919px;
-$tablet-width-only: 1599px;
-$tablet-width: 920px;
+$mobile-width: 375px;
+$mobile-width-only: 767px;
+$tablet-width: 768px;
+$tablet-width-only: 1279px;
+$tablet-desktop-between: 1280px;
+$desktop-width: 1440px;
+$desktop-width-more: 1920px;
 $vp-390: 390px;
 $vp-920: 920px;
 $vp-1440: 1440px;
 $vp-580: 580px;
-$vp-700: 700px;
+$vp-768: 768px;// относительно этой ширины будет происходить масштабирование
 $vp-1600: 1600px;
+$vp-1439: 1439px;
+$vp-1280: 1280px;
+$vp-1279: 1279px;
+$vp-768: 768px;
+$vp-1440: 1440px;
+$vp-1441: 1441px;
+
+// $fz-default: 16px;
+
+
+// $mobile-width-only: 919px;
+// $tablet-width-only: 1023px;
 
 /* Шрифты */
-$font-primary: "Pragmatica", "Arial", sans-serif;
+$font-primary: "TT Runs Trial", "Arial", sans-serif;
+$font-secondary: "TT Commons Pro Trial", "Arial", sans-serif;
 
 /* Размер шрифта */
-$fz-default: 12px;
+$fz-default: 16px;
 $max-size: 42px;
 $max-size-1: 42px;
 $max-size-2: 42px;
 
 /* Цвет */
-$accent-color: #ff4b41;
-$color-primary: #202020;
-$socials-color: #f0f0f0;
+// $accent-color: #ff4b41;
+$color-primary: #0e0e0e;
+$background-primary: #f1f1f1;
 $color-white: #ffffff;
-$background-promo-light: #f3b5dd;
-$background-catalog: #ebebeb;
-$background-bullet: #999999;
-$background-toggle: #f8f8f8;
-$background-disabled: #ebebeb;
-$background-hover: #e9473e;
+$border-color: #e4e4e4;
+$banner-accent-color: #00ffa9;
+$color-primary-opacity8: rgba(14, 14, 14, 0.8);
+$color-primary-opacity6: rgba(14, 14, 14, 0.6);
+$color-primary-opacity3: rgba(14, 14, 14, 0.3);
+$color-white7: rgba(255, 255, 255, 0.7);
+$color-primary-opacity4: rgba(14, 14, 14, 0.4);
+$slogan-color: #04251a;
+$white-35: rgba(255, 255, 255, 0.35);

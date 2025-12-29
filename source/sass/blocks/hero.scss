@@ -1,0 +1,463 @@
+.hero {
+  // position: relative;
+}
+
+.hero__wrapper {
+  padding: 32px 15px 0;
+  // position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding: 49px 20px 0;
+  }
+
+  @media (min-width: $tablet-desktop-between) {
+    display: grid;
+    // grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 2fr auto 2fr;
+    padding: 61px 20px 0;
+  }
+
+  @media(min-width: $desktop-width) {
+    padding: size(61px) size(30px) 0;
+    max-width: size(1440px);
+    margin: 0 auto;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: calc(100% - 30px);
+    height: 1px;
+    background-color: $border-color;
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+  }
+
+  &::before {
+    @media (min-width: $tablet-width) {
+      content: "";
+      display: block;
+      height: 120px;
+      width: 1px;
+      background-color: $border-color;
+      position: absolute;
+      top: 0;
+      left: 50%;
+    }
+
+    @media(min-width: $desktop-width) {
+      width: size(1px);
+      height: size(120px);
+    }
+  }
+}
+
+.hero__caption {
+  margin: 0 0 97px;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.01em;
+  color: $color-primary;
+  max-width: 464px;
+
+  // grid-column: 1 / -1;
+
+  @media (min-width: $tablet-width) {
+    font-size: 38px;
+    line-height: 47px;
+    max-width: 360px;
+    margin: 0 0 146px;
+  }
+
+  @media (min-width: $tablet-desktop-between) {
+    font-size: 42px;
+    line-height: 52px;
+    margin: 0 0 48px;
+    grid-column: 1 / 3;
+  }
+
+  @media(min-width: $desktop-width) {
+    font-size: size(50px);
+    line-height: size(63px);
+    letter-spacing: -0.03em;
+    max-width: size(500px);
+    margin: 0 0 size(28px);
+  }
+}
+
+.hero__awards {
+  display: none;
+
+  @media (min-width: $tablet-desktop-between) {
+    display: block;
+    grid-row: 1 / 3;
+    // grid-column: 2 / 3;
+    grid-column: 3 / 4;
+    justify-self: end;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    }
+}
+
+.hero__video-wrapper {
+  padding: 0 60px;
+  border-radius: 15px;
+  // overflow: hidden;
+  margin-bottom: 82px;
+
+  position: sticky;
+  background-color: pink;
+
+  @media(min-width: $tablet-width) {
+    padding: 0 156px;
+    margin-bottom:  191px;
+  }
+
+  @media(min-width: $tablet-desktop-between) {
+    padding: 0 392px;
+    margin-bottom: 69px;
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+  }
+
+  @media(min-width: $desktop-width) {
+    padding: 0;
+    // min-width: 36vw;
+    width: size(456px);
+    height: size(230px);
+    grid-column: 1 / -1;
+    // margin-bottom: size(112px);
+    margin: 0 auto size(110px);
+    // margin-bottom: size(110px);
+    z-index: -1;
+    // grid-row: 2/3;
+  }
+}
+
+.hero__video {
+  margin: 0 auto;
+  // transform: scale(0);
+  // animation: growVideo 1s ease-in-out forwards;
+  // position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+
+  @media (min-width: $tablet-width) {
+    // margin: 0 auto 191px;
+    margin: 0 auto;
+    grid-column: 1 / -1;
+  }
+
+  @media (min-width: $tablet-desktop-between) {
+    grid-row: 2 / 3;
+    margin: 0 auto 87px;
+     margin: 0 auto;
+  }
+}
+
+.hero__company-about {
+  margin: 0;
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    grid-column: 2 / 3;
+    margin-top: -3px;
+  }
+
+  @media (min-width: $tablet-desktop-between) {
+    grid-column: 3 / 4;
+  }
+
+  @media(min-width: $desktop-width) {
+    margin-top: 0;
+    margin-bottom: 0;
+    }
+  }
+
+.hero__presentation {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    margin-top: 11px;
+    grid-row: 3 / 4;
+    gap: 5px;
+  }
+
+  @media (min-width: $tablet-desktop-between) {
+    grid-row: 2 / 3;
+  }
+
+  @media(min-width: $tablet-desktop-between) {
+    padding-left: 21px;
+  }
+
+  @media(min-width: $desktop-width) {
+    padding-left: size(29px);
+    margin-top: size(11px);
+    gap: size(5px);
+  }
+}
+
+.hero__about {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  position: relative;
+  padding: 0 0 15px;
+  gap: 0;
+  align-items: stretch;
+
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 19px;
+    align-items: start;
+    border-bottom: 1px solid $border-color;
+  }
+
+  @media (min-width: $tablet-desktop-between) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column: 1 / -1;
+    padding: 0 0 31px;
+  }
+
+  @media(min-width: $desktop-width) {
+    grid-template-columns: size(345px) size(316px) size(366px) auto;
+    gap: 0 size(20px);
+    padding: 0 0 size(38px);
+    border-width: size(1px);
+  }
+
+  &::before {
+    @media (min-width: $tablet-width) {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 100%;
+      background-color: $border-color;
+      position: absolute;
+      left: 50%;
+      top: 0;
+    }
+
+    @media(min-width: $desktop-width) {
+      width: size(1px);
+    }
+  }
+}
+
+.hero__button {
+  grid-column: 1 / -1;
+  margin-top: 31px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 2 / 3;
+    margin-top: 28px;
+    width: 217px;
+    margin-left: 21px;
+  }
+
+  @media (min-width: $tablet-desktop-between) {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+
+    margin-top: 9px;
+    width: 230px;
+    margin-left: 21px;
+    justify-self: end;
+  }
+
+  @media(min-width: $desktop-width) {
+    width: size(250px);
+    margin-left: 0;
+    margin-top: 0;
+    min-height: size(59px);
+  }
+}
+
+.hero__rating {
+  @media(min-width: $tablet-width) {
+    grid-column: 1 / 2;
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+  @media (min-width: $tablet-desktop-between) {
+    // grid-row: 1 / 3;
+    grid-row: 2 / 3;
+    // min-width: 352px;
+    // margin-top: 32px;
+  }
+
+  @media(min-width: $desktop-width) {
+    grid-row: 1 / 3;
+    margin-top: size(82px);
+  }
+}
+
+.hero__contacts {
+  @media (min-width: $tablet-desktop-between) {
+    grid-column: 2 / 3;
+    // grid-row: 2 / 3;
+    grid-row: 1 / 3;
+  }
+}
+
+.hero__video {
+  // animation: growVideo 1s ease-in-out forwards;
+}
+
+@keyframes growVideo {
+  0% {
+    opacity: 0;
+    transform: scale(0.01);
+  }
+  50% {
+    opacity: 0.99;
+    transform: scale(0.99);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+.hero__video {
+  // animation: growVideo 5s ease-in-out forwards;
+  // transform-origin: center;
+}
+
+.hero__video-wrapper {
+  border-radius: 15px;
+  min-width: 225px;
+  display: flex;
+  min-height: 135px;
+  // background-repeat: no-repeat;
+  // background-size: 98%;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    // width: 416px;
+    // height: 226px;
+    width: 100%;
+    // max-height: 226px;
+    min-height: 226px;
+    border-radius: 12px;
+    height: size-tablet(226px);
+  }
+
+  @media (min-width: $tablet-desktop-between) {
+    // width: 456px;
+    // height: 230px;
+    min-width: 456px;
+    // min-height: 230px;
+    max-height: unset;
+    height: size-tablet-desktop(226px);
+  }
+
+  @media(min-width: $desktop-width) {
+    border-radius: size(20px);
+    height: size-desktop(230px);
+    width: size-desktop(456px);
+  }
+}
+
+// .hero__video-wrapper {
+//   /* базовые стили - предположим фиксированная высота */
+//   height: 400px; /* или ваша текущая высота */
+//   position: relative;
+//   transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+// }
+
+// .hero__video-wrapper--sticky {
+//   position: absolute !important; /* или fixed */
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100vh; /* ✅ Высота всей секции */
+//   z-index: 10;
+//   .hero__video {
+//     position: sticky;
+//     top: 0;
+//     left: 0;
+//     bottom: 0;
+//     right: 0;
+//     width: 100%;
+//     height: 100vh; /* ✅ Высота всей секции */
+//   }
+// }
+
+// .hero {
+//   position: relative; /* ✅ Контекст для absolute */
+//   min-height: 100vh; /* ✅ Минимальная высота секции */
+//   overflow: hidden; /* ✅ Скрываем переполнение */
+// }
+
+// .hero {
+//   position: relative;
+//   min-height: 100vh;
+// }
+
+// .hero__video-wrapper {
+//   height: 400px; /* базовая высота */
+//   position: relative;
+//   transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+//   z-index: 1;
+// }
+
+// .hero__video-wrapper--sticky {
+//   position: fixed !important; /* ✅ fixed для sticky */
+//   top: 0;
+//   left: 0;
+//   width: 100vw; /* ✅ ширина viewport */
+//   height: 100vh; /* ✅ высота viewport */
+//   z-index: 100;
+// }
+
+// .hero__video {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover; /* ✅ видео заполняет контейнер */
+// }
+
+
+// .hero__video-wrapper {
+//   /* ✅ Базовые стили */
+//   transform-origin: center center;
+//   transition: transform 0.12s linear; /* ✅ СУПЕР-ПЛАВНЫЙ scale */
+//   will-change: transform;
+// }
+
+// .hero__video-wrapper[style*="position: sticky"] {
+//   /* ✅ Scale по CSS переменной */
+//   transform: scale(var(--scale, 1)) !important;
+// }
+
+// .hero__video-wrapper video {
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+// }
+.hero__video-wrapper {
+  transform-origin: center center;
+  transition: transform 0.08s linear; /* ✅ СУПЕР-ПЛАВНЫЙ */
+  will-change: transform;
+  transform: scale(var(--scale, 1)); /* ✅ Всегда scale */
+}
+
+// .hero__video-wrapper {
+//   transform-origin: center center;
+//   transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* ✅ Пружинит */
+//   will-change: transform;
+//   transform: scale(var(--scale, 1));
+// }

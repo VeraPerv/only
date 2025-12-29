@@ -1,0 +1,131 @@
+.presentation__pdf {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: -0.03em;
+  text-transform: lowercase;
+  text-align: center;
+  color: $color-primary;
+  border-radius: 12px;
+  padding: 14px;
+  width: 54px;
+  min-height: 45px;
+  background-color: $color-white;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+
+  @media(min-width: $desktop-width) {
+    width: size(57px);
+    min-height: size(49px);
+    border-radius: size(15px);
+    font-size: size(13px);
+    line-height: size(16px);
+    padding: size(14px);
+  }
+
+    @media (hover: hover) {
+    &:hover {
+      background-color: $banner-accent-color;
+      transition: background-color 0.3s ease;
+    }
+  }
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+      background-color: $banner-accent-color;
+      transition: background-color 0.3s ease;
+    }
+
+    &:active {
+      background-color: $banner-accent-color;
+      opacity: 0.3;
+      transition: opacity 0.3s ease, background-color 0.3s ease;
+    }
+
+    &--disabled {
+      pointer-events: none;
+      opacity: 0.2;
+    }
+}
+
+.presentation__pitch {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: -0.03em;
+  text-transform: lowercase;
+  text-align: center;
+  color: $color-primary;
+  border-radius: 12px;
+  padding: 14px;
+  width: 65px;
+  min-height: 45px;
+  background-color: $color-white;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+
+  @media(min-width: $desktop-width) {
+    width: size(70px);
+    min-height: size(49px);
+    border-radius: size(15px);
+    font-size: size(13px);
+    line-height: size(16px);
+    padding: size(14px);
+  }
+
+    @media (hover: hover) {
+    &:hover {
+      background-color: $banner-accent-color;
+      transition: background-color 0.3s ease;
+    }
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    background-color: $banner-accent-color;
+    transition: background-color 0.3s ease;
+  }
+
+  &:active {
+    background-color: $banner-accent-color;
+    opacity: 0.3;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+  }
+
+  &--disabled {
+    pointer-events: none;
+    opacity: 0.2;
+  }
+}
+
+.presentation__caption {
+  margin: 0;
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 14px;
+  letter-spacing: -0.04em;
+  text-transform: lowercase;
+  color: $color-primary-opacity6;
+  padding-top: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  max-width: 150px;
+
+  @media(min-width: $desktop-width) {
+    font-size: size(13px);
+    line-height: size(14px);
+    padding-top: size(8px);
+    padding-left: size(5px);
+    padding-right: size(5px);
+    max-width: size(150px);
+  }
+}

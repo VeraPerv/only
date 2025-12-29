@@ -1,0 +1,48 @@
+.banners-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: block;
+}
+
+.banners-list__item {
+  display: none;
+
+  &--current {
+    display: block;
+  }
+}
+
+.banners-list__dev-item {
+  @media(min-width: $tablet-width) {
+    padding-top: 0;
+    padding-left: 5px;
+  }
+}
+
+.banners-list__dev-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background-color: $banner-accent-color;
+  width: 40px;
+  height: 32px;
+
+  @media(min-width: $tablet-desktop-between) {
+    width: 45px;
+    height: 36px;
+  }
+
+  @media(min-width: $desktop-width) {
+    width: size(45px);
+    height: size(36px);
+    border-radius: size(12px);
+
+    svg {
+      width: size(22px);
+      height: size(28px);
+    }
+
+  }
+}

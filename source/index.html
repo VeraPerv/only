@@ -5,871 +5,1596 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Сайт Paratype.">
-  <title>Paratype</title>
+  <title>Only</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon.png">
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon.png">
   <link rel="icon" href="favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="preload" href="fonts/pragmatica-next_vf.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/pragmatica-next_vf.woff2" as="font" type="font/woff2" crossorigin="anonymous"> -->
+  <link rel="preload" href="fonts/tt-commons-pro-trial-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/tt-commons-pro-trial-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/tt-runs-trial-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/tt-runs-trial-demibold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/tt-runs-trial-exrabold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/tt-runs-trial-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="sass/style.scss">
 </head>
 
 <body>
   <header class="header">
-    <nav class="header__nav header-nav">
-      <div class="header-nav__wrapper">
-        <a class="header__info" href="#">
-          <span class="header__discount header-discount">25% Sale</span>
-          <span class="header__sale">Осенняя распродажа шрифтов</span>
-        </a>
-        <div class="header-nav__logo logo">
-          <span class="logo__img-wrapper">
-            <picture>
-              <source media="(min-width:920px)" srcset="img/logo-desktop.svg" width="230" height="60" type="image/svg+xml">
-              <img class="logo__img" width="40" height="33" src="img/logo-mobile.svg" alt="Логотип компании Paratype.">
-            </picture>
-          </span>
-          <span class="logo__text">Основано в 1998</span>
-        </div>
-        <button class="header-nav__toggle" type="button" id="toggle-btn">
-          <span class="visually-hidden">Кнопка закрытия,открытия меню.</span>
-        </button>
-        <a class="header-nav__link header-nav__link--favorites" href="#">
-          <span class="visually-hidden">Избранное.</span>
-          <span class="header-nav__text">0</span>
-        </a>
-        <a class="header-nav__link header-nav__link--cart" href="#">
-          <span class="visually-hidden">Корзина.</span>
-          <span class="header-nav__text">0</span>
-        </a>
-        <a class="header-nav__link header-nav__link--user" href="#">
-          <span class="visually-hidden">Корзина.</span>
-          <span class="header-nav__text header-nav__text--account">Мой аккаунт</span>
-        </a>
-        <div class="header-nav__menu-wrapper">
-          <ul class="header-nav__menu-primary menu-primary">
-            <li class="menu-primary__item">
-              <a class="menu-primary__link menu-primary__link--current" href="#">Главная</a>
-            </li>
-            <li class="menu-primary__item">
-              <a class="menu-primary__link" href="#">Каталог</a>
-              <span class="menu-primary__text menu-primary__catalog-quantity">988</span>
-            </li>
-            <li class="menu-primary__item">
-              <a class="menu-primary__link menu-primary__link--active" href="#">Коллекции</a>
-              <span class="menu-primary__text menu-primary__collection-quantity">45</span>
-            </li>
-          </ul>
-          <ul class="header-nav__menu-secondary menu-secondary">
-            <li class="menu-secondary__item">
-              <a class="menu-secondary__link" href="#">Компания</a>
-            </li>
-            <li class="menu-secondary__item">
-              <a class="menu-secondary__link" href="#">Справочник</a>
-            </li>
-          </ul>
-          <div class="header-nav__profile profile">
-            <a class="profile__link" href="#">Мой профиль</a>
-            <ul class="profile__menu profile-menu">
-              <li class="profile-menu__item">
-                <a class="profile-menu__link" href="#">Войти</a>
-              </li>
-              <li class="profile-menu__item">
-                <a class="profile-menu__link" href="#">Зарегистрироваться</a>
-              </li>
-            </ul>
-          </div>
-          <ul class="header-nav__rules rules-list">
-            <li class="rules-list__item">
-              <a class="rules-list__link" href="#">FAQ</a>
-            </li>
-            <li class="rules-list__item">
-              <a class="rules-list__link" href="#">Лицензии</a>
-            </li>
-            <li class="rules-list__item">
-              <a class="rules-list__link" href="#">Правила продажи</a>
-            </li>
-            <li class="rules-list__item">
-              <a class="rules-list__link" href="#">Возврат и замена</a>
-            </li>
-            <li class="rules-list__item">
-              <a class="rules-list__link" href="#">Контакты</a>
-            </li>
-          </ul>
-            <div class="header-nav__footer nav-footer">
-            <ul class="nav-footer__socials-list socials-list">
-              <li class="socials-list__item">
-                <a class="socials-list__link socials-list__link--telegram" href="https://t.me/paratype_fonts"
-                  target="_blank" rel="noopener noreferrer">
-                  <span class="visually-hidden">Телеграм.</span>
-                </a>
-              </li>
-              <li class="socials-list__item">
-                <a class="socials-list__link socials-list__link--vk" href="https://vk.com/paratypefoundry"
-                  target="_blank" rel="noopener noreferrer">
-                  <span class="visually-hidden">В контакте.</span>
-                </a>
-              </li>
-            </ul>
-            <div class="nav-footer__copyright-wrapper">
-              <ul class="nav-footer__copyright copyright-list">
-                <li class="nav-footer__info copyright-list__item">© 1998–2022.Паратайп.</li>
-                <li class="nav-footer__info copyright-list__item">Все авторские права защищены.</li>
-              </ul>
-              <a class="nav-footer__design design-company" href="https://wemakefab.ru/" target="_blank"
-                rel="noopener noreferrer">Дизайн Wemakefab</a>
-            </div>
-          </div>
-          <label class="header-nav__theme-switcher theme-switcher" for="theme"
-            aria-label="переключатель цветовой схемы">
-            <input class="theme-switcher__input visually-hidden" type="checkbox"  name="theme"
-              id="theme">
-            <span class="theme-switcher__slider">
-              <span class="theme-switcher__light">
-                <span class="theme-switcher__text">Дневная тема</span>
-              </span>
-              <span class="theme-switcher__night">
-                <span class="theme-switcher__text">Ночная тема</span>
-              </span>
-            </span>
-          </label>
-        </div>
-        <a class="header-nav__link header-nav__link--search" href="#">
-          <span class="visually-hidden">Кнопка поиска по сайту.</span>
-        </a>
+    <div class="header__wrapper">
+      <div class="header__logo">
+        <img src="img/content/logo.svg" width="52" height="17" alt="Логотип Only.">
       </div>
-    </nav>
+      <nav class="header__nav header-nav">
+        <ul class="header-nav__list">
+          <li class="header-nav__item">
+            <a class="header-nav__link" href="#">Проекты</a>
+          </li>
+          <li class="header-nav__item">
+            <a class="header-nav__link" href="#">Компания</a>
+          </li>
+          <li class="header-nav__item">
+            <a class="header-nav__link" href="#">Направления</a>
+          </li>
+          <li class="header-nav__item">
+            <a class="header-nav__link" href="#">Контакты</a>
+          </li>
+          <li class="header-nav__item">
+            <a class="header-nav__link" href="#">Блог</a>
+          </li>
+          <li class="header-nav__item">
+            <a class="header-nav__link" href="#">Карьера</a>
+          </li>
+        </ul>
+        <a class="header-nav__favourites" href="#">
+          <span class="visually-hidden">Переход на страницу избранного.</span>
+          <span class="header-nav__favourites-text">40</span>
+          <div class="header-nav__favourites-image">
+          <svg width="22" height="21" role="img" aria-hidden="true" focusable="false">
+            <use href="/__spritemap#sprite-star"></use>
+          </svg>
+          </div>
+        </a>
+        <button class="header-nav__button" type="button">
+          <span class="visually-hidden">Кнопка открытия и закрытия мобильного меню.</span>
+        </button>
+      </nav>
+    </div>
   </header>
   <main class="main">
-    <h1 class="visually-hidden">Сайт компании Paratype.</h1>
-    <section class="promo">
-      <div class="promo__wrapper">
-        <h2 class="visually-hidden">Актуальные акции.</h2>
-        <div class="promo__slider promo-slider">
-          <ul class="promo__slider-list">
-            <li class="promo__slider-item promo__slider-item--current promo-card">
-              <a class="promo__slider-card promo__slider-card--dark" href="#">
-                <span class="promo-card__quantity">280</span>
-                <h3 class="promo-card__caption">Распродажа</h3>
-                <span class="promo-card__discount discount-mark">45</span>
-              </a>
-            </li>
-            <li class="promo__slider-item  promo-card">
-              <a class="promo__slider-card promo__slider-card--light" href="#">
-                <span class="promo-card__quantity">20</span>
-                <h3 class="promo-card__caption ">Хиты продаж</h3>
-                <span class="promo-card__discount"></span>
-              </a>
-            </li>
-          </ul>
-          <div class="promo__swiper-pagination swiper-pagination">
-            <button class="swiper-pagination__bullet swiper-pagination__bullet--active" type="button">
-              <span class="visually-hidden">Кнопка переключения слайдов.</span>
-            </button>
-            <button class="swiper-pagination__bullet" type="button">
-              <span class="visually-hidden">Кнопка переключения слайдов.</span>
-            </button>
-          </div>
+    <h1 class="visually-hidden">Сайт компании Only.</h1>
+    <section class="hero">
+      <div class="hero__wrapper">
+      <h2 class="hero__caption">Creative digital production</h2>
+      <ul class="hero__awards awards-list">
+        <li class="awards-list__item">
+          <span class="awards-list__text">25</span>
+            <a class="awards-list__link" href="#">
+              <span class="visually-hidden">Наши награды.</span>
+            <svg width="35" height="24" role="img" aria-hidden="true" focusable="false">
+              <use href="/__spritemap#sprite-awards-1"></use>
+          </svg>
+          </a>
+        </li>
+        <li class="awards-list__item">
+          <span class="awards-list__text">1</span>
+          <a class="awards-list__link" href="#">
+            <span class="visually-hidden">Наши награды.</span>
+            <svg width="40" height="12" role="img" aria-hidden="true" focusable="false">
+            <use href="/__spritemap#sprite-awards-2"></use>
+          </svg>
+          </a>
+        </li>
+        <li class="awards-list__item">
+          <span class="awards-list__text">26</span>
+          <a class="awards-list__link" href="#">
+             <span class="visually-hidden">Наши награды.</span>
+              <svg width="24" height="24" role="img" aria-hidden="true" focusable="false">
+            <use href="/__spritemap#sprite-awards-3"></use>
+          </svg>
+        </a>
+        </li>
+        <li class="awards-list__item">
+          <span class="awards-list__text">22</span>
+          <a class="awards-list__link" href="#">
+            <span class="visually-hidden">Наши награды.</span>
+            <svg width="21" height="26" role="img" aria-hidden="true" focusable="false">
+            <use href="/__spritemap#sprite-awards-4"></use>
+          </svg>
+          </a>
+        </li>
+        <li class="awards-list__item">
+          <span class="awards-list__text">40</span>
+          <a class="awards-list__link" href="#">
+            <span class="visually-hidden">Наши награды.</span>
+              <svg width="25" height="29" role="img" aria-hidden="true" focusable="false">
+            <use href="/__spritemap#sprite-awards-5"></use>
+          </svg>
+          </a>
+          </li>
+      </ul>
+      <div class="hero__video-wrapper">
+        <!-- style="background-image: var(--hero-image);" -->
+    <div class="hero__video video">
+      <video class="video__video" src="img/video/ONLY_Teaser_v056_sound.mp4" autoplay muted playsinline="true"></video>
+    </div>
+    </div>
+    <div class="hero__about">
+    <div class="hero__rating rating">
+      <div class="rating__counter">10</div>
+        <span class="rating__text">Лет</span>
+        <p class="rating__info">Лучший креативный разработчик для b2b</p>
+    </div>
+    <div class="hero__contacts contacts">
+      <!-- Для состояния disabled добавить на ссылки класс класс__ссылки два тире disabled" -->
+      <div class="contacts__phone-email">
+        <a class="contacts__mail" href="mailto:hello@only.digital">hello@only.digital</a>
+        <a class="contacts__phone" href="tel:+74957409979">+7 (495) 740 99 79</a>
+      </div>
+      <div class="contacts__telegram telegram">
+      <span class="telegram__text">Telegram для связи</span>
+      <a class="telegram__telegram" href="#">@onlydigitalagency
+      <span class="telegram__image-wrapper">
+        <svg width="12" height="11" role="img" aria-hidden="true" focusable="false">
+            <use href="/__spritemap#sprite-telegram-hero"></use>
+          </svg>
+      </span>
+      </a>
+    </div>
+    </div>
+
+    <p class="hero__company-about company-about">Only.digital — агентство с фокусом на сильную аналитику, дизайн и разработку. В основе наших проектов лежат идеи, создаваемые на стыке стратегии, креатива и технологий.</p>
+
+    <div class="hero__presentation presentation">
+      <a class="presentation__pdf" href="#">Pdf
+        <span class="visually-hidden">Ссылка на презентацию компании Only в pdf.</span>
+      </a>
+      <a class="presentation__pitch" href="#">Pitch
+        <span class="visually-hidden">Ссылка на краткую презентацию компании Only.</span>
+      </a>
+      <h3 class="presentation__caption">Презентация компании</h3>
+    </div>
+
+    <button class="hero__button button" type="button">Начать проект</button>
+    </div>
+    </div>
+    </section>
+    <section class="portfolio">
+      <div class="portfolio__text-wrapper">
+        <p class="portfolio__caption">Аналитика, брендинг и&nbsp;разработка для B2B</p>
+        <p class="portfolio__text portfolio__text--first">
+          Only — digital–агентство с фокусом на сильную аналитику, дизайн и разработку. В основе наших проектов лежат идеи, создаваемые на стыке стратегии, креатива и технологий.
+        </p>
+        <p class="portfolio__text portfolio__text--second">Обеспечиваем компании лучшими техническими и дизайн-решениями, создавая digital-проекты.</p>
+        <h2 class="portfolio__label">Проекты</h2>
+      </div>
+  <section class="portfolio__largest-companies companies">
+  <h3 class="companies__caption">Крупнейшие компании</h3>
+  <ul class="companies__companies-list companies-list">
+    <li class="companies-list__item">
+      <a class="companies-list__link" href="#">
+        <div class="companies-list__img-wrapper">
+          <!-- <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/portfolio/sibur-desktop@1x.webp 1x, img/content/portfolio/sibur-desktop@2x.webp 2x" width="400" height="400">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/content/portfolio/sibur-tablet@1x.webp 1x, img/content/portfolio/sibur-tablet@2x.webp 2x" width="357" height="349">
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/content/portfolio/sibur-mobile@1x.webp 1x, img/content/portfolio/sibur-mobile@2x.webp 2x" width="315" height="315">
+            <source media="(min-width: 1440px)" srcset="img/content/portfolio/sibur-desktop@1x.jpg 1x, img/content/portfolio/sibur-desktop@2x.jpg 2x" type="image/jpg" width="400" height="400">
+            <source media="(min-width: 768px)" srcset="img/content/portfolio/sibur-tablet@1x.jpg 1x, img/content/portfolio/sibur-tablet@2x.jpg 2x" type="image/jpg" width="357" height="349">
+            <source media="(max-width: 767px)" srcset="img/content/portfolio/sibur-mobile@1x.jpg 1x, img/content/portfolio/sibur-mobile@2x.jpg 2x" type="image/jpg" width="315" height="315">
+            <img width="315" height="315" src="img/content/portfolio/sibur-mobile@1x.jpg" srcset="img/content/portfolio/sibur-mobile@2x.jpg 2x" alt="Сибур." loading="lazy">
+          </picture> -->
+      <picture>
+        <source type="image/webp" media="(max-width:767px)" srcset="img/content/portfolio/sibur-mobile@1x.webp 1x, img/content/portfolio/sibur-mobile@2x.webp 2x">
+        <source type="image/webp" media="(min-width:768px)and(max-width:1439px)" srcset="img/content/portfolio/sibur-tablet@1x.webp 1x, img/content/portfolio/sibur-tablet@2x.webp 2x">
+        <source type="image/webp" media="(min-width:1440px)" srcset="img/content/portfolio/sibur-desktop@1x.webp 1x, img/content/portfolio/sibur-desktop@2x.webp 2x">
+        <source type="image/jpeg" media="(max-width:767px)" srcset="img/content/portfolio/sibur-mobile@1x.jpg 1x, img/content/portfolio/sibur-mobile@2x.jpg 2x">
+        <source type="image/jpeg" media="(min-width:768px)and(max-width:1439px)" srcset="img/content/portfolio/sibur-tablet@1x.jpg 1x, img/content/portfolio/sibur-tablet@2x.jpg 2x">
+        <source type="image/jpeg" media="(min-width:1440px)" srcset="img/content/portfolio/sibur-desktop@1x.jpg 1x, img/content/portfolio/sibur-desktop@2x.jpg 2x">
+        <img src="img/content/portfolio/sibur-mobile@1x.jpg" srcset="img/content/portfolio/sibur-mobile@2x.jpg 2x" width="315" height="315" alt="Сибур." loading="lazy">
+      </picture>
+
         </div>
+        <h4 class="companies-list__caption">Сибур</h4>
+        <!-- <h4 class="companies-list__caption-extended">Корпоративный сайт Сибура</h4> -->
+        <p class="companies-list__text">3D, Анимация, Production, Web-design</p>
+        <!-- <p class="companies-list__text-extended">Адаптация нового брендинга для digital. Разработка, дизайн основного сайта и подразделений</p> -->
+      </a>
+    </li>
+      <li class="companies-list__item">
+      <a class="companies-list__link" href="#">
+        <div class="companies-list__img-wrapper">
+          <!-- <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/portfolio/mr-desktop@1x.webp 1x, img/content/portfolio/mr-desktop@2x.webp 2x" width="400" height="400">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/content/portfolio/mr-tablet@1x.webp 1x, img/content/portfolio/mr-tablet@2x.webp 2x" width="357" height="349">
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/content/portfolio/mr-mobile@1x.webp 1x, img/content/portfolio/mr-mobile@2x.webp 2x" width="315" height="315">
+            <source media="(min-width: 1440px)" srcset="img/content/portfolio/mr-desktop@1x.jpg 1x, img/content/portfolio/mr-desktop@2x.jpg 2x" type="image/jpg" width="400" height="400">
+            <source media="(min-width: 768px)" srcset="img/content/portfolio/mr-tablet@1x.jpg 1x, img/content/portfolio/mr-tablet@2x.jpg 2x" type="image/jpg" width="357" height="349">
+            <source media="(max-width: 767px)" srcset="img/content/portfolio/mr-mobile@1x.jpg 1x, img/content/portfolio/mr-mobile@2x.jpg 2x" type="image/jpg" width="315" height="315">
+            <img width="315" height="315" src="img/content/portfolio/mr-mobile@1x.jpg" srcset="img/content/portfolio/mr-mobile@2x.jpg 2x" alt="MR." loading="lazy">
+          </picture> -->
+          <picture>
+<source type="image/webp" media="(max-width:767px)" srcset="img/content/portfolio/mr-mobile@1x.webp 1x, img/content/portfolio/mr-mobile@2x.webp 2x">
+<source type="image/webp" media="(min-width:768px)and(max-width:1439px)" srcset="img/content/portfolio/mr-tablet@1x.webp 1x, img/content/portfolio/mr-tablet@2x.webp 2x">
+<source type="image/webp" media="(min-width:1440px)" srcset="img/content/portfolio/mr-desktop@1x.webp 1x, img/content/portfolio/mr-desktop@2x.webp 2x">
+<source type="image/jpeg" media="(max-width:767px)" srcset="img/content/portfolio/mr-mobile@1x.jpg 1x, img/content/portfolio/mr-mobile@2x.jpg 2x">
+<source type="image/jpeg" media="(min-width:768px)and(max-width:1439px)" srcset="img/content/portfolio/mr-tablet@1x.jpg 1x, img/content/portfolio/mr-tablet@2x.jpg 2x">
+<source type="image/jpeg" media="(min-width:1440px)" srcset="img/content/portfolio/mr-desktop@1x.jpg 1x, img/content/portfolio/mr-desktop@2x.jpg 2x">
+<img width="315" height="315" src="img/content/portfolio/mr-mobile@1x.jpg" srcset="img/content/portfolio/mr-mobile@2x.jpg 2x" alt="MR." loading="lazy">
+</picture>
+
       </div>
-    </section>
-    <section class="category">
-      <div class="category__wrapper">
-        <h2 class="visually-hidden">Категории шрифтов.</h2>
-        <ul class="category__list category-list">
-          <li class="category-list__item">
-            <a class="category-list__card category-card" href="#">
-              <span class="category-card__total-count">340</span>
-              <span class="category-card__new-count">6</span>
-              <div class="category-card__img-wrapper">
-                <svg class="category-card__img category-card__img--grotesk" width="61" height="35" role="img" aria-label="Гротеск.">
-                  <use href="/__spritemap#sprite-letter-grotesk"></use>
-                </svg>
-              </div>
-              <h3 class="category-card__caption">Гротески</h3>
-            </a>
-          </li>
-          <li class="category-list__item">
-            <a class="category-list__card category-card" href="#">
-              <span class="category-card__total-count">89</span>
-              <div class="category-card__img-wrapper">
-                <svg class="category-card__img category-card__img--antique" width="57" height="34" role="img" aria-label="Антика.">
-                  <use href="/__spritemap#sprite-letter-antique"></use>
-                </svg>
-              </div>
-              <h3 class="category-card__caption">Антиквы</h3>
-            </a>
-          </li>
-          <li class="category-list__item">
-            <a class="category-list__card category-card" href="#">
-              <span class="category-card__total-count">129</span>
-              <span class="category-card__new-count">2</span>
-              <div class="category-card__img-wrapper">
-                <svg class="category-card__img category-card__img--brusque" width="57" height="34" role="img" aria-label="Брусковые.">
-                  <use href="/__spritemap#sprite-letter-brusque"></use>
-                </svg>
-              </div>
-              <h3 class="category-card__caption">Брусковые</h3>
-            </a>
-          </li>
-          <li class="category-list__item">
-            <a class="category-list__card category-card" href="#">
-              <span class="category-card__total-count">278</span>
-              <div class="category-card__img-wrapper">
-                <svg class="category-card__img category-card__img--accidental" width="57" height="34" role="img" aria-label="Акцидентные.">
-                  <use href="/__spritemap#sprite-letter-accidental"></use>
-                </svg>
-              </div>
-              <h3 class="category-card__caption">Акцидентные</h3>
-            </a>
-          </li>
-          <li class="category-list__item">
-            <a class="category-list__card category-card" href="#">
-              <span class="category-card__total-count">23</span>
-              <div class="category-card__img-wrapper">
-                <svg class="category-card__img category-card__img--handwritten" width="57" height="34" role="img" aria-label="Рукописные.">
-                  <use href="/__spritemap#sprite-letter-handwritten"></use>
-                </svg>
-              </div>
-              <h3 class="category-card__caption">Рукописные</h3>
-            </a>
-          </li>
-          <li class="category-list__item">
-            <a class="category-list__card category-card" href="#">
-              <span class="category-card__total-count">8</span>
-              <div class="category-card__img-wrapper">
-                <svg class="category-card__img category-card__img--non-alphabetic" width="57" height="34" role="img" aria-label="Неалфавитные.">
-                  <use href="/__spritemap#sprite-letter-non-alphabetic"></use>
-                </svg>
-              </div>
-              <h3 class="category-card__caption">Неалфавитные</h3>
-            </a>
-          </li>
-          <li class="category-list__item">
-            <a class="category-list__card category-card" href="#">
-              <span class="category-card__total-count">280</span>
-              <div class="category-card__img-wrapper">
-                <svg class="category-card__img category-card__img--monospaced" width="57" height="34" role="img" aria-label="Моноширинные.">
-                  <use href="/__spritemap#sprite-letter-monospaced"></use>
-                </svg>
-              </div>
-              <h3 class="category-card__caption">Моноширинные</h3>
-            </a>
-          </li>
-          <li class="category-list__item">
-            <a class="category-list__card category-card" href="#">
-              <span class="category-card__total-count">56</span>
-              <div class="category-card__img-wrapper">
-                <svg class="category-card__img category-card__img--historical" width="57" height="34" role="img" aria-label="Исторические.">
-                  <use href="/__spritemap#sprite-letter-historical"></use>
-                </svg>
-              </div>
-              <h3 class="category-card__caption">Исторические</h3>
-            </a>
-          </li>
-        </ul>
+        <h4 class="companies-list__caption">MR group</h4>
+        <!-- <h4 class="companies-list__caption-extended">Корпоративный сайт Сибура</h4> -->
+        <p class="companies-list__text">3D, Анимация, Production, Web-design</p>
+        <!-- <p class="companies-list__text-extended">Адаптация нового брендинга для digital. Разработка, дизайн основного сайта и подразделений</p> -->
+      </a>
+    </li>
+       <li class="companies-list__item">
+      <a class="companies-list__link" href="#">
+        <div class="companies-list__img-wrapper">
+          <!-- <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/portfolio/severstal-desktop@1x.webp 1x, img/content/portfolio/severstal-desktop@2x.webp 2x" width="400" height="400">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/content/portfolio/severstal-tablet@1x.webp 1x, img/content/portfolio/severstal-tablet@2x.webp 2x" width="357" height="349">
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/content/portfolio/severstal-tablet@1x.webp 1x, img/content/portfolio/severstal-tablet@2x.webp 2x" width="315" height="315">
+            <source media="(min-width: 1440px)" srcset="img/content/portfolio/severstal-desktop@1x.jpg 1x, img/content/portfolio/severstal-desktop@2x.jpg 2x" type="image/jpg" width="400" height="400">
+            <source media="(min-width: 768px)" srcset="img/content/portfolio/severstal-tablet@1x.jpg 1x, img/content/portfolio/severstal-tablet@2x.jpg 2x" type="image/jpg" width="357" height="349">
+            <source media="(max-width: 767px)" srcset="img/content/portfolio/severstal-tablet@1x.jpg 1x, img/content/portfolio/severstal-tablet@2x.jpg 2x" type="image/jpg" width="315" height="315">
+            <img width="315" height="315" src="img/content/portfolio/severstal-tablet@1x.jpg" srcset="img/content/portfolio/severstal-tablet@2x.jpg 2x" alt="Северсталь." loading="lazy">
+          </picture> -->
+
+     <picture>
+<source type="image/webp" media="(max-width:767px)" srcset="img/content/portfolio/severstal-tablet@1x.webp 1x, img/content/portfolio/severstal-tablet@2x.webp 2x">
+<source type="image/webp" media="(min-width:768px)and(max-width:1439px)" srcset="img/content/portfolio/severstal-tablet@1x.webp 1x, img/content/portfolio/severstal-tablet@2x.webp 2x">
+<source type="image/webp" media="(min-width:1440px)" srcset="img/content/portfolio/severstal-desktop@1x.webp 1x, img/content/portfolio/severstal-desktop@2x.webp 2x">
+<source type="image/jpeg" media="(max-width:767px)" srcset="img/content/portfolio/severstal-tablet@1x.jpg 1x, img/content/portfolio/severstal-tablet@2x.jpg 2x">
+<source type="image/jpeg" media="(min-width:768px)and(max-width:1439px)" srcset="img/content/portfolio/severstal-tablet@1x.jpg 1x, img/content/portfolio/severstal-tablet@2x.jpg 2x">
+<source type="image/jpeg" media="(min-width:1440px)" srcset="img/content/portfolio/severstal-desktop@1x.jpg 1x, img/content/portfolio/severstal-desktop@2x.jpg 2x">
+<img width="315" height="315" src="img/content/portfolio/severstal-tablet@1x.jpg" srcset="img/content/portfolio/severstal-tablet@2x.jpg 2x" alt="Северсталь." loading="lazy">
+</picture>
+
+        </div>
+        <h4 class="companies-list__caption">Северсталь</h4>
+        <!-- <h4 class="companies-list__caption-extended">Корпоративный сайт Сибура</h4> -->
+        <p class="companies-list__text">3D, Анимация, Production, Web-design</p>
+        <!-- <p class="companies-list__text-extended">Адаптация нового брендинга для digital. Разработка, дизайн основного сайта и подразделений</p> -->
+      </a>
+    </li>
+
+        <li class="companies-list__item">
+      <a class="companies-list__link" href="#">
+        <div class="companies-list__img-wrapper">
+          <!-- <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/portfolio/woosh-desktop@1x.webp 1x, img/content/portfolio/woosh-desktop@2x.webp 2x" width="400" height="400">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/content/portfolio/woosh-tablet@1x.webp 1x, img/content/portfolio/woosh-tablet@2x.webp 2x" width="357" height="349">
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/content/portfolio/woosh-mobile@1x.webp 1x, img/content/portfolio/woosh-mobile@2x.webp 2x" width="315" height="315">
+            <source media="(min-width: 1440px)" srcset="img/content/portfolio/woosh-desktop@1x.jpg 1x, img/content/portfolio/woosh-desktop@2x.jpg 2x" type="image/jpg" width="400" height="400">
+            <source media="(min-width: 768px)" srcset="img/content/portfolio/woosh-tablet@1x.jpg 1x, img/content/portfolio/woosh-tablet@2x.jpg 2x" type="image/jpg" width="357" height="349">
+            <source media="(max-width: 767px)" srcset="img/content/portfolio/woosh-mobile@1x.jpg 1x, img/content/portfolio/woosh-mobile@2x.jpg 2x" type="image/jpg" width="315" height="315">
+            <img  width="315" height="315" src="img/content/portfolio/woosh-mobile@1x.jpg" srcset="img/content/portfolio/woosh-mobile@2x.jpg 2x" alt="WHOOSH." loading="lazy">
+          </picture> -->
+
+          <picture>
+  <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/portfolio/woosh-desktop@1x.webp 1x, img/content/portfolio/woosh-desktop@2x.webp 2x">
+  <source type="image/webp" media="(min-width: 768px)" srcset="img/content/portfolio/woosh-tablet@1x.webp 1x, img/content/portfolio/woosh-tablet@2x.webp 2x">
+  <source type="image/webp" media="(max-width: 767px)" srcset="img/content/portfolio/woosh-mobile@1x.webp 1x, img/content/portfolio/woosh-mobile@2x.webp 2x">
+  <source media="(min-width: 1440px)" srcset="img/content/portfolio/woosh-desktop@1x.jpg 1x, img/content/portfolio/woosh-desktop@2x.jpg 2x" type="image/jpeg">
+  <source media="(min-width: 768px)" srcset="img/content/portfolio/woosh-tablet@1x.jpg 1x, img/content/portfolio/woosh-tablet@2x.jpg 2x" type="image/jpeg">
+  <source media="(max-width: 767px)" srcset="img/content/portfolio/woosh-mobile@1x.jpg 1x, img/content/portfolio/woosh-mobile@2x.jpg 2x" type="image/jpeg">
+  <img width="315" height="315" src="img/content/portfolio/woosh-mobile@1x.jpg" srcset="img/content/portfolio/woosh-mobile@2x.jpg 2x" alt="WHOOSH." loading="lazy">
+</picture>
+
+        </div>
+        <h4 class="companies-list__caption">WHOOSH</h4>
+        <!-- <h4 class="companies-list__caption-extended">Корпоративный сайт Сибура</h4> -->
+        <p class="companies-list__text">3D, Анимация, Production, Web-design</p>
+        <!-- <p class="companies-list__text-extended">Адаптация нового брендинга для digital. Разработка, дизайн основного сайта и подразделений</p> -->
+      </a>
+    </li>
+    <li class="companies-list__item">
+      <a class="companies-list__link" href="#">
+        <div class="companies-list__img-wrapper">
+          <!-- <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/portfolio/npmk-desktop@1x.webp 1x, img/content/portfolio/npmk-desktop@2x.webp 2x" width="400" height="400">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/content/portfolio/npmk-tablet@1x.webp 1x, img/content/portfolio/npmk-tablet@2x.webp 2x" width="357" height="349">
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/content/portfolio/npmk-mobile@1x.webp 1x, img/content/portfolio/npmk-mobile@2x.webp 2x" width="315" height="315">
+            <source media="(min-width: 1440px)" srcset="img/content/portfolio/npmk-desktop@1x.jpg 1x, img/content/portfolio/npmk-desktop@2x.jpg 2x" type="image/jpg" width="400" height="400">
+            <source media="(min-width: 768px)" srcset="img/content/portfolio/npmk-tablet@1x.jpg 1x, img/content/portfolio/npmk-tablet@2x.jpg 2x" type="image/jpg" width="357" height="349">
+            <source media="(max-width: 767px)" srcset="img/content/portfolio/npmk-mobile@1x.jpg 1x, img/content/portfolio/npmk-mobile@2x.jpg 2x" type="image/jpg" width="315" height="315">
+            <img  width="315" height="315" src="img/content/portfolio/npmk-mobile@1x.jpg" srcset="img/content/portfolio/npmk-mobile@2x.jpg 2x" alt="НЛМК." loading="lazy">
+          </picture> -->
+          <picture>
+  <source type="image/webp" media="(max-width: 767px)" srcset="img/content/portfolio/npmk-mobile@1x.webp 1x, img/content/portfolio/npmk-mobile@2x.webp 2x">
+  <source type="image/webp" media="(min-width: 768px)" srcset="img/content/portfolio/npmk-tablet@1x.webp 1x, img/content/portfolio/npmk-tablet@2x.webp 2x">
+  <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/portfolio/npmk-desktop@1x.webp 1x, img/content/portfolio/npmk-desktop@2x.webp 2x">
+  <source media="(max-width: 767px)" srcset="img/content/portfolio/npmk-mobile@1x.jpg 1x, img/content/portfolio/npmk-mobile@2x.jpg 2x" type="image/jpeg">
+  <source media="(min-width: 768px)" srcset="img/content/portfolio/npmk-tablet@1x.jpg 1x, img/content/portfolio/npmk-tablet@2x.jpg 2x" type="image/jpeg">
+  <source media="(min-width: 1440px)" srcset="img/content/portfolio/npmk-desktop@1x.jpg 1x, img/content/portfolio/npmk-desktop@2x.jpg 2x" type="image/jpeg">
+  <img width="315" height="315" src="img/content/portfolio/npmk-mobile@1x.jpg" srcset="img/content/portfolio/npmk-mobile@2x.jpg 2x" alt="НЛМК." loading="lazy">
+</picture>
+
       </div>
-    </section>
-    <section class="products">
-      <div class="products__wrapper">
-        <h2 class="visually-hidden">Все категории шрифтов в одном разделе.</h2>
-        <div class="products__select sale-select" aria-label="Сортировка." tabindex="0">
-          <div class="sale-select__select-wrapper">
-            <div class="sale-select__screen">Все новинки</div>
-            <ul class="products__select-list select-list">
-              <li class="select-list__item  ">
-                <button class="select-list__button select-button select-button--current" type="button" id="new">Все
-                  новинки</button>
+        <h4 class="companies-list__caption">Сайт R&D-центра НЛМК</h4>
+        <!-- <h4 class="companies-list__caption-extended">Корпоративный сайт Сибура</h4> -->
+        <p class="companies-list__text">3D, Анимация, Production, Web-design</p>
+        <!-- <p class="companies-list__text-extended">Адаптация нового брендинга для digital. Разработка, дизайн основного сайта и подразделений</p> -->
+      </a>
+    </li>
+       <li class="companies-list__item">
+      <a class="companies-list__link" href="#">
+        <div class="companies-list__img-wrapper">
+          <!-- <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/portfolio/academic-desktop@1x.webp 1x, img/content/portfolio/academic-desktop@2x.webp 2x" width="400" height="400">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/content/portfolio/academic-tablet@1x.webp 1x, img/content/portfolio/academic-tablet@2x.webp 2x" width="357" height="349">
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/content/portfolio/academic-tablet@1x.webp 1x, img/content/portfolio/academic-tablet@2x.webp 2x" width="315" height="315">
+            <source media="(min-width: 1440px)" srcset="img/content/portfolio/academic-desktop@1x.jpg 1x, img/content/portfolio/academic-desktop@2x.jpg 2x" type="image/jpg" width="400" height="400">
+            <source media="(min-width: 768px)" srcset="img/content/portfolio/academic-tablet@1x.jpg 1x, img/content/portfolio/academic-tablet@2x.jpg 2x" type="image/jpg" width="357" height="349">
+            <source media="(max-width: 767px)" srcset="img/content/portfolio/academic-tablet@1x.jpg 1x, img/content/portfolio/academic-tablet@2x.jpg 2x" type="image/jpg" width="315" height="315">
+            <img  width="315" height="315" src="img/content/portfolio/academic-tablet@1x.jpg" srcset="img/content/portfolio/academic-tablet@2x.jpg 2x" alt="Новые академики." loading="lazy">
+          </picture> -->
+          <picture>
+  <source type="image/webp" media="(max-width: 767px)" srcset="img/content/portfolio/academic-tablet@1x.webp 1x, img/content/portfolio/academic-tablet@2x.webp 2x">
+  <source type="image/webp" media="(min-width: 768px)" srcset="img/content/portfolio/academic-tablet@1x.webp 1x, img/content/portfolio/academic-tablet@2x.webp 2x">
+  <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/portfolio/academic-desktop@1x.webp 1x, img/content/portfolio/academic-desktop@2x.webp 2x">
+  <source media="(max-width: 767px)" srcset="img/content/portfolio/academic-tablet@1x.jpg 1x, img/content/portfolio/academic-tablet@2x.jpg 2x" type="image/jpeg">
+  <source media="(min-width: 768px)" srcset="img/content/portfolio/academic-tablet@1x.jpg 1x, img/content/portfolio/academic-tablet@2x.jpg 2x" type="image/jpeg">
+  <source media="(min-width: 1440px)" srcset="img/content/portfolio/academic-desktop@1x.jpg 1x, img/content/portfolio/academic-desktop@2x.jpg 2x" type="image/jpeg">
+  <img width="315" height="315" src="img/content/portfolio/academic-tablet@1x.jpg" srcset="img/content/portfolio/academic-tablet@2x.jpg 2x" alt="Новые академики." loading="lazy">
+</picture>
+
+        </div>
+        <h4 class="companies-list__caption">Новые академики</h4>
+        <!-- <h4 class="companies-list__caption-extended">Корпоративный сайт Сибура</h4> -->
+        <p class="companies-list__text">3D, Анимация, Production, Web-design</p>
+        <!-- <p class="companies-list__text-extended">Адаптация нового брендинга для digital. Разработка, дизайн основного сайта и подразделений</p> -->
+      </a>
+    </li>
+
+    <li class="companies-list__item">
+      <a class="companies-list__link" href="#">
+        <div class="companies-list__img-wrapper">
+          <!-- <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/portfolio/ashtau-desktop@1x.webp 1x, img/content/portfolio/ashtau-desktop@2x.webp 2x" width="400" height="400">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/content/portfolio/ashtau-tablet@1x.webp 1x, img/content/portfolio/ashtau-tablet@2x.webp 2x" width="357" height="349">
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/content/portfolio/ashtau-mobile@1x.webp 1x, img/content/portfolio/ashtau-mobile@2x.webp 2x" width="315" height="315">
+            <source media="(min-width: 1440px)" srcset="img/content/portfolio/ashtau-desktop@1x.jpg 1x, img/content/portfolio/ashtau-desktop@2x.jpg 2x" type="image/jpg" width="400" height="400">
+            <source media="(min-width: 768px)" srcset="img/content/portfolio/ashtau-tablet@1x.jpg 1x, img/content/portfolio/ashtau-tablet@2x.jpg 2x" type="image/jpg" width="357" height="349">
+            <source media="(max-width: 767px)" srcset="img/content/portfolio/ashtau-mobile@1x.jpg 1x, img/content/portfolio/ashtau-mobile@2x.jpg 2x" type="image/jpg" width="315" height="315">
+            <img  width="315" height="315" src="img/content/portfolio/ashtau-mobile@1x.jpg" srcset="img/content/portfolio/ashtau-mobile@2x.jpg 2x" alt="Аш-Тау." loading="lazy">
+          </picture> -->
+          <picture>
+  <source type="image/webp" media="(max-width: 767px)" srcset="img/content/portfolio/ashtau-mobile@1x.webp 1x, img/content/portfolio/ashtau-mobile@2x.webp 2x">
+  <source type="image/webp" media="(min-width: 768px)" srcset="img/content/portfolio/ashtau-tablet@1x.webp 1x, img/content/portfolio/ashtau-tablet@2x.webp 2x">
+  <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/portfolio/ashtau-desktop@1x.webp 1x, img/content/portfolio/ashtau-desktop@2x.webp 2x">
+  <source media="(max-width: 767px)" srcset="img/content/portfolio/ashtau-mobile@1x.jpg 1x, img/content/portfolio/ashtau-mobile@2x.jpg 2x" type="image/jpeg">
+  <source media="(min-width: 768px)" srcset="img/content/portfolio/ashtau-tablet@1x.jpg 1x, img/content/portfolio/ashtau-tablet@2x.jpg 2x" type="image/jpeg">
+  <source media="(min-width: 1440px)" srcset="img/content/portfolio/ashtau-desktop@1x.jpg 1x, img/content/portfolio/ashtau-desktop@2x.jpg 2x" type="image/jpeg">
+  <img width="315" height="315" src="img/content/portfolio/ashtau-mobile@1x.jpg" srcset="img/content/portfolio/ashtau-mobile@2x.jpg 2x" alt="Аш-Тау." loading="lazy">
+</picture>
+
+        </div>
+        <h4 class="companies-list__caption">Аш-Тау</h4>
+        <!-- <h4 class="companies-list__caption-extended">Корпоративный сайт Сибура</h4> -->
+        <p class="companies-list__text">3D, Анимация, Production, Web-design</p>
+        <!-- <p class="companies-list__text-extended">Адаптация нового брендинга для digital. Разработка, дизайн основного сайта и подразделений</p> -->
+      </a>
+    </li>
+       <li class="companies-list__item">
+      <a class="companies-list__link" href="#">
+        <div class="companies-list__img-wrapper">
+          <!-- <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/portfolio/uralhim-desktop@1x.webp 1x, img/content/portfolio/uralhim-desktop@2x.webp 2x" width="400" height="400">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/content/portfolio/uralhim-tablet@1x.webp 1x, img/content/portfolio/uralhim-tablet@2x.webp 2x" width="357" height="349">
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/content/portfolio/uralhim-mobile@1x.webp 1x, img/content/portfolio/uralhim-mobile@2x.webp 2x" width="315" height="315">
+            <source media="(min-width: 1440px)" srcset="img/content/portfolio/uralhim-desktop@1x.jpg 1x, img/content/portfolio/uralhim-desktop@2x.jpg 2x" type="image/jpg" width="400" height="400">
+            <source media="(min-width: 768px)" srcset="img/content/portfolio/uralhim-tablet@1x.jpg 1x, img/content/portfolio/uralhim-tablet@2x.jpg 2x" type="image/jpg" width="357" height="349">
+            <source media="(max-width: 767px)" srcset="img/content/portfolio/uralhim-mobile@1x.jpg 1x, img/content/portfolio/uralhim-mobile@2x.jpg 2x" type="image/jpg" width="315" height="315">
+            <img width="315" height="315" src="img/content/portfolio/uralhim-mobile@1x.jpg" srcset="img/content/portfolio/uralhim-mobile@2x.jpg 2x" alt="Уралхим." loading="lazy">
+          </picture> -->
+          <picture>
+  <source type="image/webp" media="(max-width: 767px)" srcset="img/content/portfolio/uralhim-mobile@1x.webp 1x, img/content/portfolio/uralhim-mobile@2x.webp 2x">
+  <source type="image/webp" media="(min-width: 768px)" srcset="img/content/portfolio/uralhim-tablet@1x.webp 1x, img/content/portfolio/uralhim-tablet@2x.webp 2x">
+  <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/portfolio/uralhim-desktop@1x.webp 1x, img/content/portfolio/uralhim-desktop@2x.webp 2x">
+  <source media="(max-width: 767px)" srcset="img/content/portfolio/uralhim-mobile@1x.jpg 1x, img/content/portfolio/uralhim-mobile@2x.jpg 2x" type="image/jpeg">
+  <source media="(min-width: 768px)" srcset="img/content/portfolio/uralhim-tablet@1x.jpg 1x, img/content/portfolio/uralhim-tablet@2x.jpg 2x" type="image/jpeg">
+  <source media="(min-width: 1440px)" srcset="img/content/portfolio/uralhim-desktop@1x.jpg 1x, img/content/portfolio/uralhim-desktop@2x.jpg 2x" type="image/jpeg">
+  <img width="315" height="315" src="img/content/portfolio/uralhim-mobile@1x.jpg" srcset="img/content/portfolio/uralhim-mobile@2x.jpg 2x" alt="Уралхим." loading="lazy">
+</picture>
+
+      </div>
+        <h4 class="companies-list__caption">Уралхим</h4>
+        <!-- <h4 class="companies-list__caption-extended">Корпоративный сайт Сибура</h4> -->
+        <p class="companies-list__text">3D, Анимация, Production, Web-design</p>
+        <!-- <p class="companies-list__text-extended">Адаптация нового брендинга для digital. Разработка, дизайн основного сайта и подразделений</p> -->
+      </a>
+    </li>
+    <li class="companies-list__item">
+      <a class="companies-list__link" href="#">
+        <div class="companies-list__img-wrapper">
+          <!-- <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/portfolio/pay-desktop@1x.webp 1x, img/content/portfolio/pay-desktop@2x.webp 2x" width="400" height="400">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/content/portfolio/pay-tablet@1x.webp 1x, img/content/portfolio/pay-tablet@2x.webp 2x" width="357" height="349">
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/content/portfolio/pay-tablet@1x.webp 1x, img/content/portfolio/pay-tablet@2x.webp 2x" width="315" height="315">
+            <source media="(min-width: 1440px)" srcset="img/content/portfolio/pay-desktop@1x.jpg 1x, img/content/portfolio/pay-desktop@2x.jpg 2x" type="image/jpg" width="400" height="400">
+            <source media="(min-width: 768px)" srcset="img/content/portfolio/pay-tablet@1x.jpg 1x, img/content/portfolio/pay-tablet@2x.jpg 2x" type="image/jpg" width="357" height="349">
+            <source media="(max-width: 767px)" srcset="img/content/portfolio/pay-tablet@1x.jpg 1x, img/content/portfolio/pay-tablet@2x.jpg 2x" type="image/jpg" width="315" height="315">
+            <img width="315" height="315" src="img/content/portfolio/pay-tablet@1x.jpg" srcset="img/content/portfolio/pay-tablet@2x.jpg 2x" alt="Пляти частями." loading="lazy">
+          </picture> -->
+          <picture>
+  <source type="image/webp" media="(max-width: 767px)" srcset="img/content/portfolio/pay-tablet@1x.webp 1x, img/content/portfolio/pay-tablet@2x.webp 2x">
+  <source type="image/webp" media="(min-width: 768px)" srcset="img/content/portfolio/pay-tablet@1x.webp 1x, img/content/portfolio/pay-tablet@2x.webp 2x">
+  <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/portfolio/pay-desktop@1x.webp 1x, img/content/portfolio/pay-desktop@2x.webp 2x">
+  <source media="(max-width: 767px)" srcset="img/content/portfolio/pay-tablet@1x.jpg 1x, img/content/portfolio/pay-tablet@2x.jpg 2x" type="image/jpeg">
+  <source media="(min-width: 768px)" srcset="img/content/portfolio/pay-tablet@1x.jpg 1x, img/content/portfolio/pay-tablet@2x.jpg 2x" type="image/jpeg">
+  <source media="(min-width: 1440px)" srcset="img/content/portfolio/pay-desktop@1x.jpg 1x, img/content/portfolio/pay-desktop@2x.jpg 2x" type="image/jpeg">
+  <img width="315" height="315" src="img/content/portfolio/pay-tablet@1x.jpg" srcset="img/content/portfolio/pay-tablet@2x.jpg 2x" alt="Плати частями." loading="lazy">
+</picture>
+
+        </div>
+        <h4 class="companies-list__caption">Плати частями</h4>
+        <!-- <h4 class="companies-list__caption-extended">Корпоративный сайт Сибура</h4> -->
+        <p class="companies-list__text">3D, Анимация, Production, Web-design</p>
+        <!-- <p class="companies-list__text-extended">Адаптация нового брендинга для digital. Разработка, дизайн основного сайта и подразделений</p> -->
+      </a>
+    </li>
+  </ul>
+  </section>
+
+  <section class="portfolio__developers developers">
+    <h3 class="developers__caption">Девелоперы</h3>
+  <ul class="portfolio__developers-list developers-list">
+    <li class="developers-list__item">
+      <a class="developers-list__link" href="#">
+        <div class="developers-list__img-wrapper">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/portfolio/woosh-desktop@1x.webp 1x, img/content/portfolio/woosh-desktop@2x.webp 2x" width="400" height="400">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/content/portfolio/woosh-tablet@1x.webp 1x, img/content/portfolio/woosh-tablet@2x.webp 2x" width="357" height="349">
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/content/portfolio/woosh-mobile@1x.webp 1x, img/content/portfolio/woosh-mobile@2x.webp 2x" width="315" height="315">
+            <source media="(min-width: 1440px)" srcset="img/content/portfolio/woosh-desktop@1x.jpg 1x, img/content/portfolio/woosh-desktop@2x.jpg 2x" type="image/jpg" width="400" height="400">
+            <source media="(min-width: 768px)" srcset="img/content/portfolio/woosh-tablet@1x.jpg 1x, img/content/portfolio/woosh-tablet@2x.jpg 2x" type="image/jpg" width="357" height="349">
+            <source media="(max-width: 767px)" srcset="img/content/portfolio/woosh-mobile@1x.jpg 1x, img/content/portfolio/woosh-mobile@2x.jpg 2x" type="image/jpg" width="315" height="315">
+            <img width="315" height="315" src="img/content/portfolio/woosh-mobile@1x.jpg" srcset="img/content/portfolio/woosh-mobile@2x.jpg 2x" alt="WHOOSH." loading="lazy">
+          </picture>
+        </div>
+        <h4 class="developers-list__caption">WHOOSH</h4>
+        <!-- <h4 class="developers-list__caption-extended">Корпоративный сайт Сибура</h4> -->
+        <p class="developers-list__text">3D, Анимация, Production, Web-design</p>
+        <!-- <p class="developers-list__text-extended">Адаптация нового брендинга для digital. Разработка, дизайн основного сайта и подразделений</p> -->
+      </a>
+    </li>
+    <li class="developers-list__item">
+      <a class="developers-list__link" href="#">
+        <div class="developers-list__img-wrapper">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/portfolio/npmk-desktop@1x.webp 1x, img/content/portfolio/npmk-desktop@2x.webp 2x" width="400" height="400">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/content/portfolio/npmk-tablet@1x.webp 1x, img/content/portfolio/npmk-tablet@2x.webp 2x" width="357" height="349">
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/content/portfolio/npmk-mobile@1x.webp 1x, img/content/portfolio/npmk-mobile@2x.webp 2x" width="315" height="315">
+            <source media="(min-width: 1440px)" srcset="img/content/portfolio/npmk-desktop@1x.jpg 1x, img/content/portfolio/npmk-desktop@2x.jpg 2x" type="image/jpg" width="400" height="400">
+            <source media="(min-width: 768px)" srcset="img/content/portfolio/npmk-tablet@1x.jpg 1x, img/content/portfolio/npmk-tablet@2x.jpg 2x" type="image/jpg" width="357" height="349">
+            <source media="(max-width: 767px)" srcset="img/content/portfolio/npmk-mobile@1x.jpg 1x, img/content/portfolio/npmk-mobile@2x.jpg 2x" type="image/jpg" width="315" height="315">
+            <img width="315" height="315" src="img/content/portfolio/npmk-mobile@1x.jpg" srcset="img/content/portfolio/npmk-mobile@2x.jpg 2x" alt="НЛМК." loading="lazy">
+          </picture>
+        </div>
+        <h4 class="developers-list__caption">Сибур</h4>
+        <!-- <h4 class="developers-list__caption-extended">Корпоративный сайт Сибура</h4> -->
+        <p class="developers-list__text">3D, Анимация, Production, Web-design</p>
+        <!-- <p class="developers-list__text-extended">Адаптация нового брендинга для digital. Разработка, дизайн основного сайта и подразделений</p> -->
+      </a>
+    </li>
+      <li class="developers-list__item">
+      <a class="developers-list__link" href="#">
+        <div class="developers-list__img-wrapper">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/portfolio/severstal-desktop@1x.webp 1x, img/content/portfolio/severstal-desktop@2x.webp 2x" width="400" height="400">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/content/portfolio/severstal-tablet@1x.webp 1x, img/content/portfolio/severstal-tablet@2x.webp 2x" width="357" height="349">
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/content/portfolio/severstal-tablet@1x.webp 1x, img/content/portfolio/severstal-tablet@2x.webp 2x" width="315" height="315">
+            <source media="(min-width: 1440px)" srcset="img/content/portfolio/severstal-desktop@1x.jpg 1x, img/content/portfolio/severstal-desktop@2x.jpg 2x" type="image/jpg" width="400" height="400">
+            <source media="(min-width: 768px)" srcset="img/content/portfolio/severstal-tablet@1x.jpg 1x, img/content/portfolio/severstal-tablet@2x.jpg 2x" type="image/jpg" width="357" height="349">
+            <source media="(max-width: 767px)" srcset="img/content/portfolio/severstal-tablet@1x.jpg 1x, img/content/portfolio/severstal-tablet@2x.jpg 2x" type="image/jpg" width="315" height="315">
+            <img width="315" height="315" src="img/content/portfolio/severstal-tablet@1x.jpg" srcset="img/content/portfolio/severstal-tablet@2x.jpg 2x" alt="Северсталь." loading="lazy">
+          </picture>
+        </div>
+        <h4 class="developers-list__caption">Сибур</h4>
+        <!-- <h4 class="developers-list__caption-extended">Корпоративный сайт Сибура</h4> -->
+        <p class="developers-list__text">3D, Анимация, Production, Web-design</p>
+        <!-- <p class="developers-list__text-extended">Адаптация нового брендинга для digital. Разработка, дизайн основного сайта и подразделений</p> -->
+      </a>
+    </li>
+      <!-- <li class="developers-list__item">
+      <a class="developers-list__link" href="">
+        <div class="developers-list__img-wrapper">
+          <picture>
+            <img src="" alt="">
+          </picture>
+        </div>
+        <h4 class="developers-list__caption">Сибур</h4>
+        <h4 class="developers-list__caption-extended">Корпоративный сайт Сибура</h4>
+        <p class="developers-list__text">3D, Анимация, Production, Web-design</p>
+        <p class="developers-list__text-extended">Адаптация нового брендинга для digital. Разработка, дизайн основного сайта и подразделений</p>
+      </a>
+    </li> -->
+  </ul>
+</section>
+<section class="portfolio__b2c b2c">
+  <h3 class="b2c__caption">B2C</h3>
+  <ul class="portfolio__b2c-list b2c-list ">
+      <li class="b2c-list__item">
+      <a class="b2c-list__link" href="#">
+        <div class="b2c-list__img-wrapper">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/portfolio/ashtau-desktop@1x.webp 1x, img/content/portfolio/ashtau-desktop@2x.webp 2x" width="400" height="400">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/content/portfolio/ashtau-tablet@1x.webp 1x, img/content/portfolio/ashtau-tablet@2x.webp 2x" width="357" height="349">
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/content/portfolio/ashtau-mobile@1x.webp 1x, img/content/portfolio/ashtau-mobile@2x.webp 2x" width="315" height="315">
+            <source media="(min-width: 1440px)" srcset="img/content/portfolio/ashtau-desktop@1x.jpg 1x, img/content/portfolio/ashtau-desktop@2x.jpg 2x" type="image/jpg" width="400" height="400">
+            <source media="(min-width: 768px)" srcset="img/content/portfolio/ashtau-tablet@1x.jpg 1x, img/content/portfolio/ashtau-tablet@2x.jpg 2x" type="image/jpg" width="357" height="349">
+            <source media="(max-width: 767px)" srcset="img/content/portfolio/ashtau-mobile@1x.jpg 1x, img/content/portfolio/ashtau-mobile@2x.jpg 2x" type="image/jpg" width="315" height="315">
+            <img width="315" height="315" src="img/content/portfolio/ashtau-mobile@1x.jpg" srcset="img/content/portfolio/ashtau-mobile@2x.jpg 2x" alt="Аш-Тау." loading="lazy">
+          </picture>
+        </div>
+        <h4 class="b2c-list__caption">Аш-Тау</h4>
+        <!-- <h4 class="b2c-list__caption-extended">Корпоративный сайт Сибура</h4> -->
+        <p class="b2c-list__text">3D, Анимация, Production, Web-design</p>
+        <!-- <p class="b2c-list__text-extended">Адаптация нового брендинга для digital. Разработка, дизайн основного сайта и подразделений</p> -->
+      </a>
+    </li>
+          <li class="b2c-list__item">
+      <a class="b2c-list__link" href="#">
+        <div class="b2c-list__img-wrapper">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/portfolio/uralhim-desktop@1x.webp 1x, img/content/portfolio/uralhim-desktop@2x.webp 2x" width="400" height="400">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/content/portfolio/uralhim-tablet@1x.webp 1x, img/content/portfolio/uralhim-tablet@2x.webp 2x" width="357" height="349">
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/content/portfolio/uralhim-mobile@1x.webp 1x, img/content/portfolio/uralhim-mobile@2x.webp 2x" width="315" height="315">
+            <source media="(min-width: 1440px)" srcset="img/content/portfolio/uralhim-desktop@1x.jpg 1x, img/content/portfolio/uralhim-desktop@2x.jpg 2x" type="image/jpg" width="400" height="400">
+            <source media="(min-width: 768px)" srcset="img/content/portfolio/uralhim-tablet@1x.jpg 1x, img/content/portfolio/uralhim-tablet@2x.jpg 2x" type="image/jpg" width="357" height="349">
+            <source media="(max-width: 767px)" srcset="img/content/portfolio/uralhim-mobile@1x.jpg 1x, img/content/portfolio/uralhim-mobile@2x.jpg 2x" type="image/jpg" width="315" height="315">
+            <img width="315" height="315" src="img/content/portfolio/uralhim-mobile@1x.jpg" srcset="img/content/portfolio/uralhim-mobile@2x.jpg 2x" alt="Уралхим." loading="lazy">
+          </picture>
+        </div>
+        <h4 class="b2c-list__caption">Уралхим</h4>
+        <!-- <h4 class="b2c-list__caption-extended">Корпоративный сайт Сибура</h4> -->
+        <p class="b2c-list__text">3D, Анимация, Production, Web-design</p>
+        <!-- <p class="b2c-list__text-extended">Адаптация нового брендинга для digital. Разработка, дизайн основного сайта и подразделений</p> -->
+      </a>
+    </li>
+    <li class="b2c-list__item">
+      <a class="b2c-list__link" href="#">
+        <div class="b2c-list__img-wrapper">
+          <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/portfolio/severstal-desktop@1x.webp 1x, img/content/portfolio/severstal-desktop@2x.webp 2x" width="400" height="400">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/content/portfolio/severstal-tablet@1x.webp 1x, img/content/portfolio/severstal-tablet@2x.webp 2x" width="357" height="349">
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/content/portfolio/severstal-tablet@1x.webp 1x, img/content/portfolio/severstal-tablet@2x.webp 2x" width="315" height="315">
+            <source media="(min-width: 1440px)" srcset="img/content/portfolio/severstal-desktop@1x.jpg 1x, img/content/portfolio/severstal-desktop@2x.jpg 2x" type="image/jpg" width="400" height="400">
+            <source media="(min-width: 768px)" srcset="img/content/portfolio/severstal-tablet@1x.jpg 1x, img/content/portfolio/severstal-tablet@2x.jpg 2x" type="image/jpg" width="357" height="349">
+            <source media="(max-width: 767px)" srcset="img/content/portfolio/severstal-tablet@1x.jpg 1x, img/content/portfolio/severstal-tablet@2x.jpg 2x" type="image/jpg" width="315" height="315">
+            <img width="315" height="315" src="img/content/portfolio/severstal-tablet@1x.jpg" srcset="img/content/portfolio/severstal-tablet@2x.jpg 2x" alt="Северсталь." loading="lazy">
+          </picture>
+        </div>
+        <h4 class="b2c-list__caption">Сибур</h4>
+        <!-- <h4 class="b2c-list__caption-extended">Корпоративный сайт Сибура</h4> -->
+        <p class="b2c-list__text">3D, Анимация, Production, Web-design</p>
+        <!-- <p class="b2c-list__text-extended">Адаптация нового брендинга для digital. Разработка, дизайн основного сайта и подразделений</p> -->
+      </a>
+    </li>
+  </ul>
+
+
+
+</section>
+  <button class="portfolio__button button" type="button">все проекты</button>
+  </section>
+  <section class="clients">
+    <h2 class="visually-hidden">Клиенты.</h2>
+    <p class="clients__about">20 клиентов — крупнейшие компании из списка Forbes. Более 100 реализованных проектов</p>
+    <ul class="clients__list clients-list">
+      <li class="clients-list__item clients-list__item--severstal">
+        <a class="clients-list__link clients-list__link--severstal" href="#">
+          <img src="/__spritemap#sprite-severstal-view" width="90" height="29" alt="Логотип Северсталь.">
+        </a>
+      </li>
+        <li class="clients-list__item clients-list__item--sibur">
+        <a class="clients-list__link clients-list__link--sibur" href="#">
+          <img src="/__spritemap#sprite-sibur-view" width="69" height="13" alt="Логотип Сибур.">
+        </a>
+      </li>
+        <li class="clients-list__item clients-list__item--uralhim">
+        <a class="clients-list__link clients-list__link--uralhim" href="#">
+          <img src="/__spritemap#sprite-uralhim-view" width="100" height="13" alt="Логотип Уралхим.">
+        </a>
+      </li>
+        <li class="clients-list__item clients-list__item--rostech">
+        <a class="clients-list__link clients-list__link--rostech" href="#">
+          <img src="/__spritemap#sprite-rostech-view" width="80" height="25" alt="Логотип Ростех.">
+        </a>
+      </li>
+
+        <li class="clients-list__item clients-list__item--nlmk">
+        <a class="clients-list__link clients-list__link--nlmk" href="#">
+          <img src="/__spritemap#sprite-nlmk-view" width="69" height="32" alt="Это спрайт">
+        </a>
+      </li>
+        <li class="clients-list__item clients-list__item--rosatom">
+        <a class="clients-list__link clients-list__link--rosatom" href="#">
+          <img src="/__spritemap#sprite-rosatom-view" width="74" height="31" alt="Логотип НЛМК.">
+        </a>
+      </li>
+      <li class="clients-list__item clients-list__item--tektorg ">
+        <a class="clients-list__link clients-list__link--tektorg" href="#">
+          <img src="/__spritemap#sprite-tek-torg-view" width="84" height="20" alt="Логотип ТЭК-Торг">
+        </a>
+      </li>
+        <li class="clients-list__item clients-list__item--farmstandart">
+        <a class="clients-list__link clients-list__link--farmstandart" href="#">
+          <img src="/__spritemap#sprite-farmstandart-view" width="86" height="20" alt="Логотип Фармстандарт.">
+        </a>
+      </li>
+        <li class="clients-list__item clients-list__item--schlumberger">
+        <a class="clients-list__link clients-list__link--schlumberger" href="#">
+          <img src="/__spritemap#sprite-schlumberger-view" width="83" height="40" alt="Логотип Schlumberger.">
+        </a>
+      </li>
+        <li class="clients-list__item clients-list__item--sber">
+        <a class="clients-list__link clients-list__link--sber" href="#">
+          <img src="/__spritemap#sprite-sber-view" width="76" height="21" alt="Логотип Сбера.">
+        </a>
+      </li>
+        <li class="clients-list__item clients-list__item--vk">
+        <a class="clients-list__link clients-list__link--vk" href="#">
+          <img src="/__spritemap#sprite-vk-view" width="33" height="34" alt="Логотип VK.">
+        </a>
+      </li>
+        <li class="clients-list__item clients-list__item--otkritie">
+        <a class="clients-list__link clients-list__link--otkritie" href="#">
+          <img src="/__spritemap#sprite-otkritie-view" width="98" height="19" alt="Логотип Открытие.">
+        </a>
+      </li>
+        <li class="clients-list__item clients-list__item--mr">
+        <a class="clients-list__link clients-list__link--mr" href="#">
+          <img src="/__spritemap#sprite-mr-group-view" width="82" height="18" alt="Логотип MR group.">
+        </a>
+      </li>
+        <li class="clients-list__item clients-list__item--coldy">
+        <a class="clients-list__link clients-list__link--coldy" href="#">
+          <img src="/__spritemap#sprite-coldy-view" width="72" height="12" alt="Логотип Coldy.">
+        </a>
+      </li>
+        <li class="clients-list__item clients-list__item--glavstroy">
+        <a class="clients-list__link clients-list__link--glavstroy" href="#">
+          <img src="/__spritemap#sprite-glavstroy-view" width="107" height="13" alt="Логотип Главстрой.">
+        </a>
+      </li>
+    </ul>
+  </section>
+  <section class="projects">
+    <div class="projects__text-wrapper">
+      <h2 class="projects__caption">Крупные проекты</h2>
+      <p class="projects__text">Поддерживаем и развиваем долгосрочное сотрудничество</p>
+      <div class="projects__slider-buttons slider-buttons">
+        <button class="slider-buttons__button slider-button slider-button--left" type="button">
+          <span class="visually-hidden">Назад</span>
+          <svg width="16" height="16" role="img" aria-hidden="true" focusable="false">
+            <use href="/__spritemap#sprite-slider-arrow-left"></use>
+          </svg>
+          </button>
+          <button class="slider-buttons__button slider-button slider-button--right" type="button">
+            <span class="visually-hidden">Вперед</span>
+            <svg width="16" height="16" role="img" aria-hidden="true" focusable="false">
+            <use href="/__spritemap#sprite-slider-arrow-right"></use>
+          </svg>
+          </button>
+      </div>
+    </div>
+    <div class="project__slider-screen">
+      <ul class="projects__list projects-list">
+        <li class="projects-list__item projects-card" style="background-image: var(--bg-project-1);">
+          <a class="projects-card__link" href="#">
+            <ul class="projects-card__box projects-box">
+              <li class="projects-box__item">
+                <div class="projects-box__img-wrapper projects-box__img-wrapper--severstal-logo">
+                  <img src="img/content/projects/severstal-project1.svg" width="" height="" alt="Проект для Северстали.">
+                </div>
               </li>
-              <li class="select-list__item">
-                <button class="select-list__button select-button" type="button" id="sale">Распродажа</button>
+              <li class="projects-box__item">
+                <div class="projects-box__img-wrapper">
+                  <img src="img/content/projects/severstal-project2.svg" alt="Проект для Северстали.">
+                </div>
               </li>
-              <li class="select-list__item">
-                <button class="select-list__button select-button" type="button"
-                  id="recommendations">Рекомендуем</button>
+              <li class="projects-box__item">
+                <div class="projects-box__img-wrapper">
+                  <img src="img/content/projects/severstal-project3.svg" alt="Проекты для Северстали.">
+                </div>
               </li>
-              <li class="select-list__item">
-                <button class="select-list__button select-button" type="button" id="bestsellers">Бестселлеры</button>
+              <li class="projects-box__item">
+                <div class="projects-box__img-wrapper">
+                  <img src="img/content/projects/severstal-project4.svg" alt="Проекты для Северстали.">
+                  <span class="projects-box__quantity">+6</span>
+                </div>
               </li>
             </ul>
-            <div class="sale-select__buttons">
-              <button class="sale-select__button layout-button layout-button--current layout-button--two-columns"
-                type="button" id="layout-two">
-                <span class="visually-hidden">Раскладка карточек по две в ряд.</span>
-              </button>
-              <button class="sale-select__button layout-button layout-button--three-columns" id="layout-three"
-                type="button">
-                  <span class="visually-hidden">Раскладка карточек по три в ряд.</span>
-                <span class="layout-button__span" aria-hidden="true"></span>
-              </button>
+            <div class="projects-card__text-wrapper">
+              <p class="projects-card__category">Промышленность</p>
+              <h3 class="projects-card__caption">Северсталь</h3>
+              <p class="projects-card__about">Адаптация нового брендинга для&nbsp;digital</p>
             </div>
+          </a>
+        </li>
+          <li class="projects-list__item projects-card" style="background-image: var(--bg-project-2);">
+          <a class="projects-card__link" href="#">
+            <ul class="projects-card__box projects-box">
+              <li class="projects-box__item">
+                <div class="projects-box__img-wrapper projects-box__img-wrapper--logo">
+                  <img src="img/content/projects/sibur-project1.svg" alt="Проект для Сибур.">
+                </div>
+              </li>
+              <li class="projects-box__item">
+                <div class="projects-box__img-wrapper">
+                  <img src="img/content/projects/sibur-project2.svg" alt="Проект для Сибур.">
+                </div>
+              </li>
+              <li class="projects-box__item">
+                <div class="projects-box__img-wrapper">
+                  <img src="img/content/projects/sibur-project3.svg" alt="Проект для Сибур.">
+                </div>
+              </li>
+              <li class="projects-box__item">
+                <div class="projects-box__img-wrapper">
+                  <img src="img/content/projects/sibur-project4.svg" alt="Проект для Сибур.">
+                <span class="projects-box__quantity">+6</span>
+                </div>
+              </li>
+
+            </ul>
+            <div class="projects-card__text-wrapper">
+              <p class="projects-card__category">Промышленность</p>
+              <h3 class="projects-card__caption">Сибур</h3>
+              <p class="projects-card__about">Адаптация нового брендинга для&nbsp;digital</p>
+            </div>
+          </a>
+        </li>
+          <li class="projects-list__item projects-card" style="background-image: var(--bg-project-3);">
+          <a class="projects-card__link" href="#">
+            <ul class="projects-card__box projects-box">
+              <li class="projects-box__item">
+                <div class="projects-box__img-wrapper projects-box__img-wrapper--logo">
+                  <img src="img/content/projects/mr-project1.svg" alt="Проект для MR Group.">
+                </div>
+              </li>
+              <li class="projects-box__item">
+                <div class="projects-box__img-wrapper">
+                  <img src="img/content/projects/mr-project2.svg" alt="Проект для MR Group.">
+                </div>
+              </li>
+              <li class="projects-box__item">
+                <div class="projects-box__img-wrapper">
+                  <img src="img/content/projects/mr-project3.svg" alt="Проекты для MR Group.">
+                </div>
+              </li>
+              <li class="projects-box__item">
+                <div class="projects-box__img-wrapper">
+                  <img src="img/content/projects/mr-project4.svg" alt="Проекты для MR Group.">
+                  <span class="projects-box__quantity">+2</span>
+                </div>
+              </li>
+            </ul>
+            <div class="projects-card__text-wrapper">
+              <p class="projects-card__category">Недвижимость</p>
+              <h3 class="projects-card__caption">MR Group</h3>
+              <p class="projects-card__about">Адаптация нового брендинга для&nbsp;digital</p>
+            </div>
+          </a>
+        </li>
+          <li class="projects-list__item projects-card" style="background-image: var(--bg-project-4);">
+          <a class="projects-card__link" href="#">
+            <ul class="projects-card__box projects-box">
+              <li class="projects-box__item">
+                <div class="projects-box__img-wrapper projects-box__img-wrapper--logo">
+                  <img src="img/content/projects/glavstroy-project1.svg" alt="Проект для Главстроя.">
+                </div>
+              </li>
+              <li class="projects-box__item">
+                <div class="projects-box__img-wrapper">
+                  <img src="img/content/projects/glavstroy-project2.svg" alt="Проект для Главстроя.">
+                </div>
+              </li>
+              <li class="projects-box__item">
+                <div class="projects-box__img-wrapper">
+                  <img src="img/content/projects/glavstroy-project3.svg" alt="Проекты для Главстроя.">
+
+                </div>
+              </li>
+              <li class="projects-box__item">
+                <div class="projects-box__img-wrapper">
+                  <img src="img/content/projects/glavstroy-project4.svg" alt="Проекты для Главстроя.">
+                <span class="projects-box__quantity">+1</span>
+                </div>
+              </li>
+            </ul>
+            <div class="projects-card__text-wrapper">
+              <p class="projects-card__category">Недвижимость</p>
+              <h3 class="projects-card__caption">Главстрой</h3>
+              <p class="projects-card__about">Адаптация нового брендинга для&nbsp;digital</p>
+            </div>
+          </a>
+        </li>
+          <li class="projects-list__item projects-card" style="background-image: var(--bg-project-1);">
+          <a class="projects-card__link" href="#">
+            <ul class="projects-card__box projects-box">
+              <li class="projects-box__item">
+                <div class="projects-box__img-wrapper projects-box__img-wrapper--severstal-logo">
+                  <img src="img/content/projects/severstal-project1.svg" width="" height="" alt="Проект для Северстали.">
+                </div>
+              </li>
+              <li class="projects-box__item">
+                <div class="projects-box__img-wrapper">
+                  <img src="img/content/projects/severstal-project2.svg" alt="Проект для Северстали.">
+                </div>
+              </li>
+              <li class="projects-box__item">
+                <div class="projects-box__img-wrapper">
+                  <img src="img/content/projects/severstal-project3.svg" alt="Проекты для Северстали.">
+                </div>
+              </li>
+              <li class="projects-box__item">
+                <div class="projects-box__img-wrapper">
+                  <img src="img/content/projects/severstal-project4.svg" alt="Проекты для Северстали.">
+                  <span class="projects-box__quantity">+6</span>
+                </div>
+              </li>
+            </ul>
+            <div class="projects-card__text-wrapper">
+              <p class="projects-card__category">Промышленность</p>
+              <h3 class="projects-card__caption">Северсталь</h3>
+              <p class="projects-card__about">Адаптация нового брендинга для&nbsp;digital</p>
+            </div>
+          </a>
+        </li>
+
+            <li class="projects-list__item projects-card" style="background-image: var(--bg-project-4);">
+          <a class="projects-card__link" href="#">
+            <ul class="projects-card__box projects-box">
+              <li class="projects-box__item">
+                <div class="projects-box__img-wrapper projects-box__img-wrapper--logo">
+                  <img src="img/content/projects/glavstroy-project1.svg" alt="Проект для Главстроя.">
+                </div>
+              </li>
+              <li class="projects-box__item">
+                <div class="projects-box__img-wrapper">
+                  <img src="img/content/projects/glavstroy-project2.svg" alt="Проект для Главстроя.">
+                </div>
+              </li>
+              <li class="projects-box__item">
+                <div class="projects-box__img-wrapper">
+                  <img src="img/content/projects/glavstroy-project3.svg" alt="Проекты для Главстроя.">
+
+                </div>
+              </li>
+              <li class="projects-box__item">
+                <div class="projects-box__img-wrapper">
+                  <img src="img/content/projects/glavstroy-project4.svg" alt="Проекты для Главстроя.">
+                <span class="projects-box__quantity">+1</span>
+                </div>
+              </li>
+            </ul>
+            <div class="projects-card__text-wrapper">
+              <p class="projects-card__category">Недвижимость</p>
+              <h3 class="projects-card__caption">Главстрой</h3>
+              <p class="projects-card__about">Адаптация нового брендинга для&nbsp;digital</p>
+            </div>
+          </a>
+        </li>
+          <li class="projects-list__item projects-card" style="background-image: var(--bg-project-1);">
+          <a class="projects-card__link" href="#">
+            <ul class="projects-card__box projects-box">
+              <li class="projects-box__item">
+                <div class="projects-box__img-wrapper projects-box__img-wrapper--severstal-logo">
+                  <img src="img/content/projects/severstal-project1.svg" width="" height="" alt="Проект для Северстали.">
+                </div>
+              </li>
+              <li class="projects-box__item">
+                <div class="projects-box__img-wrapper">
+                  <img src="img/content/projects/severstal-project2.svg" alt="Проект для Северстали.">
+                </div>
+              </li>
+              <li class="projects-box__item">
+                <div class="projects-box__img-wrapper">
+                  <img src="img/content/projects/severstal-project3.svg" alt="Проекты для Северстали.">
+                </div>
+              </li>
+              <li class="projects-box__item">
+                <div class="projects-box__img-wrapper">
+                  <img src="img/content/projects/severstal-project4.svg" alt="Проекты для Северстали.">
+                  <span class="projects-box__quantity">+6</span>
+                </div>
+              </li>
+            </ul>
+            <div class="projects-card__text-wrapper">
+              <p class="projects-card__category">Промышленность</p>
+              <h3 class="projects-card__caption">Северсталь</h3>
+              <p class="projects-card__about">Адаптация нового брендинга для&nbsp;digital</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+<section class="banners">
+  <h2 class="visually-hidden">Слайды с рекламой</h2>
+  <div class="banners__screen">
+  <ul class="banners__list banners-list">
+    <li class="banners-list__item banners-list__item--current">
+      <div class="banners-list__box banner">
+        <div class="banner__text-wrapper">
+          <h3 class="banner__caption">Недвижимость</h3>
+          <div class="banner__slogan">
+         Формируем
+             <span class="banner__svg-wrapper">
+              <svg width="36" height="29" role="img" aria-hidden="true" focusable="false">
+                <use href="/__spritemap#sprite-banner-arrow"></use>
+              </svg>
+             </span>
+             <br>
+             <span class="banner__img-wrapper">
+                <picture>
+                  <!-- WebP для таблета -->
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/content/banner/banner-heart@1x.webp 1x, img/content/banner/banner-heart@2x.webp 2x" width="32" height="32">
+                  <!-- WebP для десктопа -->
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/banner/banner-heart-desktop@1x.webp 1x, img/banner/banner-heart-desktop@2x.webp 2x" width="40" height="40">
+                  <!-- PNG для таблета -->
+                  <source media="(min-width: 768px)" srcset="img/content/banner/banner-heart@1x.png 1x, img/content/banner/banner-heart@2x.png 2x" type="image/png" width="32" height="32">
+                  <!-- PNG для десктопа -->
+                  <source media="(min-width: 1440px)" srcset="img/content/banner/banner-heart-desktop@1x.png 1x, img/content/banner/banner-heart-desktop@2x.png 2x" type="image/png" width="40" height="40">
+                  <!-- Fallback для мобильных и браузеров без поддержки WebP -->
+                  <img width="32" height="32" src="img/content/banner/banner-heart@1x.png" srcset="img/content/banner/banner-heart@2x.png 2x" alt=""  loading="lazy">
+                </picture>
+             </span>
+            <span class="banner__slogan-text">ценность брендa</span>
+              <span class="banner__img-wrapper">
+                <picture>
+        <!-- WebP для таблета -->
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/content/banner/banner-room@1x.webp 1x, img/content/banner/banner-room@2x.webp 2x" width="32" height="32">
+        <!-- WebP для десктопа -->
+        <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/banner/banner-room-desktop@1x.webp 1x, img/banner/banner-room-desktop@2x.webp 2x" width="40" height="40">
+        <!-- PNG для таблета -->
+        <source media="(min-width: 768px)" srcset="img/content/banner/banner-room@1x.png 1x, img/content/banner/banner-room@2x.png 2x" type="image/png" width="32" height="32">
+        <!-- PNG для десктопа -->
+        <source media="(min-width: 1440px)" srcset="img/content/banner/banner-room-desktop@1x.png 1x, img/content/banner/banner-room-desktop@2x.png 2x" type="image/png" width="40" height="40">
+        <!-- Fallback для мобильных и браузеров без поддержки WebP -->
+        <img width="32" height="32" src="img/content/banner/banner-room@1x.png" srcset="img/content/banner/banner-room@2x.png 2x" alt=""  loading="lazy">
+                </picture>
+             </span>
+              ЖК
+            <div class="banner__accent">
+              <span class="banner__svg-wrapper banner__svg-wrapper--accent">
+               <svg width="36" height="29" role="img" aria-hidden="true" focusable="false">
+                <use href="/__spritemap#sprite-banner-world"></use>
+              </svg>
+             </span>
+             <span class="banner__slogan-wrapper">
+              в digital - среде
+             </span>
+            </div>
+             </div>
+          <p class="banner__text">Создаем digital-пространство для девелоперов и проектов ЖК, находя баланс идентичности бренда и сервисности.</p>
+          <button class="banner__button button" type="button">Подробнее</button>
+        </div>
+        <div class="banner__animation-box">
+    <div class="banner__promo-wrapper banner__promo-wrapper--1">
+      <picture>
+        <!-- WebP для таблета -->
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/content/banner/banner-img1@1x.webp 1x, img/content/banner/banner-img1@2x.webp 2x" width="148" height="103" >
+        <!-- WebP для десктопа -->
+        <source type="image/webp" media="(min-width: 1280px)" srcset="img/content/banner/banner-img-desktop1@1x.webp 1x, img/banner/banner-img-desktop1@2x.webp 2x" width="278" height="194">
+
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/banner/desktop-1@1x.webp 1x, img/banner/desktop-1@2x.webp 2x" width="278" height="194">
+        <!-- PNG для таблета -->
+        <source media="(min-width: 768px)" srcset="img/content/banner/banner-img1@1x.png 1x, img/content/banner/banner-img1@2x.png 2x" type="image/png" width="148" height="103" >
+        <!-- PNG для десктопа -->
+        <source media="(min-width: 1280px)" srcset="img/content/banner/banner-img-desktop1@1x.png 1x, img/content/banner/banner-img-desktop1@2x.png 2x" type="image/png" width="278" height="194">
+
+             <source media="(min-width: 1440px)" srcset="img/content/banner/desktop-1@1x.png 1x, img/content/banner/desktop-1@2x.png 2x" type="image/png" width="278" height="194">
+        <!-- Fallback для мобильных и браузеров без поддержки WebP -->
+        <img width="148" height="103" src="img/content/banner/banner-img1@1x.png" srcset="img/content/banner/banner-img1@2x.png 2x" alt=""  loading="lazy">
+      </picture>
+    </div>
+    <div class="banner__promo-wrapper banner__promo-wrapper--2">
+      <picture>
+        <!-- WebP для таблета -->
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/content/banner/banner-img2@1x.webp 1x, img/content/banner/banner-img2@2x.webp 2x" width="99" height="215">
+        <!-- WebP для десктопа -->
+        <source type="image/webp" media="(min-width: 1280px)" srcset="img/content/banner/banner-img-desktop2@1x.webp 1x, img/content/banner/banner-img-desktop2@2x.webp 2x" width="150" height="326">
+
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/banner/desktop-2@1x.webp 1x, img/content/banner/desktop-2@2x.webp 2x" width="150" height="326">
+        <!-- PNG для таблета -->
+        <source media="(min-width: 768px)" srcset="img/content/banner/banner-img2@1x.png 1x, img/content/banner/banner-img2@2x.png 2x" type="image/png" width="99" height="215" >
+        <!-- PNG для десктопа -->
+        <source media="(min-width: 1280px)" srcset="img/content/banner/banner-img-desktop2@1x.png 1x, img/content/banner/banner-img-desktop2@2x.png 2x" type="image/png" width="150" height="326">
+
+                <source media="(min-width: 1440px)" srcset="img/content/banner/desktop-2@1x.png 1x, img/content/banner/desktop-2@2x.png 2x" type="image/png" width="150" height="326">
+        <!-- Fallback для мобильных и браузеров без поддержки WebP -->
+        <img width="99" height="215" src="img/content/banner/banner-img2@1x.png" srcset="img/content/banner/banner-img2@2x.png 2x" alt="" loading="lazy">
+      </picture>
+    </div>
+    <div class="banner__promo-wrapper banner__promo-wrapper--3">
+      <picture>
+        <!-- WebP для таблета -->
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/content/banner/banner-img3@1x.webp 1x, img/content/banner/banner-img3@2x.webp 2x" width="144" height="144">
+        <!-- WebP для десктопа -->
+        <source type="image/webp" media="(min-width: 1280px)" srcset="img/content/banner/banner-img-desktop3@1x.webp 1x, img/content/banner/banner-img-desktop3@2x.webp 2x" width="277" height="277">
+
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/banner/desktop-3@1x.webp 1x, img/content/banner/desktop-3@2x.webp 2x" width="277" height="277">
+        <!-- PNG для таблета -->
+        <source media="(min-width: 768px)" srcset="img/content/banner/banner-img3@1x.png 1x, img/content/banner/banner-img3@2x.png 2x" type="image/png" width="144" height="144">
+        <!-- PNG для десктопа -->
+        <source media="(min-width: 1280px)" srcset="img/content/banner/banner-img-desktop3@1x.png 1x, img/content/banner/banner-img-desktop3@2x.png 2x" type="image/png" width="277" height="277">
+
+         <source media="(min-width: 1440px)" srcset="img/content/banner/desktop-3@1x.png 1x, img/content/banner/desktop-3@2x.png 2x" type="image/png" width="277" height="277">
+        <!-- Fallback для мобильных и браузеров без поддержки WebP -->
+        <img width="144" height="144" src="img/content/banner/banner-img3@1x.png" srcset="img/content/banner/banner-img3@2x.png 2x" alt=""  loading="lazy">
+      </picture>
+    </div>
+        <div class="banner__promo-wrapper banner__promo-wrapper--4">
+          <picture>
+            <!-- WebP для таблета -->
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/content/banner/banner-img4@1x.webp 1x, img/content/banner/banner-img4@2x.webp 2x"  width="206" height="163" >
+            <!-- WebP для табл -десктопа -->
+            <source type="image/webp" media="(min-width: 1280px)" srcset="img/content/banner/banner-img-desktop4@1x.webp 1x, img/content/banner/banner-img-desktop4@2x.webp 2x" width="247" height="247">
+
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/banner/desktop-4@1x.webp 1x, img/content/banner/desktop-4@2x.webp 2x" width="247" height="247">
+            <!-- PNG для таблета -->
+            <source media="(min-width: 768px)" srcset="img/content/banner/banner-img4@1x.png 1x, img/content/banner/banner-img4@2x.png 2x" type="image/png" width="206" height="163" >
+            <!-- PNG для десктопа -->
+            <source media="(min-width: 1280px)" srcset="img/content/banner/banner-img-desktop4@1x.png 1x, img/content/banner/banner-img-desktop4@2x.png 2x" type="image/png" width="247" height="247">
+
+                   <source media="(min-width: 1440px)" srcset="img/content/banner/desktop-4@1x.png 1x, img/content/banner/desktop-4@2x.png 2x" type="image/png" width="247" height="247">
+            <!-- Fallback для мобильных и браузеров без поддержки WebP -->
+            <img width="206" height="163"  src="img/content/banner/banner-img4@1x.png" srcset="img/content/banner/banner-img4@2x.png 2x" alt="" loading="lazy">
+          </picture>
+        </div>
+        <div class="banner__label">
+          <svg width="38" height="31" role="img" aria-hidden="true" focusable="false">
+            <use href="/__spritemap#sprite-banner-label"></use>
+          </svg>
+        </div>
+        </div>
+      </div>
+    </li>
+    <li class="banners-list__item banners-list__dev-item">
+      <div class="banners-list__box banner banner-dev">
+        <div class="banner__text-wrapper banner-dev__text-wrapper">
+          <h3 class="banner__caption bunner-dev__caption">mobile app</h3>
+          <p class="banner__slogan banner-dev__slogan">Проектируем<br>
+            <span class="banners-list__dev-icon">
+            <svg width="18" height="22" role="img" aria-hidden="true" focusable="false">
+            <use href="/__spritemap#sprite-phone"></use>
+          </svg>
+          </span>
+            мобильные приложения</p>
+          <p class="banner__text banner-dev__text">Разрабатываем приложения для мобильных устройств, решая реальные запросы пользователей.</p>
+          <button class="banner__button button" type="button">Подробнее</button>
+        </div>
+        <div class="banner__animation-box banner-dev__animation-box ">
+          <div class="banner__img-wrapper banner-dev__img-wrapper">
+            <span class="banner-dev__dev-icon">
+            <svg width="26" height="30" role="img" aria-hidden="true" focusable="false">
+            <use href="/__spritemap#sprite-banner-burger"></use>
+          </svg>
+          </span>
+          </div>
+          <div class="banner__img-wrapper banner-dev__img-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 1280px)" srcset="img/content/banner/banner2-desktop-3@1x.webp 1x, img/content/banner/banner2-desktop-3@2x.webp 2x" width="210" height="111">
+
+              <source media="(min-width: 1280px)" srcset="img/content/banner/img/content/banner/banner2-desktop-3@1x.png 1x, img/content/banner/img/content/banner/banner2-desktop-3@2x.png 2x" type="image/png" width="210" height="111">
+
+              <img width="210" height="111" src="img/content/banner/img/content/banner/banner2-desktop-3@1x.png" srcset="img/content/banner/img/content/banner/banner2-desktop-3@2x.png 2x" alt="" loading="lazy">
+            </picture>
+          </div>
+          <div class="banner__img-wrapper banner-dev__img-wrapper">
+            <picture>
+              <!-- WebP для таблета -->
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/content/banner/banner2-mobile-1@1x.webp 1x, img/content/banner/banner2-mobile-1@2x.webp 2x" width="112" height="246">
+              <!-- WebP для десктопа -->
+              <source type="image/webp" media="(min-width: 1280px)" srcset="img/content/banner/banner2-desktop-1@1x.webp 1x, img/content/banner/banner2-desktop-1@2x.webp 2x" width="213" height="467">
+              <!-- PNG для таблета -->
+              <source media="(min-width: 768px)" srcset="img/content/banner/banner2-mobile-1@1x.png 1x, img/content/banner/banner2-mobile-1@2x.png 2x" type="image/png" width="112" height="246">
+              <!-- PNG для десктопа -->
+              <source media="(min-width: 1280px)" srcset="img/content/banner/banner2-desktop-1@1x.png 1x, img/content/banner/banner2-desktop-1@2x.png 2x" type="image/png" width="213" height="467">
+              <!-- Fallback для мобильных и браузеров без поддержки WebP -->
+              <img width="112" height="246" src="img/content/banner/banner2-mobile-1@1x.png" srcset="img/content/banner/banner2-mobile-1@2x.png 2x" alt=""  loading="lazy">
+            </picture>
+          </div>
+          <div class="banner__img-wrapper banner-dev__img-wrapper">
+             <picture>
+              <!-- WebP для таблета -->
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/content/banner/banner2-mobile-2@1x.webp 1x, img/content/banner/banner2-mobile-2@2x.webp 2x" width="120" height="252">
+              <!-- WebP для десктопа -->
+              <source type="image/webp" media="(min-width: 1280px)" srcset="img/content/banner/banner2-desktop-2@1x.webp 1x, img/content/banner/banner2-desktop-2@2x.webp 2x" width="226" height="479">
+              <!-- PNG для таблета -->
+              <source media="(min-width: 768px)" srcset="img/content/banner/banner2-mobile-2@1x.png 1x, img/content/banner/banner2-mobile-2@2x.png 2x" type="image/png" width="120" height="252">
+              <!-- PNG для десктопа -->
+              <source media="(min-width: 1280px)" srcset="img/content/banner/banner2-desktop-2@1x.png 1x, img/content/banner/banner2-desktop-2@2x.png 2x" type="image/png" width="226" height="479">
+              <!-- Fallback для мобильных и браузеров без поддержки WebP -->
+              <img width="120" height="252" src="img/content/banner/banner2-mobile-2@1x.png" srcset="img/content/banner/banner2-mobile-2@2x.png 2x" alt=""  loading="lazy">
+            </picture>
+          </div>
+          <div class="banner__img-wrapper banner-dev__img-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 1280px)" srcset="img/content/banner/banner2-desktop-4@1x.webp 1x, img/content/banner/banner2-desktop-4@2x.webp 2x" width="99" height="215">
+
+              <source media="(min-width: 1280px)" srcset="img/content/banner/img/content/banner/banner2-desktop-4@1x.png 1x, img/content/banner/img/content/banner/banner2-desktop-4@2x.png 2x" type="image/png" width="180" height="390">
+
+              <img width="99" height="215" src="img/content/banner/img/content/banner/banner2-desktop-4@1x.png" srcset="img/content/banner/img/content/banner/banner2-desktop-4@2x.png 2x" alt="" loading="lazy">
+            </picture>
+          </div>
+          <div class="banner__label banner-dev__label">
+            <svg width="38" height="31" role="img" aria-hidden="true" focusable="false">
+              <use href="/__spritemap#sprite-order"></use>
+            </svg>
           </div>
         </div>
-        <section class="products__sale sale">
-          <div class="sale__wrapper">
-            <article class="sale__card products-card products-card--open">
-              <a class="products-card__link" href="#">
-                <span class="visually-hidden">Карточка описания</span>
-              </a>
-              <header class="products-card__header">
-                <span class="products-card__category">Распродажа</span>
-                <span class="products-card__discount">30%</span>
-                <button class="products-card__button button-favourites" type="button">
-                  <span class="visually-hidden">Добавить в избранное.</span>
-                </button>
-              </header>
-              <h3 class="products-card__caption products-caption">
-                Pragmatica Next VF</h3>
-              <div class="products-card__about">
-                <div class="products-card__about-wrapper">
-                  <h4 class="products-card__format-caption format-caption">Opentype</h4>
-                  <ul class="products-card__list">
-                    <li class="products-card__item">
-                      <span class="products-card__termin">Начертаний</span>
-                      <span class="products-card__description">8</span>
-                    </li>
-                    <li class="products-card__item">
-                      <span class="products-card__termin">Языки</span>
-                      <span class="products-card__description">92</span>
-                    </li>
-                  </ul>
-                  <p class="products-card__classification">Гротеск</p>
-                  <p class="products-card__price-text">
-                    <span class="products-card__text">От</span>
-                    <span class="products-card__price">2 250 ₽</span>
-                  </p>
-                  <h4 class="products-card__tag-caption">Теги</h4>
-                  <ul class="products-card__tag-list tag-list">
-                    <li class="tag-list__item tag">Десктоп
-                    </li>
-                    <li class="tag-list__item tag">Вэб
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-            <div class="sale__slider sale-slider products-slider">
-              <div class="products-slider__scrollbar sale-slider__scrollbar ">
-                <a class="products-slider__scrollbar-link products-slider__scrollbar-link--active" href="#">
-                  <span class="visually-hidden">Переход к следующему слайду.</span>
-                </a>
-                <a class="products-slider__scrollbar-link" href="#">
-                  <span class="visually-hidden">Переход к следующему слайду.</span>
-                </a>
-                <a class="products-slider__scrollbar-link" href="#">
-                  <span class="visually-hidden">Переход к следующему слайду.</span>
-                </a>
-              </div>
-              <button class="sale-slider__toggle-button slider-toggle products-slider__toggle" id="sale-toggle"
-                type="button">
-                <span class="visually-hidden">Открыть карточку шрифта.</span>
-              </button>
-              <ul class="sale-slider__list products-slider__list">
-                <li class="sale-slider__item products-slider__list-item sale-card">
-                  <div class="sale-slider__img-wrapper products-slider__img-wrapper">
-                    <picture>
-                      <source type="image/webp" media="(min-width: 1600px)"
-                        srcset="img/sale/pragmatica-desktop@1x.webp, img/sale/pragmatica-desktop@2x.webp 2x"
-                        width="1580" height="800">
-                      <source type="image/webp" srcset="img/sale/pragmatica@1x.webp, img/sale/pragmatica@2x.webp 2x"
-                        width="370" height="300">
-                      <source media="(min-width: 1600px)"
-                        srcset="img/sale/pragmatica-desktop@1x.jpg, img/sale/pragmatica-desktop@2x.jpg 2x"
-                        type="image/jpg" width="1580" height="800">
-                      <img class="sale-slider__img products-slider__img" width="370" height="300"
-                        src="img/sale/pragmatica@1x.jpg" srcset="img/sale/pragmatica@2x.jpg 2x" alt="Шрифт Pragmatica."
-                        loading="lazy">
-                    </picture>
-                  </div>
-                </li>
-                <li class="products-slider__item sale-slider__item  sale-card">
-                  <div class="products-slider__img-wrapper sale-slider__img-wrapper">
-                    <picture>
-                      <source type="image/webp" media="(min-width: 1600px)"
-                        srcset="img/sale/proxima-desktop@1x.webp, img/sale/proxima-desktop@2x.webp 2x" width="1580"
-                        height="800">
-                      <source type="image/webp"
-                        srcset="img/sale/proxima-mobile@1x.webp, img/sale/proxima-mobile@2x.webp 2x" width="370"
-                        height="300">
-                      <source media="(min-width: 1600px)"
-                        srcset="img/sale/proxima-desktop@1x.jpg, img/sale/proxima-desktop@2x.jpg 2x" type="image/jpg"
-                        width="1580" height="800">
-                      <img class="products-slider__img sale-slider__img" width="370" height="300"
-                        src="img/sale/proxima-mobile@1x.jpg" srcset="img/sale/proxima-mobile@2x.jpg 2x"
-                        alt="Шрифт Proxima PT." loading="lazy">
-                    </picture>
-                  </div>
-                </li>
-                <li class="products-slider__item sale-slider__item sale-card">
-                  <div class="products-slider__img-wrapper sale-slider__img-wrapper">
-                    <picture>
-                      <source type="image/webp" media="(min-width: 1600px)"
-                        srcset="img/sale/magistral-desktop@1x.webp, img/sale/magistral-desktop@2x.webp 2x" width="1580"
-                        height="800">
-                      <source type="image/webp"
-                        srcset="img/sale/magistral-mobile@1x.webp, img/sale/magistral-mobile@2x.webp 2x" width="370"
-                        height="300">
-                      <source media="(min-width: 1600px)"
-                        srcset="img/sale/magistral-desktop@1x.jpg, img/sale/magistral-desktop@2x.jpg 2x"
-                        type="image/jpg" width="1580" height="800">
-                      <img class="products-slider__img sale-slider__img" width="370" height="300"
-                        src="img/sale/magistral-mobile@1x.jpg" srcset="img/sale/magistral-mobile@2x.jpg 2x"
-                        alt="Шрифт Magistral." loading="lazy">
-                    </picture>
-                  </div>
-                </li>
-              </ul>
-              <div class="products__swiper-pagination sale__swiper-pagination swiper-pagination">
-                <button class="swiper-pagination__bullet swiper-pagination__bullet--active" type="button"
-                  aria-label="Перейти к слайду 1">
-                  <span class="visually-hidden">Кнопка переключения слайдов.</span>
-                </button>
-                <button class="swiper-pagination__bullet" type="button"
-                  aria-label="Перейти к слайду 1">
-                  <span class="visually-hidden">Кнопка переключения слайдов.</span>
-                </button>
-                <button class="swiper-pagination__bullet" type="button"
-                  aria-label="Перейти к слайду 1">
-                  <span class="visually-hidden">Кнопка переключения слайдов.</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="products__bestseller bestseller">
-          <div class="bestseller__wrapper">
-            <article class="bestseller__card products-card">
-                <a class="products-card__link" href="#">
-                <span class="visually-hidden">Карточка описания</span>
-              </a>
-              <header class="products-card__header">
-                <span class="products-card__category">Бестселлер</span>
-                <button class="products-card__button button-favourites" type="button">
-                  <span class="visually-hidden">Добавить в избранное.</span>
-                </button>
-              </header>
-              <h3 class="products-card__caption products-caption">Proxima Nova</h3>
-              <div class="products-card__about">
-                <div class="products-card__about-wrapper">
-                  <h4 class="products-card__format-caption format-caption">Opentype</h4>
-                  <ul class="products-card__list">
-                    <li class="products-card__item">
-                      <span class="products-card__termin">Начертаний</span>
-                      <span class="products-card__description">8</span>
-                    </li>
-                    <li class="products-card__item">
-                      <span class="products-card__termin">Языки</span>
-                      <span class="products-card__description">92</span>
-                    </li>
-                  </ul>
-                  <p class="products-card__classification">Гротеск</p>
-                  <p class="products-card__price-text">
-                    <span class="products-card__text">От</span>
-                    <span class="products-card__price">2 250 ₽</span>
-                  </p>
-                  <h4 class="products-card__tag-caption">Теги</h4>
-                  <ul class="products-card__tag-list tag-list">
-                    <li class="tag-list__item tag">Десктоп
-                    </li>
-                    <li class="tag-list__item tag">Вэб
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-            <div class="products-slider bestseller__slider bestseller-slider ">
-
-              <div class="products-slider__scrollbar bestseller-slider__scrollbar ">
-                <a class="products-slider__scrollbar-link products-slider__scrollbar-link--active" href="#">
-                  <span class="visually-hidden">Переход к следующему слайду.</span>
-                </a>
-                <a class="products-slider__scrollbar-link" href="#">
-                  <span class="visually-hidden">Переход к следующему слайду.</span>
-                </a>
-                <a class="products-slider__scrollbar-link" href="#">
-                  <span class="visually-hidden">Переход к следующему слайду.</span>
-                </a>
-              </div>
-              <button class="products-slider__toggle bestseller-slider__toggle-button slider-toggle"
-                id="bestseller-toggle" type="button">
-                <span class="visually-hidden">Открыть карточку шрифта.</span>
-              </button>
-              <ul class="products-slider__list bestseller-slider__list">
-                <li class="products-slider__item bestseller-slider__item bestseller-card">
-                  <div class="products-slider__img-wrapper bestseller-slider__img-wrapper">
-                    <picture>
-                      <source type="image/webp" media="(min-width: 1600px)"
-                        srcset="img/sale/proxima-desktop@1x.webp, img/sale/proxima-desktop@2x.webp 2x" width="1580"
-                        height="800">
-                      <source type="image/webp"
-                        srcset="img/sale/proxima-mobile@1x.webp, img/sale/proxima-mobile@2x.webp 2x" width="370"
-                        height="300">
-                      <source media="(min-width: 1600px)"
-                        srcset="img/sale/proxima-desktop@1x.jpg, img/sale/proxima-desktop@2x.jpg 2x" type="image/jpg"
-                        width="1580" height="800">
-
-                      <img class="products-slider__img bestseller-slider__img" width="370" height="300"
-                        src="img/sale/proxima-mobile@1x.jpg" srcset="img/sale/proxima-mobile@2x.jpg 2x"
-                        alt="Шрифт Proxima PT." loading="lazy">
-                    </picture>
-                  </div>
-                </li>
-                <li class="products-slider__item bestseller-slider__item bestseller-card">
-                  <div class="products-slider__img-wrapper bestseller-slider__img-wrapper">
-
-
-                    <picture>
-                      <source type="image/webp" media="(min-width: 1600px)"
-                        srcset="img/sale/magistral-desktop@1x.webp, img/sale/magistral-desktop@2x.webp 2x" width="1580"
-                        height="800">
-                      <source type="image/webp"
-                        srcset="img/sale/magistral-mobile@1x.webp, img/sale/magistral-mobile@2x.webp 2x" width="370"
-                        height="300">
-                      <source media="(min-width: 1600px)"
-                        srcset="img/sale/magistral-desktop@1x.jpg, img/sale/magistral-desktop@2x.jpg 2x"
-                        type="image/jpg" width="1580" height="800">
-
-                      <img class="products-slider__img bestseller-slider__img" width="370" height="300"
-                        src="img/sale/magistral-mobile@1x.jpg" srcset="img/sale/magistral-mobile@2x.jpg 2x"
-                        alt="Шрифт Magistral." loading="lazy">
-                    </picture>
-
-
-                  </div>
-                </li>
-                <li class="products-slider__item bestseller-slider__item bestseller-card">
-                  <div class="products-slider__img-wrapper bestseller-slider__img-wrapper">
-
-
-                    <picture>
-                      <source type="image/webp" media="(min-width: 1600px)"
-                        srcset="img/sale/pragmatica-desktop@1x.webp, img/sale/pragmatica-desktop@2x.webp 2x"
-                        width="1580" height="800">
-                      <source type="image/webp" srcset="img/sale/pragmatica@1x.webp, img/sale/pragmatica@2x.webp 2x"
-                        width="370" height="300">
-                      <source media="(min-width: 1600px)"
-                        srcset="img/sale/pragmatica-desktop@1x.jpg, img/sale/pragmatica-desktop@2x.jpg 2x"
-                        type="image/jpg" width="1580" height="800">
-
-                      <img class="products-slider__img bestseller-slider__img" width="370" height="300"
-                        src="img/sale/pragmatica@1x.jpg" srcset="img/sale/pragmatica@2x.jpg 2x" alt="Шрифт Pragmatica."
-                        loading="lazy">
-                    </picture>
-                  </div>
-                </li>
-              </ul>
-              <div class="products__swiper-pagination bestseller__swiper-pagination swiper-pagination">
-                <button class="swiper-pagination__bullet swiper-pagination__bullet--active" type="button"
-                  aria-label="Перейти к слайду 1">
-                  <span class="visually-hidden">Кнопка переключения слайдов.</span>
-                </button>
-                <button class="swiper-pagination__bullet" type="button"
-                  aria-label="Перейти к слайду 1">
-                  <span class="visually-hidden">Кнопка переключения слайдов.</span>
-                </button>
-                <button class="swiper-pagination__bullet" type="button"
-                  aria-label="Перейти к слайду 1">
-                  <span class="visually-hidden">Кнопка переключения слайдов.</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="products__recommendation recommendation">
-          <div class="recommendation__wrapper">
-            <article class="recommendation__card products-card">
-            <a class="products-card__link" href="#">
-                <span class="visually-hidden">Карточка описания</span>
-              </a>
-              <header class="products-card__header">
-                <span class="products-card__category">Рекомендуем</span>
-                <button class="products-card__button button-favourites" type="button">
-                  <span class="visually-hidden">Добавить в избранное.</span>
-                </button>
-              </header>
-              <h3 class="products-card__caption products-caption">
-                Magistral<br class="products-caption__break">pt</h3>
-              <div class="products-card__about products-card__about--open">
-                <div class="products-card__about-wrapper">
-                  <h4 class="products-card__format-caption format-caption">Opentype</h4>
-                  <ul class="products-card__list">
-                    <li class="products-card__item">
-                      <span class="products-card__termin">Начертаний</span>
-                      <span class="products-card__description">8</span>
-                    </li>
-                    <li class="products-card__item">
-                      <span class="products-card__termin">Языки</span>
-                      <span class="products-card__description">92</span>
-                    </li>
-                  </ul>
-                  <p class="products-card__classification">Гротеск</p>
-                  <p class="products-card__price-text">
-                    <span class="products-card__text">От</span>
-                    <span class="products-card__price">2 250 ₽</span>
-                  </p>
-                  <h4 class="products-card__tag-caption">Теги</h4>
-                  <ul class="products-card__tag-list tag-list">
-                    <li class="tag-list__item tag">Десктоп</li>
-                    <li class="tag-list__item tag">Вэб</li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-            <div class="products-slider recommendation__slider recommendation-slider">
-              <div class="products-slider__scrollbar recommendation-slider__scrollbar ">
-                <a class="products-slider__scrollbar-link products-slider__scrollbar-link--active" href="#">
-                  <span class="visually-hidden">Переход к следующему слайду.</span>
-                </a>
-                <a class="products-slider__scrollbar-link" href="#">
-                  <span class="visually-hidden">Переход к следующему слайду.</span>
-                </a>
-                <a class="products-slider__scrollbar-link" href="#">
-                  <span class="visually-hidden">Переход к следующему слайду.</span>
-                </a>
-              </div>
-
-              <button
-                class="products-slider__toggle recommendation-slider__toggle-button slider-toggle slider-toggle--open"
-                id="recommendation-toggle" type="button">
-                <span class="visually-hidden">Открыть карточку шрифта.</span>
-              </button>
-              <ul class="products-slider__list recommendation-slider__list">
-                <li class="products-slider__item recommendation-slider__item recommendation-card">
-                  <div class="products-slider__img-wrapper recommendation-slider__img-wrapper">
-                    <picture>
-                      <source type="image/webp" media="(min-width: 1600px)"
-                        srcset="img/sale/magistral-desktop@1x.webp, img/sale/magistral-desktop@2x.webp 2x" width="1580"
-                        height="800">
-                      <source type="image/webp"
-                        srcset="img/sale/magistral-mobile@1x.webp, img/sale/magistral-mobile@2x.webp 2x" width="370"
-                        height="300">
-                      <source media="(min-width: 1600px)"
-                        srcset="img/sale/magistral-desktop@1x.jpg, img/sale/magistral-desktop@2x.jpg 2x"
-                        type="image/jpg" width="1580" height="800">
-
-                      <img class="products-slider__img recommendation-slider__img" width="370" height="300"
-                        src="img/sale/magistral-mobile@1x.jpg" srcset="img/sale/magistral-mobile@2x.jpg 2x"
-                        alt="Шрифт Magistral." loading="lazy">
-                    </picture>
-                  </div>
-                </li>
-                <li class="products-slider__item recommendation-slider__item recommendation-card">
-                  <div class="products-slider__img-wrapper recommendation-slider__img-wrapper">
-                    <picture>
-                      <source type="image/webp" media="(min-width: 1600px)"
-                        srcset="img/sale/proxima-desktop@1x.webp, img/sale/proxima-desktop@2x.webp 2x" width="1580"
-                        height="800">
-                      <source type="image/webp"
-                        srcset="img/sale/proxima-mobile@1x.webp, img/sale/proxima-mobile@2x.webp 2x" width="370"
-                        height="300">
-                      <source media="(min-width: 1600px)"
-                        srcset="img/sale/proxima-desktop@1x.jpg, img/sale/proxima-desktop@2x.jpg 2x" type="image/jpg"
-                        width="1580" height="800">
-
-                      <img class="products-slider__img recommendation-slider__img" width="370" height="300"
-                        src="img/sale/proxima-mobile@1x.jpg" srcset="img/sale/proxima-mobile@2x.jpg 2x"
-                        alt="Шрифт Proxima PT." loading="lazy">
-                    </picture>
-                  </div>
-                </li>
-                <li class="products-slider__item recommendation-slider__item recommendation-card">
-                  <div class="products-slider__img-wrapper recommendation-slider__img-wrapper">
-                    <picture>
-                      <source type="image/webp" media="(min-width: 1600px)"
-                        srcset="img/sale/pragmatica-desktop@1x.webp, img/sale/pragmatica-desktop@2x.webp 2x"
-                        width="1580" height="800">
-                      <source type="image/webp" srcset="img/sale/pragmatica@1x.webp, img/sale/pragmatica@2x.webp 2x"
-                        width="370" height="300">
-                      <source media="(min-width: 1600px)"
-                        srcset="img/sale/pragmatica-desktop@1x.jpg, img/sale/pragmatica-desktop@2x.jpg 2x"
-                        type="image/jpg" width="1580" height="800">
-
-                      <img class="products-slider__img recommendation-slider__img" width="370" height="300"
-                        src="img/sale/pragmatica@1x.jpg" srcset="img/sale/pragmatica@2x.jpg 2x" alt="Шрифт Pragmatica."
-                        loading="lazy">
-                    </picture>
-                  </div>
-                </li>
-
-
-              </ul>
-
-              <div class="products__swiper-pagination recommendation__swiper-pagination swiper-pagination">
-                <button class="swiper-pagination__bullet swiper-pagination__bullet--active" type="button"
-                  aria-label="Перейти к слайду 1">
-                  <span class="visually-hidden">Кнопка переключения слайдов.</span>
-                </button>
-                <button class="swiper-pagination__bullet" type="button"
-                  aria-label="Перейти к слайду 1">
-                  <span class="visually-hidden">Кнопка переключения слайдов.</span>
-                </button>
-                <button class="swiper-pagination__bullet" type="button"
-                  aria-label="Перейти к слайду 1">
-                  <span class="visually-hidden">Кнопка переключения слайдов.</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
-        <div class="products__scroll scroll">
-    <button class="scroll__button" type="button">
-      <span class="visually-hidden">Кнопка скролла наверх.</span>
-    </button>
+    </li>
+      <li class="banners-list__item">
+      <div class="banners-list__box banner">
+        <div class="banner__text-wrapper">
+          <h3 class="banner__caption">Недвижимость</h3>
+          <div class="banner__slogan">
+         Формируем
+             <span class="banner__svg-wrapper">
+              <svg width="36" height="29" role="img" aria-hidden="true" focusable="false">
+                <use href="/__spritemap#sprite-banner-arrow"></use>
+              </svg>
+             </span>
+             <br>
+             <span class="banner__img-wrapper">
+                <picture>
+                  <!-- WebP для таблета -->
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/content/banner/banner-heart@1x.webp 1x, img/content/banner/banner-heart@2x.webp 2x" width="32" height="32">
+                  <!-- WebP для десктопа -->
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/banner/banner-heart-desktop@1x.webp 1x, img/banner/banner-heart-desktop@2x.webp 2x" width="40" height="40">
+                  <!-- PNG для таблета -->
+                  <source media="(min-width: 768px)" srcset="img/content/banner/banner-heart@1x.png 1x, img/content/banner/banner-heart@2x.png 2x" type="image/png" width="32" height="32">
+                  <!-- PNG для десктопа -->
+                  <source media="(min-width: 1440px)" srcset="img/content/banner/banner-heart-desktop@1x.png 1x, img/content/banner/banner-heart-desktop@2x.png 2x" type="image/png" width="40" height="40">
+                  <!-- Fallback для мобильных и браузеров без поддержки WebP -->
+                  <img width="32" height="32" src="img/content/banner/banner-heart@1x.png" srcset="img/content/banner/banner-heart@2x.png 2x" alt=""  loading="lazy">
+                </picture>
+             </span>
+            <span class="banner__slogan-text">ценность брендa</span>
+              <span class="banner__img-wrapper">
+                <picture>
+        <!-- WebP для таблета -->
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/content/banner/banner-room@1x.webp 1x, img/content/banner/banner-room@2x.webp 2x" width="32" height="32">
+        <!-- WebP для десктопа -->
+        <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/banner/banner-room-desktop@1x.webp 1x, img/banner/banner-room-desktop@2x.webp 2x" width="40" height="40">
+        <!-- PNG для таблета -->
+        <source media="(min-width: 768px)" srcset="img/content/banner/banner-room@1x.png 1x, img/content/banner/banner-room@2x.png 2x" type="image/png" width="32" height="32">
+        <!-- PNG для десктопа -->
+        <source media="(min-width: 1440px)" srcset="img/content/banner/banner-room-desktop@1x.png 1x, img/content/banner/banner-room-desktop@2x.png 2x" type="image/png" width="40" height="40">
+        <!-- Fallback для мобильных и браузеров без поддержки WebP -->
+        <img width="32" height="32" src="img/content/banner/banner-room@1x.png" srcset="img/content/banner/banner-room@2x.png 2x" alt=""  loading="lazy">
+                </picture>
+             </span>
+              ЖК
+            <div class="banner__accent">
+              <span class="banner__svg-wrapper banner__svg-wrapper--accent">
+               <svg width="36" height="29" role="img" aria-hidden="true" focusable="false">
+                <use href="/__spritemap#sprite-banner-world"></use>
+              </svg>
+             </span>
+             <span class="banner__slogan-wrapper">
+              в digital - среде
+             </span>
+            </div>
+             </div>
+          <p class="banner__text">Создаем digital-пространство для девелоперов и проектов ЖК, находя баланс идентичности бренда и сервисности.</p>
+          <button class="banner__button button" type="button">Подробнее</button>
+        </div>
+        <div class="banner__animation-box">
+    <div class="banner__promo-wrapper banner__promo-wrapper--1">
+      <picture>
+        <!-- WebP для таблета -->
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/content/banner/banner-img1@1x.webp 1x, img/content/banner/banner-img1@2x.webp 2x" width="148" height="103" >
+        <!-- WebP для десктопа -->
+        <source type="image/webp" media="(min-width: 1280px)" srcset="img/content/banner/banner-img-desktop1@1x.webp 1x, img/banner/banner-img-desktop1@2x.webp 2x" width="278" height="194">
+
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/banner/desktop-1@1x.webp 1x, img/banner/desktop-1@2x.webp 2x" width="278" height="194">
+        <!-- PNG для таблета -->
+        <source media="(min-width: 768px)" srcset="img/content/banner/banner-img1@1x.png 1x, img/content/banner/banner-img1@2x.png 2x" type="image/png" width="148" height="103" >
+        <!-- PNG для десктопа -->
+        <source media="(min-width: 1280px)" srcset="img/content/banner/banner-img-desktop1@1x.png 1x, img/content/banner/banner-img-desktop1@2x.png 2x" type="image/png" width="278" height="194">
+
+             <source media="(min-width: 1440px)" srcset="img/content/banner/desktop-1@1x.png 1x, img/content/banner/desktop-1@2x.png 2x" type="image/png" width="278" height="194">
+        <!-- Fallback для мобильных и браузеров без поддержки WebP -->
+        <img width="148" height="103" src="img/content/banner/banner-img1@1x.png" srcset="img/content/banner/banner-img1@2x.png 2x" alt=""  loading="lazy">
+      </picture>
+    </div>
+    <div class="banner__promo-wrapper banner__promo-wrapper--2">
+      <picture>
+        <!-- WebP для таблета -->
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/content/banner/banner-img2@1x.webp 1x, img/content/banner/banner-img2@2x.webp 2x" width="99" height="215">
+        <!-- WebP для десктопа -->
+        <source type="image/webp" media="(min-width: 1280px)" srcset="img/content/banner/banner-img-desktop2@1x.webp 1x, img/content/banner/banner-img-desktop2@2x.webp 2x" width="150" height="326">
+
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/banner/desktop-2@1x.webp 1x, img/content/banner/desktop-2@2x.webp 2x" width="150" height="326">
+        <!-- PNG для таблета -->
+        <source media="(min-width: 768px)" srcset="img/content/banner/banner-img2@1x.png 1x, img/content/banner/banner-img2@2x.png 2x" type="image/png" width="99" height="215" >
+        <!-- PNG для десктопа -->
+        <source media="(min-width: 1280px)" srcset="img/content/banner/banner-img-desktop2@1x.png 1x, img/content/banner/banner-img-desktop2@2x.png 2x" type="image/png" width="150" height="326">
+
+                <source media="(min-width: 1440px)" srcset="img/content/banner/desktop-2@1x.png 1x, img/content/banner/desktop-2@2x.png 2x" type="image/png" width="150" height="326">
+        <!-- Fallback для мобильных и браузеров без поддержки WebP -->
+        <img width="99" height="215" src="img/content/banner/banner-img2@1x.png" srcset="img/content/banner/banner-img2@2x.png 2x" alt="" loading="lazy">
+      </picture>
+    </div>
+    <div class="banner__promo-wrapper banner__promo-wrapper--3">
+      <picture>
+        <!-- WebP для таблета -->
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/content/banner/banner-img3@1x.webp 1x, img/content/banner/banner-img3@2x.webp 2x" width="144" height="144">
+        <!-- WebP для десктопа -->
+        <source type="image/webp" media="(min-width: 1280px)" srcset="img/content/banner/banner-img-desktop3@1x.webp 1x, img/content/banner/banner-img-desktop3@2x.webp 2x" width="277" height="277">
+
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/banner/desktop-3@1x.webp 1x, img/content/banner/desktop-3@2x.webp 2x" width="277" height="277">
+        <!-- PNG для таблета -->
+        <source media="(min-width: 768px)" srcset="img/content/banner/banner-img3@1x.png 1x, img/content/banner/banner-img3@2x.png 2x" type="image/png" width="144" height="144">
+        <!-- PNG для десктопа -->
+        <source media="(min-width: 1280px)" srcset="img/content/banner/banner-img-desktop3@1x.png 1x, img/content/banner/banner-img-desktop3@2x.png 2x" type="image/png" width="277" height="277">
+
+         <source media="(min-width: 1440px)" srcset="img/content/banner/desktop-3@1x.png 1x, img/content/banner/desktop-3@2x.png 2x" type="image/png" width="277" height="277">
+        <!-- Fallback для мобильных и браузеров без поддержки WebP -->
+        <img width="144" height="144" src="img/content/banner/banner-img3@1x.png" srcset="img/content/banner/banner-img3@2x.png 2x" alt=""  loading="lazy">
+      </picture>
+    </div>
+        <div class="banner__promo-wrapper banner__promo-wrapper--4">
+          <picture>
+            <!-- WebP для таблета -->
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/content/banner/banner-img4@1x.webp 1x, img/content/banner/banner-img4@2x.webp 2x"  width="206" height="163" >
+            <!-- WebP для табл -десктопа -->
+            <source type="image/webp" media="(min-width: 1280px)" srcset="img/content/banner/banner-img-desktop4@1x.webp 1x, img/content/banner/banner-img-desktop4@2x.webp 2x" width="247" height="247">
+
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/banner/desktop-4@1x.webp 1x, img/content/banner/desktop-4@2x.webp 2x" width="247" height="247">
+            <!-- PNG для таблета -->
+            <source media="(min-width: 768px)" srcset="img/content/banner/banner-img4@1x.png 1x, img/content/banner/banner-img4@2x.png 2x" type="image/png" width="206" height="163" >
+            <!-- PNG для десктопа -->
+            <source media="(min-width: 1280px)" srcset="img/content/banner/banner-img-desktop4@1x.png 1x, img/content/banner/banner-img-desktop4@2x.png 2x" type="image/png" width="247" height="247">
+
+                   <source media="(min-width: 1440px)" srcset="img/content/banner/desktop-4@1x.png 1x, img/content/banner/desktop-4@2x.png 2x" type="image/png" width="247" height="247">
+            <!-- Fallback для мобильных и браузеров без поддержки WebP -->
+            <img width="206" height="163"  src="img/content/banner/banner-img4@1x.png" srcset="img/content/banner/banner-img4@2x.png 2x" alt="" loading="lazy">
+          </picture>
+        </div>
+        <div class="banner__label">
+          <svg width="38" height="31" role="img" aria-hidden="true" focusable="false">
+            <use href="/__spritemap#sprite-banner-label"></use>
+          </svg>
+        </div>
+        </div>
+      </div>
+    </li>
+      <li class="banners-list__item banners-list__dev-item">
+      <div class="banners-list__box banner banner-dev">
+        <div class="banner__text-wrapper banner-dev__text-wrapper">
+          <h3 class="banner__caption bunner-dev__caption">mobile app</h3>
+          <p class="banner__slogan banner-dev__slogan">Проектируем<br>
+            <span class="banners-list__dev-icon">
+            <svg width="18" height="22" role="img" aria-hidden="true" focusable="false">
+            <use href="/__spritemap#sprite-phone"></use>
+          </svg>
+          </span>
+            мобильные приложения</p>
+          <p class="banner__text banner-dev__text">Разрабатываем приложения для мобильных устройств, решая реальные запросы пользователей.</p>
+          <button class="banner__button button" type="button">Подробнее</button>
+        </div>
+        <div class="banner__animation-box banner-dev__animation-box ">
+          <div class="banner__img-wrapper banner-dev__img-wrapper">
+            <span class="banner-dev__dev-icon">
+            <svg width="26" height="30" role="img" aria-hidden="true" focusable="false">
+            <use href="/__spritemap#sprite-banner-burger"></use>
+          </svg>
+          </span>
+          </div>
+          <div class="banner__img-wrapper banner-dev__img-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 1280px)" srcset="img/content/banner/banner2-desktop-3@1x.webp 1x, img/content/banner/banner2-desktop-3@2x.webp 2x" width="210" height="111">
+
+              <source media="(min-width: 1280px)" srcset="img/content/banner/img/content/banner/banner2-desktop-3@1x.png 1x, img/content/banner/img/content/banner/banner2-desktop-3@2x.png 2x" type="image/png" width="210" height="111">
+
+              <img width="210" height="111" src="img/content/banner/img/content/banner/banner2-desktop-3@1x.png" srcset="img/content/banner/img/content/banner/banner2-desktop-3@2x.png 2x" alt="" loading="lazy">
+            </picture>
+          </div>
+          <div class="banner__img-wrapper banner-dev__img-wrapper">
+            <picture>
+              <!-- WebP для таблета -->
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/content/banner/banner2-mobile-1@1x.webp 1x, img/content/banner/banner2-mobile-1@2x.webp 2x" width="112" height="246">
+              <!-- WebP для десктопа -->
+              <source type="image/webp" media="(min-width: 1280px)" srcset="img/content/banner/banner2-desktop-1@1x.webp 1x, img/content/banner/banner2-desktop-1@2x.webp 2x" width="213" height="467">
+              <!-- PNG для таблета -->
+              <source media="(min-width: 768px)" srcset="img/content/banner/banner2-mobile-1@1x.png 1x, img/content/banner/banner2-mobile-1@2x.png 2x" type="image/png" width="112" height="246">
+              <!-- PNG для десктопа -->
+              <source media="(min-width: 1280px)" srcset="img/content/banner/banner2-desktop-1@1x.png 1x, img/content/banner/banner2-desktop-1@2x.png 2x" type="image/png" width="213" height="467">
+              <!-- Fallback для мобильных и браузеров без поддержки WebP -->
+              <img width="112" height="246" src="img/content/banner/banner2-mobile-1@1x.png" srcset="img/content/banner/banner2-mobile-1@2x.png 2x" alt=""  loading="lazy">
+            </picture>
+          </div>
+          <div class="banner__img-wrapper banner-dev__img-wrapper">
+             <picture>
+              <!-- WebP для таблета -->
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/content/banner/banner2-mobile-2@1x.webp 1x, img/content/banner/banner2-mobile-2@2x.webp 2x" width="120" height="252">
+              <!-- WebP для десктопа -->
+              <source type="image/webp" media="(min-width: 1280px)" srcset="img/content/banner/banner2-desktop-2@1x.webp 1x, img/content/banner/banner2-desktop-2@2x.webp 2x" width="226" height="479">
+              <!-- PNG для таблета -->
+              <source media="(min-width: 768px)" srcset="img/content/banner/banner2-mobile-2@1x.png 1x, img/content/banner/banner2-mobile-2@2x.png 2x" type="image/png" width="120" height="252">
+              <!-- PNG для десктопа -->
+              <source media="(min-width: 1280px)" srcset="img/content/banner/banner2-desktop-2@1x.png 1x, img/content/banner/banner2-desktop-2@2x.png 2x" type="image/png" width="226" height="479">
+              <!-- Fallback для мобильных и браузеров без поддержки WebP -->
+              <img width="120" height="252" src="img/content/banner/banner2-mobile-2@1x.png" srcset="img/content/banner/banner2-mobile-2@2x.png 2x" alt=""  loading="lazy">
+            </picture>
+          </div>
+          <div class="banner__img-wrapper banner-dev__img-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 1280px)" srcset="img/content/banner/banner2-desktop-4@1x.webp 1x, img/content/banner/banner2-desktop-4@2x.webp 2x" width="99" height="215">
+
+              <source media="(min-width: 1280px)" srcset="img/content/banner/img/content/banner/banner2-desktop-4@1x.png 1x, img/content/banner/img/content/banner/banner2-desktop-4@2x.png 2x" type="image/png" width="180" height="390">
+
+              <img width="99" height="215" src="img/content/banner/img/content/banner/banner2-desktop-4@1x.png" srcset="img/content/banner/img/content/banner/banner2-desktop-4@2x.png 2x" alt="" loading="lazy">
+            </picture>
+          </div>
+          <div class="banner__label banner-dev__label">
+            <svg width="38" height="31" role="img" aria-hidden="true" focusable="false">
+              <use href="/__spritemap#sprite-order"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <ol class="banners__buttons-list">
+    <li class="banners__button-item">
+      <button class="banners__bullet-button bullet-button bullet-button--current" type="button">
+        <span class="visually-hidden">Показать первый экран слайдера.</span>
+      </button>
+    </li>
+      <li class="banners__button-item">
+      <button class="banners__bullet-button bullet-button" type="button">
+        <span class="visually-hidden">Показать второй экран слайдера.</span>
+      </button>
+    </li>
+      <li class="banners__button-item">
+      <button class="banners__bullet-button bullet-button" type="button">
+        <span class="visually-hidden">Показать третий экран слайдера.</span>
+      </button>
+    </li>
+        <li class="banners__button-item">
+      <button class="banners__bullet-button bullet-button" type="button">
+        <span class="visually-hidden">Показать четвертый экран слайдера.</span>
+      </button>
+    </li>
+
+  </ol>
   </div>
-    </section>
-    <section class="category">
-      <div class="category__wrapper">
-        <h2 class="visually-hidden">Категории шрифтов.</h2>
-        <ul class="category__list category-list">
-          <li class="category-list__item">
-            <a class="category-list__card category-card" href="#">
-              <span class="category-card__total-count">340</span>
-              <span class="category-card__new-count">6</span>
-              <div class="category-card__img-wrapper">
-                <svg class="category-card__img category-card__img--grotesk" width="61" height="35" role="img" aria-label="Гротески.">
-                  <use href="/__spritemap#sprite-letter-grotesk"></use>
-                </svg>
-              </div>
-              <h3 class="category-card__caption">Гротески</h3>
-            </a>
-          </li>
-          <li class="category-list__item">
-            <a class="category-list__card category-card" href="#">
-              <span class="category-card__total-count">89</span>
-              <div class="category-card__img-wrapper">
-                <svg class="category-card__img category-card__img--antique" width="57" height="34" role="img" aria-label="Антиквы.">
-                  <use href="/__spritemap#sprite-letter-antique"></use>
-                </svg>
-              </div>
-              <h3 class="category-card__caption">Антиквы</h3>
-            </a>
-          </li>
-          <li class="category-list__item">
-            <a class="category-list__card category-card" href="#">
-              <span class="category-card__total-count">129</span>
-              <span class="category-card__new-count">2</span>
-              <div class="category-card__img-wrapper">
-                <svg class="category-card__img category-card__img--brusque" width="57" height="34" role="img" aria-label="Брусковые.">
-                  <use href="/__spritemap#sprite-letter-brusque"></use>
-                </svg>
-              </div>
-              <h3 class="category-card__caption">Брусковые</h3>
-            </a>
-          </li>
-          <li class="category-list__item">
-            <a class="category-list__card category-card" href="#">
-              <span class="category-card__total-count">278</span>
-              <div class="category-card__img-wrapper">
-                <svg class="category-card__img category-card__img--accidental" width="57" height="34" role="img" aria-label="Акцидентные.">
-                  <use href="/__spritemap#sprite-letter-accidental"></use>
-                </svg>
-              </div>
-              <h3 class="category-card__caption">Акцидентные</h3>
-            </a>
-          </li>
-          <li class="category-list__item">
-            <a class="category-list__card category-card" href="#">
-              <span class="category-card__total-count">23</span>
-              <div class="category-card__img-wrapper">
-                <svg class="category-card__img category-card__img--handwritten" width="57" height="34" role="img" aria-label="Рукописные.">
-                  <use href="/__spritemap#sprite-letter-handwritten"></use>
-                </svg>
-              </div>
-              <h3 class="category-card__caption">Рукописные</h3>
-            </a>
-          </li>
-          <li class="category-list__item">
-            <a class="category-list__card category-card" href="#">
-              <span class="category-card__total-count">8</span>
-              <div class="category-card__img-wrapper">
-                <svg class="category-card__img category-card__img--non-alphabetic" width="57" height="34" role="img" aria-label="Неалфавитные.">
-                  <use href="/__spritemap#sprite-letter-non-alphabetic"></use>
-                </svg>
-              </div>
-              <h3 class="category-card__caption">Неалфавитные</h3>
-            </a>
-          </li>
-          <li class="category-list__item">
-            <a class="category-list__card category-card" href="#">
-              <span class="category-card__total-count">280</span>
-              <div class="category-card__img-wrapper">
-                <svg class="category-card__img category-card__img--monospaced" width="57" height="34" role="img" aria-label="Моноширинные.">
-                  <use href="/__spritemap#sprite-letter-monospaced"></use>
-                </svg>
-              </div>
-              <h3 class="category-card__caption">Моноширинные</h3>
-            </a>
-          </li>
-          <li class="category-list__item">
-            <a class="category-list__card category-card" href="#">
-              <span class="category-card__total-count">56</span>
-              <div class="category-card__img-wrapper">
-                <svg class="category-card__img category-card__img--historical" width="57" height="34" role="img" aria-label="Исторические.">
-                  <use href="/__spritemap#sprite-letter-historical"></use>
-                </svg>
-              </div>
-              <h3 class="category-card__caption">Исторические</h3>
-            </a>
-          </li>
-        </ul>
+</section>
+<section class="awards">
+    <div class="awards__text-wrapper">
+      <h2 class="awards__caption">Награды</h2>
+
+      <div class="awards__slogan-wrapper">
+        <p class="awards__slogan">За 10 лет <span class="awards__slogan--additional">активной</span> работы мы завоевали более <br class="awards__break"> 150 призовых мест</p>
+        <p class="awards__text">
+          Каждый год подтверждаем высокие позиции в Рейтинге Рунета в сегменте крупного B2B-бизнеса. Побеждаем на международных и российских конкурсах в номинациях digital-дизайна и разработки сайтов.
+        </p>
       </div>
-    </section>
+    </div>
+    <ul class="awards__list">
+        <li class="awards__list-item">
+          <a class="awards__list-link" href="#">
+            <p class="awards__list-title awards-title">
+              <span class="awards-title__img-wrapper awards-title__img-wrapper--awwards">
+                <svg width="35" height="24" role="img" aria-hidden="true" focusable="false">
+                <use href="/__spritemap__02592ae9#sprite-awards-1"></use>
+          </svg>
+              </span>
+              <span class="awards-title__text">AWWWARDS</span>
+              <span class="awards-title__quantity">25</span>
+            </p>
+          </a>
+        </li>
+        <!-- //awards-list__item awards-list__link awards-list__title" -->
+        <li class="awards__list-item">
+          <a class="awards__list-link" href="#">
+            <p class="awards__list-title awards-title">
+              <span class="awards-title__img-wrapper awards-title__img-wrapper--cssda">
+                <svg width="24" height="24" role="img" aria-hidden="true" focusable="false">
+                  <use href="/__spritemap__02592ae9#sprite-awards-3"></use>
+                </svg>
+              </span>
+              <span class="awards-title__text">СSSDA</span>
+              <span class="awards-title__quantity">28</span>
+            </p>
+          </a>
+        </li>
+        <li class="awards__list-item">
+          <a class="awards__list-link" href="#">
+            <p class="awards__list-title awards-title">
+              <span class="awards-title__img-wrapper awards-title__img-wrapper--mixx">
+                 <svg width="24" height="24" role="img" aria-hidden="true" focusable="false">
+                  <use href="/__spritemap__02592ae9#sprite-mixxrussia"></use>
+                </svg>
+              </span>
+              <span class="awards-title__text">Mixxrussia</span>
+              <span class="awards-title__quantity">5</span>
+            </p>
+          </a>
+        </li>
+        <li class="awards__list-item">
+          <a class="awards__list-link awards__list-link--current" href="#">
+            <p class="awards__list-title awards-title">
+              <span class="awards-title__text">G8</span>
+              <span class="awards-title__img-wrapper awards-title__img-wrapper--g8">
+                <svg width="24" height="24" role="img" aria-hidden="true" focusable="false">
+                  <use href="/__spritemap__02592ae9#sprite-g8"></use>
+                </svg>
+              </span>
+              <span class="awards-title__text">Awards</span>
+              <span class="awards-title__quantity">26</span>
+            </p>
+          </a>
+        </li>
+        <li class="awards__list-item">
+          <a class="awards__list-link" href="#">
+            <p class="awards__list-title awards-title">
+              <span class="awards-title__img-wrapper awards-title__img-wrapper--sreda">
+                 <svg width="24" height="24" role="img" aria-hidden="true" focusable="false">
+                  <use href="/__spritemap__02592ae9#sprite-sreda"></use>
+                </svg>
+              </span>
+              <span class="awards-title__text">Среда</span>
+              <span class="awards-title__quantity">5</span>
+            </p>
+          </a>
+        </li>
+        <li class="awards__list-item">
+          <a class="awards__list-link" href="#">
+            <p class="awards__list-title awards-title">
+              <span class="awards-title__text">Рейтинг</span>
+              <span class="awards-title__img-wrapper awards-title__img-wrapper--runet">
+                <svg width="22" height="21" role="img" aria-hidden="true" focusable="false">
+            <use href="/__spritemap__02592ae9#sprite-awards-4"></use>
+          </svg>
+              </span>
+              <span class="awards-title__text awards-title__text--additional">Рунета</span>
+              <span class="awards-title__quantity">22</span>
+            </p>
+          </a>
+        </li>
+        <li class="awards__list-item">
+          <a class="awards__list-link" href="#">
+            <p class="awards__list-title awards-title">
+              <span class="awards-title__text">Золотой</span>
+              <span class="awards-title__img-wrapper awards-title__img-wrapper--gold">
+                <svg width="22" height="21" role="img" aria-hidden="true" focusable="false">
+                  <use href="/__spritemap__02592ae9#sprite-awards-5"></use>
+                </svg>
+              </span>
+              <span class="awards-title__text awards-title__text--additional">Сайт</span>
+              <span class="awards-title__quantity">40</span>
+            </p>
+          </a>
+        </li>
+        <li class="awards__list-item">
+           <a class="awards__list-link" href="#">
+            <p class="awards__list-title awards-title awards-title--wow">
+              <span class="awards-title__text">WOW</span>
+              <span class="awards-title__img-wrapper awards-title__img-wrapper--awards">
+  <picture>
+    <source media="(min-width: 1440px)" width="46" height="24"
+    srcset="img/content/awards/wow-desktop@1x.webp 1x, img/content/awards/wow-desktop@2x.webp 2x" type="image/webp">
+  <source media="(min-width: 768px)" width="33" height="13"
+    srcset="img/content/awards/wow-tablet@1x.webp 1x, img/content/awards/wow-tablet@2x.webp 2x" type="image/webp">
+  <source media="(min-width: 1440px)" width="46" height="24"
+    srcset="img/content/awards/wow-desktop@1x.png 1x, img/content/awards/wow-desktop@2x.png 2x" type="image/png">
+  <source media="(min-width: 768px)" width="33" height="13"
+    srcset="img/content/awards/wow-tablet@1x.png 1x, img/content/awards/wow-tablet@2x.png 2x" type="image/png">
+  <img src="img/content/awards/wow-tablet@1x.png" srcset="img/content/awards/wow-tablet@2x.png 2x" width="33" height="13"  alt="wow логотип." loading="lazy">
+</picture>
+
+              </span>
+              <span class="awards-title__text awards-title__text--additional">Awards</span>
+              <span class="awards-title__quantity">3</span>
+            </p>
+          </a>
+        </li>
+      </ul>
+      <ul class="awards__rating-list rating-list">
+        <li class="rating-list__item rating-card">
+          <span class="rating-card__place">2</span>
+          <p class="rating-card__organisation">Рейтинг Рунета 2024</p>
+          <p class="rating-card__category">в рейтинге креативности <br class="rating-card__break">для крупного b2b-бизнеса</p>
+        </li>
+        <li class="rating-list__item rating-card">
+          <span class="rating-card__place">2</span>
+          <p class="rating-card__organisation">Рейтинг Рунета 2024</p>
+          <p class="rating-card__category">в дизайне цифровых продуктов <br class="rating-card__break">для промышленности</p>
+        </li>
+
+        <li class="rating-list__item rating-card">
+          <span class="rating-card__place">5</span>
+          <p class="rating-card__organisation">Рейтинг Рунета 2024</p>
+          <p class="rating-card__category">в разработке сайтов <br class="rating-card__break">для промышленности</p>
+        </li>
+        <li class="rating-list__item rating-card">
+          <span class="rating-card__place">13</span>
+          <p class="rating-card__organisation">Tagline 2024</p>
+          <p class="rating-card__category">в рейтинге <br>веб-дизайна</p>
+        </li>
+        <li class="rating-list__item rating-card">
+          <span class="rating-card__place">8</span>
+          <p class="rating-card__organisation">Ruward 2022</p>
+          <p class="rating-card__category">в рейтинге Digital <br class="rating-card__break">Design & Creative</p>
+        </li>
+      </ul>
+</section>
+
 
   </main>
   <footer class="footer">
     <div class="footer__wrapper">
-      <ul class="footer__menu-list footer-menu">
-        <li class="footer-menu__item">
-          <a class="footer-menu__link" href="#">Faq</a>
-        </li>
-        <li class="footer-menu__item">
-          <a class="footer-menu__link" href="#">Лицензии</a>
-        </li>
-        <li class="footer-menu__item footer-menu__item--additional">
-          <a class="footer-menu__link" href="#">Правила продажи</a>
-        </li>
-        <li class="footer-menu__item footer-menu__item--additional">
-          <a class="footer-menu__link" href="#">Возврат и замена</a>
-        </li>
-      </ul>
-      <ul class="footer__contacts footer-contacts">
-        <li class="footer-contacts__item">
-          <a class="footer-contacts__link" href="#">Контакты</a>
-        </li>
-      </ul>
-      <div class="footer__form form">
-        <h3 class="form__caption">Новости Paratype</h3>
-        <form class="form__footer-form footer-form" action="https://echo.htmlacademy.ru/" method="post" novalidate>
-          <label class="visually-hidden" for="email">Введите Ваш email.</label>
-          <input class="footer-form__input email-input" id="email" type="email" name="email" placeholder="Ваш email" required>
-          <button class="footer-form__button button" type="submit">Подписаться</button>
-        </form>
+      <div class="footer__logo footer-logo">
+        <img src="img/content/footer-logo.svg" width="154" height="24" alt="Логотип Only digital.">
+      </div>
+      <button class="footer__button button" type="button">Начать проект</button>
+      <div class="footer__contacts footer-contacts">
+        <p class="footer-contacts__text">Создаем качественный digital-продукт на базе стратегии, креатива и технологий</p>
+         <div class="footer-contacts__phone-email">
+        <a class="footer-contacts__mail" href="mailto:hello@only.digital">hello@only.digital</a>
+        <a class="footer-contacts__phone" href="tel:+74957409979">+7 (495) 740 99 79</a>
+      </div>
+
+      <div class="footer-contacts__telegram telegram">
+      <span class="footer-contacts__telegram-text">Telegram для связи</span>
+      <a class="footer-contacts__telegram-box" href="#">
+          <span class="footer-contacts__image-wrapper">
+          <svg width="16" height="16" role="img" aria-hidden="true" focusable="false">
+              <use href="/__spritemap#sprite-telegram-hero"></use>
+            </svg>
+        </span>
+        <span class="footer-contacts__telegram-address">@onlydigitalagency</span>
+      </a>
+    </div>
       </div>
       <ul class="footer__socials-list socials-list">
-        <li class="socials-list__item">
-          <a class="socials-list__link socials-list__link--telegram" href="https://t.me/paratype_fonts" target="_blank"
-            rel="noopener noreferrer">
-            <span class="visually-hidden">Телеграм.</span>
-          </a>
+        <li class="footer__socials-item socials-list__item">
+          <a class="socials-list__link" href="#">be</a>
         </li>
-        <li class="socials-list__item">
-          <a class="socials-list__link socials-list__link--vk" href="https://vk.com/paratypefoundry" target="_blank"
-            rel="noopener noreferrer">
-            <span class="visually-hidden">В контакте.</span>
-          </a>
+          <li class="footer__socials-item socials-list__item">
+          <a class="socials-list__link" href="#">dp</a>
         </li>
+          <li class="footer__socials-item socials-list__item">
+          <a class="socials-list__link" href="#">tg</a>
+        </li>
+          <li class="footer__socials-item socials-list__item">
+          <a class="socials-list__link" href="#">vk</a>
+        </li>
+
       </ul>
-      <div class="footer__copyright-wrapper">
-        <ul class="footer__copyright copyright-list">
-          <li class="footer__info copyright-list__item">© 1998–2022.Паратайп.</li>
-          <li class="footer__info copyright-list__item">Все авторские права защищены.</li>
-        </ul>
-        <a class="footer__design design-company" href="https://wemakefab.ru/" target="_blank" rel="noopener noreferrer">Дизайн Wemakefab</a>
-      </div>
+      <div class="footer__presentation presentation">
+      <a class="presentation__pdf" href="#">Pdf
+        <span class="visually-hidden">Ссылка на презентацию компании Only в pdf.</span>
+      </a>
+      <a class="presentation__pitch" href="#">Pitch
+        <span class="visually-hidden">Ссылка на краткую презентацию компании Only.</span>
+      </a>
+      <h3 class="presentation__caption">Презентация компании</h3>
+    </div>
+    <p class="footer__copyright copyright">© 2014 - 2024</p>
+    <p class="footer__caption">
+      <span>Creative</span>
+      <span>digital</span>
+      <span>production</span>
+    </p>
+    <a class="footer__privacy" href="#" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a>
     </div>
   </footer>
+
   <script type="module" src="js/main.js"></script>
 </body>
 </html>
