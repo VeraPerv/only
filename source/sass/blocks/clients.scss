@@ -5,7 +5,7 @@
     padding: 0 20px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     padding: 0 size(30px);
     padding-top: size(130px);
   }
@@ -29,13 +29,13 @@
     margin: 0 auto 60px;
   }
 
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     font-size: 24px;
     line-height: 29px;
     max-width: 580px;
   }
 
-  @media( min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     font-weight: 600;
     font-size: size(26px);
     line-height: size(31px);

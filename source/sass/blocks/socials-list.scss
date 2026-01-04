@@ -6,7 +6,7 @@
   flex-wrap: wrap;
   gap: 5px;
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     gap: size(5px);
   }
 }
@@ -30,7 +30,7 @@
   color: $color-primary;
   cursor: pointer;
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     border-radius: size(12px);
     padding: size(10px);
     width: size(48px);
@@ -39,7 +39,7 @@
     line-height: size(16px);
   }
 
-   @media (hover: hover) {
+  @media (hover: hover) {
     &:hover {
       background-color: $banner-accent-color;
       transition: background-color 0.3s ease;

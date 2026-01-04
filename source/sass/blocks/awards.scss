@@ -5,11 +5,11 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 51% 49%;
-    padding: 80px 20px 80px;
+    padding: 80px 20px;
     align-items: start;
   }
 
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     padding: 80px 20px 57px;
   }
 
@@ -21,7 +21,7 @@
 .awards__break {
   display: none;
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     display: inherit;
   }
 }
@@ -37,11 +37,11 @@
     grid-column: 1 / -1;
   }
 
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     padding-top: 30px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     padding-top: size(40px);
     margin-bottom: size(21px);
   }
@@ -58,7 +58,7 @@
       left: 50%;
     }
 
-    @media(min-width: $desktop-width) {
+    @media (min-width: $desktop-width) {
       width: size(1px);
       height: size(217px);
     }
@@ -85,7 +85,7 @@
     text-transform: lowercase;
   }
 
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     font-size: 14px;
     line-height: 17px;
   }
@@ -115,7 +115,7 @@
     margin: 0 0 20px;
   }
 
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     font-size: 24px;
     line-height: 29px;
     max-width: 430px;
@@ -146,13 +146,13 @@
     margin: 0 0 59px;
   }
 
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     font-size: 16px;
     line-height: 22px;
     max-width: 541px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     font-size: size(16px);
     line-height: size(22px);
     max-width: size(541px);
@@ -165,11 +165,11 @@
     padding: 0 0 0 20px;
   }
 
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     padding: 0 0 0 30px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     padding: 0 0 0 size(40px);
   }
 }
@@ -180,15 +180,15 @@
   list-style-type: none;
   gap: 10px;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     max-width: 360px;
   }
 
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     padding-top: 11px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     padding-top: 0;
     max-width: size(650px);
   }
@@ -204,77 +204,84 @@
         width: 35px;
         transition: width 0.3s ease;
         margin-right: 12px;
-      @media(min-width: $tablet-width) {
-        width: 44px;
+
+        @media (min-width: $tablet-width) {
+          width: 44px;
+        }
+
+        @media (min-width: $tablet-desktop-between) {
+          width: 65px;
+        }
+
+        @media (min-width: $desktop-width) {
+          margin-right: size(12px);
+          width: size(70px);
+        }
       }
-      @media(min-width: $tablet-desktop-between) {
-        width: 65px;
-      }
-      @media(min-width: $desktop-width) {
-        margin-right: size(12px);
-        width: size(70px);
-      }
-    }
+
       .awards-title__text {
         color: $color-primary;
         transition: color 0.3s ease;
       }
     }
   }
-    &:focus,
-    &:focus-visible {
-      outline: none;
 
-      // @media(min-width: $tablet-desktop-between) {
-      //   .awards-title__img-wrapper {
-      //     width: 65px;
-      //     transition: width 0.3s ease;
-      //     margin-right: 12px;
-      //   }
-      // }
-        .awards-title__img-wrapper {
-          width: 65px;
-          transition: width 0.3s ease;
-          margin-right: 12px;
-        }
-      @media(min-width: $desktop-width) {
-        .awards-title__img-wrapper {
-          margin-right: size(12px);
-          width: size(70px);
-        }
-      }
+  &:focus,
+  &:focus-visible {
+    outline: none;
+
+    // @media(min-width: $tablet-desktop-between) {
+    //   .awards-title__img-wrapper {
+    //     width: 65px;
+    //     transition: width 0.3s ease;
+    //     margin-right: 12px;
+    //   }
+    // }
+    .awards-title__img-wrapper {
+      width: 65px;
+      transition: width 0.3s ease;
+      margin-right: 12px;
     }
 
-    &:active {
-    @media(min-width: $tablet-desktop-between) {
-      .awards-title__text {
-          color: $color-primary-opacity4;
-        }
-      }
-
-      @media(min-width: $desktop-width) {
-        margin-right: size(12px);
-        // width: size(70px);
-      }
-    }
-
-        &--current {
+    @media (min-width: $desktop-width) {
       .awards-title__img-wrapper {
-        @media(min-width: $tablet-desktop-between) {
-          width: 65px;
-        }
-
-        @media(min-width: $desktop-width) {
-          width: size(70px);
-          position: relative;
-          top: size(-11px);
-          margin-right: size(21px);
-        }
+        margin-right: size(12px);
+        width: size(70px);
       }
+    }
+  }
 
+  &:active {
+    @media (min-width: $tablet-desktop-between) {
       .awards-title__text {
-        color: $color-primary;
+        color: $color-primary-opacity4;
       }
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: size(12px);
+
+      // width: size(70px);
+    }
+  }
+
+  &--current {
+    .awards-title__img-wrapper {
+      @media (min-width: $tablet-desktop-between) {
+        width: 65px;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: size(70px);
+        position: relative;
+        top: size(-11px);
+        margin-right: size(21px);
+      }
+    }
+
+    .awards-title__text {
+      color: $color-primary;
+    }
 
     @media (hover: hover) {
       &:hover {
@@ -293,14 +300,15 @@
     &:focus-visible {
       outline: none;
 
-      @media(min-width: $tablet-desktop-between) {
+      @media (min-width: $tablet-desktop-between) {
         .awards-title__img-wrapper {
           width: 65px;
+
           // margin-right: unset;
         }
       }
 
-      @media(min-width: $desktop-width) {
+      @media (min-width: $desktop-width) {
         .awards-title__img-wrapper {
           width: size(69px);
           margin-right: size(21px);
@@ -311,19 +319,17 @@
 }
 
 .awards__list-item {
-
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     margin-bottom: 6px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     margin-bottom: size(4px);
   }
-
 }
 
 .awards__list-item:has(.awards__list-link--current) {
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     margin-top: size(14px);
     margin-bottom: size(13px);
   }
@@ -331,13 +337,14 @@
 
 .awards__break {
   display: none;
-  @media(min-width: $desktop-width) {
+
+  @media (min-width: $desktop-width) {
     display: inherit;
   }
 }
 
 .awards__rating-list {
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     margin-left: size(-4px);
   }
 }

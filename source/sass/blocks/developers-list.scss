@@ -59,34 +59,37 @@
   display: block;
   cursor: pointer;
 
-    @media (hover: hover) {
+  @media (hover: hover) {
     &:hover {
       .developers-list__img-wrapper {
         border-radius: 46px;
         transition: border-radius 0.3s ease;
 
-        @media(min-width: $desktop-width) {
+        @media (min-width: $desktop-width) {
           border-radius: 52px;
           transition: border-radius 0.3s ease;
         }
       }
+
+      .developers-list__img-wrapper img {
+        scale: 1.08;
+        transition: scale 0.3s ease;
+      }
+    }
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+
+    .developers-list__img-wrapper {
+      border-radius: 46px;
+      transition: border-radius 0.3s ease;
+    }
+
     .developers-list__img-wrapper img {
-      scale: 1.08;
+      scale: 1.03;
       transition: scale 0.3s ease;
     }
   }
-}
-
-&:focus,
-&:focus-visible {
-  outline: none;
-  .developers-list__img-wrapper {
-    border-radius: 46px;
-    transition: border-radius 0.3s ease;
-  }
-  .developers-list__img-wrapper img {
-    scale: 1.03;
-    transition: scale 0.3s ease;
-  }
-}
 }

@@ -11,14 +11,14 @@
   cursor: pointer;
   transition: background-color 0.4s ease, opacity 0.4s ease;
 
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     border-radius: 15px;
     padding: 20px;
     width: 55px;
     height: 55px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     border-radius: size(15px);
     padding: size(20px);
     width: size(61px);
@@ -29,7 +29,7 @@
     stroke: $color-primary;
     transition: stroke 0.4s ease;
 
-    @media(min-width: $desktop-width) {
+    @media (min-width: $desktop-width) {
       width: size(20px);
       height: size(20px);
     }

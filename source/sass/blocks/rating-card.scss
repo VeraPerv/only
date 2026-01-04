@@ -17,7 +17,7 @@
     border-radius: 20px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     border-radius: size(30px);
     min-height: size(298px);
     padding: size(30px) size(20px) size(29px) size(31px);
@@ -38,7 +38,7 @@
     margin-bottom: 7px;
   }
 
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     font-size: 24px;
     line-height: 29px;
     margin-bottom: 9px;
@@ -60,11 +60,11 @@
   letter-spacing: -0.02em;
   color: $color-primary-opacity6;
 
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     margin-bottom: 22px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     max-width: size(541px);
     margin-bottom: size(22px);
     font-size: size(15px);
@@ -90,12 +90,12 @@
     max-width: 260px;
   }
 
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     font-size: 14px;
     line-height: 17px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     font-size: size(14px);
     line-height: size(17px);
     max-width: 100%;
@@ -104,7 +104,8 @@
 
 .rating-card__break {
   display: none;
-  @media(min-width: $desktop-width) {
+
+  @media (min-width: $desktop-width) {
     display: inherit;
   }
 }

@@ -7,7 +7,7 @@
   letter-spacing: -0.03em;
   color: $color-primary;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     font-family: $font-primary;
     font-weight: 600;
     font-size: 15px;
@@ -16,7 +16,7 @@
     color: $color-primary;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     font-size: size(18px);
     line-height: size(23px);
   }

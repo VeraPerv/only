@@ -1,9 +1,9 @@
 .banner-dev {
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     padding: 60px 5px 11px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     padding: size(60px) size(5px) size(35px);
   }
 }
@@ -11,7 +11,7 @@
 .banner-dev__text-wrapper {
   max-width: 400px;
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     max-width: size(400px);
   }
 }
@@ -20,12 +20,12 @@
   line-height: 29px;
   margin-bottom: 25px;
 
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     line-height: 35px;
     margin-bottom: 33px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     line-height: size(35px);
     margin-bottom: size(33px);
   }
@@ -35,11 +35,11 @@
   margin-bottom: 20px;
   max-width: 385px;
 
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     margin-bottom: 24px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     max-width: size(385px);
     margin-bottom: size(24px);
   }
@@ -49,7 +49,7 @@
   display: none;
 
   &:nth-of-type(1) {
-    @media(min-width: $tablet-width) {
+    @media (min-width: $tablet-width) {
       position: absolute;
       width: 53px;
       height: 53px;
@@ -57,11 +57,11 @@
       left: 46px;
     }
 
-    @media(min-width: $tablet-desktop-between) {
+    @media (min-width: $tablet-desktop-between) {
       top: 105px;
     }
 
-    @media(min-width: $desktop-width) {
+    @media (min-width: $desktop-width) {
       top: size(105px);
       width: size(53px);
       height: size(53px);
@@ -77,14 +77,14 @@
     top: 18px;
     left: -31px;
 
-    @media(min-width: $tablet-desktop-between) {
+    @media (min-width: $tablet-desktop-between) {
       width: 203px;
       height: 429px;
       top: -87px;
       left: 114px;
     }
 
-     @media(min-width: $desktop-width) {
+    @media (min-width: $desktop-width) {
       width: size(213px);
       height: size(467px);
       top: size(-87px);
@@ -92,17 +92,16 @@
     }
 
     img {
-      @media(min-width: $tablet-desktop-between) {
+      @media (min-width: $tablet-desktop-between) {
         width: 203px;
         height: 429px;
       }
 
-      @media(min-width: $desktop-width) {
+      @media (min-width: $desktop-width) {
         width: size(213px);
         height: size(467px);
       }
     }
-
   }
 
   &:nth-of-type(4) {
@@ -113,14 +112,14 @@
     top: 53px;
     left: 103px;
 
-    @media(min-width: $tablet-desktop-between) {
+    @media (min-width: $tablet-desktop-between) {
       width: 203px;
       height: 430px;
       top: -19px;
       left: 353px;
     }
 
-    @media(min-width: $desktop-width) {
+    @media (min-width: $desktop-width) {
       width: size(226px);
       height: size(429px);
       top: size(-19px);
@@ -128,12 +127,12 @@
     }
 
     img {
-      @media(min-width: $tablet-desktop-between) {
+      @media (min-width: $tablet-desktop-between) {
         width: 203px;
         height: 429px;
       }
 
-      @media(min-width: $desktop-width) {
+      @media (min-width: $desktop-width) {
         width: size(213px);
         height: size(467px);
       }
@@ -141,24 +140,25 @@
   }
 
   &:nth-of-type(5) {
-  @media(min-width: $tablet-desktop-between) {
-    width: 210px;
-    height: 66px;
-    position: absolute;
-    right: 35px;
-    bottom: -10px;
-
-    img {
+    @media (min-width: $tablet-desktop-between) {
       width: 210px;
       height: 66px;
-        @media(min-width: $desktop-width) {
+      position: absolute;
+      right: 35px;
+      bottom: -10px;
+
+      img {
+        width: 210px;
+        height: 66px;
+
+        @media (min-width: $desktop-width) {
           width: size(210px);
           height: size(66px);
         }
       }
     }
 
-    @media(min-width: $desktop-width) {
+    @media (min-width: $desktop-width) {
       right: size(35px);
       bottom: size(-10px);
       width: size(210px);
@@ -166,13 +166,12 @@
     }
   }
 
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     display: block;
   }
 
   &:nth-of-type(2) {
-  
-    @media(min-width: $tablet-desktop-between) {
+    @media (min-width: $tablet-desktop-between) {
       border-radius: 13px;
       width: 210px;
       height: 111px;
@@ -182,7 +181,7 @@
       left: -42px;
       z-index: 10;
 
-      @media(min-width: $desktop-width) {
+      @media (min-width: $desktop-width) {
         top: size(185px);
         left: size(-42px);
         border-radius: size(13px);
@@ -194,18 +193,18 @@
       img {
         width: 210px;
         height: 111px;
-        @media(min-width: $desktop-width) {
+
+        @media (min-width: $desktop-width) {
           width: size(210px);
           height: size(111px);
         }
       }
     }
   }
-
 }
 
 .banner-dev__dev-icon {
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -216,7 +215,7 @@
     border-radius: 20px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     border-radius: size(20px);
     width: size(53px);
     height: size(53px);
@@ -224,29 +223,27 @@
   }
 
   svg {
-      width: 20px;
-      height: 25px;
+    width: 20px;
+    height: 25px;
 
-      @media(min-width: $tablet-desktop-between) {
-        width: 29px;
-        height: 33px;
-      }
-
-      @media(min-width: $desktop-width) {
-        width: size(29px);
-        height: size(33px);
-      }
+    @media (min-width: $tablet-desktop-between) {
+      width: 29px;
+      height: 33px;
     }
 
+    @media (min-width: $desktop-width) {
+      width: size(29px);
+      height: size(33px);
+    }
+  }
 }
 
 .banner-dev__label {
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     width: 93px;
     height: 26px;
     box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.05);
     background: #edebe9;
-    position: absolute;
     position: absolute;
     bottom: -58px;
     right: 77px;
@@ -255,14 +252,14 @@
       width: 72px;
       height: 7px;
 
-      @media(min-width: $desktop-width) {
+      @media (min-width: $desktop-width) {
         width: size(72px);
         height: size(7px);
       }
     }
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     bottom: size(-58px);
     right: size(77px);
     width: size(93px);
@@ -272,12 +269,11 @@
 }
 
 .bunner-dev__caption {
-
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     margin: 0 0 28px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     margin: 0 0 size(28px);
   }
 }
@@ -291,13 +287,13 @@
 }
 
 // АНИМАЦИЯ запускается ТОЛЬКО при .is-animated--visible
-.is-animated--visible { 
-
+.is-animated--visible {
   .banner-dev__img-wrapper:nth-child(1) {
     opacity: 1;
     transform: scaleX(1) scaleY(1);
     transition-delay: 0s;
   }
+
   .banner-dev__img-wrapper:nth-child(3) {
     opacity: 1;
     transform: scaleX(1) scaleY(1);
@@ -316,14 +312,14 @@
     transition-delay: 0.25s;
   }
 
-.banner-dev__img-wrapper:nth-child(5) {
+  .banner-dev__img-wrapper:nth-child(5) {
     opacity: 1;
     transform: scaleX(1) scaleY(1);
     transition-delay: 0.35s;
   }
-  
 
-.banner-dev__label {
+
+  .banner-dev__label {
     opacity: 1;
     transform: scaleX(1) scaleY(1);
     transition-delay: 0.5s;

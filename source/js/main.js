@@ -1,15 +1,171 @@
 import {initializeSlider} from './banner-slider';
 import {initProjectsSlider} from './projects-slider';
 import {initToggleMenu} from './burger-menu';
-import {intersectionObserver} from './banners-animation';
-import {intersectionObserverFooter} from './footer-animation';
+// import {intersectionObserver} from './banners-animation';
+//import {intersectionObserverFooter} from './footer-animation';
 
 initializeSlider();
 initProjectsSlider();
 initToggleMenu();
-intersectionObserver();
-intersectionObserverFooter();
+// intersectionObserver();
+//intersectionObserverFooter();
 
+const intersectionObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-animated--visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.1,
+});
+
+document.querySelectorAll('.banners').forEach((banner) => {
+  intersectionObserver.observe(banner);
+});
+
+const footer = document.querySelector('.footer');
+
+const intersectionObserverFooter = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-animated--visible');
+    } else {
+      entry.target.classList.remove('is-animated--visible');
+    }
+  });
+}, {
+  threshold: [0, 0.1],
+  rootMargin: '0px 0px -100px 0px'
+});
+
+intersectionObserverFooter.observe(footer);
+
+////АКТУАЛЬНОЕ НИЖЕ
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
+// // Теперь можно использовать
+// //Анимация масштабирования
+// gsap.to(".hero__video-wrapper", {
+//   scale: 6.2,              // До полного экрана
+//   // borderRadius: 0,         // Убираем скругление
+//   ease: "none",            // Линейно со скроллом
+
+//   scrollTrigger: {
+//     trigger: ".hero",  // Родительская секция
+//     start: "top top",
+//     end: "bottom top",
+//     scrub: true,             // Синхронно со скроллом
+//     // pin: ".hero__video-wrapper",  // Фиксируем именно wrapper
+//     pin: false,  // Фиксируем именно wrapper
+//     pinSpacing: true,
+//     markers: false          // true для дебага, потом false
+//   }
+// });
+
+////АКТУАЛЬНОЕ ВЫШЕ
+
+// хорошее с плавным увеличением,   ПРЕДпоследнее
+// gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".hero",
+//     start: "top top",
+//     end: "bottom top",
+//     scrub: 0.5,  // Легкая задержка для плавности
+//     onUpdate: (self) => {
+//       // Добавляем инерцию через ease
+//       gsap.to(".hero__video-wrapper", {
+//         scale: 1 + (self.progress * 7.5),
+//         duration: 0.8,
+//         ease: "power2.out"
+//       });
+//     }
+//   }
+// });
+// ПОСЛЕДНЕЕ ХОРОШО УВЕЛИЧИВАЕТСЯ НА СКРОЛЛ, НО НЕ ВОЗВРАЩАЕТСЯ К ИСХОДНОМУ РАЗМЕРУ
+
+// gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".hero",
+//     start: "top top",
+//     end: "bottom top",
+//     scrub: 0.5,
+//     onUpdate: (self) => {
+//       const wrapper = document.querySelector(".hero__video-wrapper");
+//       const hero = document.querySelector(".hero");
+
+//       // Получаем размеры один раз
+//       const containerRect = hero.getBoundingClientRect();
+//       const videoRect = wrapper.getBoundingClientRect();
+
+//       // Максимум = границы родителя
+//       const maxScale = Math.min(
+//         containerRect.width / videoRect.width,
+//         containerRect.height / videoRect.height
+//       );
+
+//       // Останавливаем на maxScale (1.0 = размер родителя)
+//       const scale = 4 + gsap.utils.clamp(0, maxScale - 1, self.progress * 2);
+
+//       gsap.to(".hero__video-wrapper", {
+//         scale: scale,
+//         duration: 0.8,
+//         ease: "power2.out"
+//       });
+//     }
+//   }
+// });
+
+
+
+// хорошее с плавным увеличением, последнее выше
+
+
+// ScrollTrigger.create({
+//   trigger: ".hero",
+//   start: "top top",
+//   end: "bottom top",
+//   scrub: 0.5,
+//   pin: ".hero__video-wrapper",
+//   pinSpacing: false,
+//   onUpdate: (self) => {
+//     // Ограничиваем scale через clamp()
+//     const progressScale = 1 + (self.progress * 6);
+//     const clampedScale = Math.min(progressScale, 1.1); // Подберите под ваш случай
+
+//     gsap.to(".hero__video-wrapper", {
+//       scale: clampedScale,
+//       duration: 0.6,
+//       ease: "power2.out"
+//     });
+//   }
+// });
+
+
+// gsap.to(".hero__video-wrapper", {
+//   scale: 2.5,
+//   width: "100vw",           // ← Конечная ширина
+//   height: "100vh",          // ← Конечная высота
+//   borderRadius: 0,
+//   top: 0,
+//   left: 0,
+//   right: 0,
+//   bottom: 0,
+//   margin: 0,
+//   position: "fixed",        // ← Фиксируем вручную
+
+//   scrollTrigger: {
+//     trigger: ".hero__wrapper",
+//     start: "top top",
+//     end: "bottom top",
+//     scrub: true,
+//     pin: false,              // ← Отключаем pin GSAP
+//     invalidateOnRefresh: true
+//   }
+// });
 
 //интерсекшен обсервер ДЛЯ БАННЕРОВ
 
@@ -1240,74 +1396,74 @@ intersectionObserverFooter();
 // });
 
 // очень хорошо, но резко
-const video = document.querySelector('.hero__video-wrapper');
-const heroSection = document.querySelector('.hero');
-let initialWidth, initialHeight;
-const maxWidth = window.innerWidth;
-const maxHeight = window.innerHeight;
-let currentProgress = 0; // ✅ Текущий прогресс для МЯГКОГО сглаживания
+// const video = document.querySelector('.hero__video-wrapper');
+// const heroSection = document.querySelector('.hero');
+// let initialWidth, initialHeight;
+// const maxWidth = window.innerWidth;
+// const maxHeight = window.innerHeight;
+// let currentProgress = 0; // ✅ Текущий прогресс для МЯГКОГО сглаживания
 
-function updateVideoSize() {
-  if (initialWidth === undefined) {
-    initialWidth = parseFloat(getComputedStyle(video).width);
-    initialHeight = parseFloat(getComputedStyle(video).height);
-  }
+// function updateVideoSize() {
+//   if (initialWidth === undefined) {
+//     initialWidth = parseFloat(getComputedStyle(video).width);
+//     initialHeight = parseFloat(getComputedStyle(video).height);
+//   }
 
-  const heroRect = heroSection.getBoundingClientRect();
-  const windowHeight = window.innerHeight;
+//   const heroRect = heroSection.getBoundingClientRect();
+//   const windowHeight = window.innerHeight;
 
-  // ✅ Твой оригинальный расчет прогресса
-  const targetProgress = Math.max(0, Math.min(1,
-    (heroRect.height - heroRect.bottom + windowHeight * 0.5) / (heroRect.height + windowHeight * 0.5) * 2
-  ));
+//   // ✅ Твой оригинальный расчет прогресса
+//   const targetProgress = Math.max(0, Math.min(1,
+//     (heroRect.height - heroRect.bottom + windowHeight * 0.5) / (heroRect.height + windowHeight * 0.5) * 2
+//   ));
 
-  // ✅ СУПЕР-МЯГКОЕ сглаживание (0.08 = очень плавно)
-  currentProgress += (targetProgress - currentProgress) * 0.08;
+//   // ✅ СУПЕР-МЯГКОЕ сглаживание (0.08 = очень плавно)
+//   currentProgress += (targetProgress - currentProgress) * 0.08;
 
-  if (window.scrollY === 0) {
-    video.style.removeProperty('position');
-    video.style.removeProperty('top');
-    video.style.removeProperty('left');
-    video.style.removeProperty('width');
-    video.style.removeProperty('height');
-    video.style.removeProperty('object-fit');
-    video.style.removeProperty('z-index');
-    video.style.removeProperty('opacity');
-    currentProgress = 0;
-  } else if (heroRect.top <= windowHeight && heroRect.bottom >= 0) {
-    const newWidth = initialWidth + (maxWidth - initialWidth) * currentProgress;
-    const newHeight = initialHeight + (maxHeight - initialHeight) * currentProgress;
+//   if (window.scrollY === 0) {
+//     video.style.removeProperty('position');
+//     video.style.removeProperty('top');
+//     video.style.removeProperty('left');
+//     video.style.removeProperty('width');
+//     video.style.removeProperty('height');
+//     video.style.removeProperty('object-fit');
+//     video.style.removeProperty('z-index');
+//     video.style.removeProperty('opacity');
+//     currentProgress = 0;
+//   } else if (heroRect.top <= windowHeight && heroRect.bottom >= 0) {
+//     const newWidth = initialWidth + (maxWidth - initialWidth) * currentProgress;
+//     const newHeight = initialHeight + (maxHeight - initialHeight) * currentProgress;
 
-    const finalWidth = Math.min(newWidth, maxWidth);
-    const finalHeight = Math.min(newHeight, maxHeight);
+//     const finalWidth = Math.min(newWidth, maxWidth);
+//     const finalHeight = Math.min(newHeight, maxHeight);
 
-    video.style.position = 'sticky';
-    video.style.top = '0';
-    video.style.left = '0';
-    video.style.right = '0';
-    video.style.bottom = '0';
-    // video.style.width = `${finalWidth}px`;
-    // video.style.height = `${finalHeight}px`;
-    video.style.width = '100%';
-    video.style.height = '100%';
-    video.style.objectFit = 'cover';
-    video.style.zIndex = '10';
-    video.style.opacity = '1';
-  }
-}
+//     video.style.position = 'sticky';
+//     video.style.top = '0';
+//     video.style.left = '0';
+//     video.style.right = '0';
+//     video.style.bottom = '0';
+//     // video.style.width = `${finalWidth}px`;
+//     // video.style.height = `${finalHeight}px`;
+//     video.style.width = '100%';
+//     video.style.height = '100%';
+//     video.style.objectFit = 'cover';
+//     video.style.zIndex = '10';
+//     video.style.opacity = '1';
+//   }
+// }
 
-// ✅ requestAnimationFrame = 60fps БЕЗ РЫВКОВ
-let ticking = false;
-function requestTick() {
-  if (!ticking) {
-    requestAnimationFrame(updateVideoSize);
-    ticking = true;
-  }
-  ticking = false;
-}
+// // ✅ requestAnimationFrame = 60fps БЕЗ РЫВКОВ
+// let ticking = false;
+// function requestTick() {
+//   if (!ticking) {
+//     requestAnimationFrame(updateVideoSize);
+//     ticking = true;
+//   }
+//   ticking = false;
+// }
 
-window.addEventListener('scroll', requestTick, { passive: true });
-requestAnimationFrame(updateVideoSize);
+// window.addEventListener('scroll', requestTick, { passive: true });
+// requestAnimationFrame(updateVideoSize);
 
 // по скейлу вырви глаз
 // const video = document.querySelector('.hero__video-wrapper');
@@ -1486,3 +1642,60 @@ requestAnimationFrame(updateVideoSize);
 // window.addEventListener('scroll', requestTick, { passive: true });
 // requestAnimationFrame(updateVideoSize);
 
+// gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".hero",
+//     start: "top top",
+//     end: "bottom top",
+//     scrub: 0.5,
+//     onUpdate: (self) => {
+//       const wrapper = document.querySelector(".hero__video-wrapper");
+//       const hero = document.querySelector(".hero");
+
+//       // Получаем размеры один раз
+//       const containerRect = hero.getBoundingClientRect();
+//       const videoRect = wrapper.getBoundingClientRect();
+
+//       // Максимум = границы родителя (ваше хорошее увеличение)
+//       const maxScale = Math.min(
+//         containerRect.width / videoRect.width,
+//         containerRect.height / videoRect.height
+//       );
+
+//       // ✅ Комбинация: ограниченный maxScale + возврат к 1.0
+//       const scale = 1 + gsap.utils.clamp(0, maxScale - 1, self.progress * 50);
+
+//       gsap.to(".hero__video-wrapper", {
+//         scale: scale,
+//         duration: 0.8,
+//         ease: "power2.out"
+//       });
+//     }
+//   }
+// });
+
+
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".hero",
+    start: "top top",
+    end: "bottom top",
+    scrub: 0.5,
+    onUpdate: (self) => {
+      const wrapper = document.querySelector(".hero__video-wrapper");
+      const hero = document.querySelector(".hero");
+
+      // ✅ ФИКС: задаем ЦЕЛЕВОЙ максимум 80% от родителя
+      const targetScale = 3.8; // 80% увеличение от исходного размера
+
+      // ✅ Плавное увеличение до 80% + возврат к 1.0
+      const scale = 1 + gsap.utils.clamp(0, targetScale - 1, self.progress * 25);
+
+      gsap.to(".hero__video-wrapper", {
+        scale: scale,
+        duration: 0.8,
+        ease: "power2.out"
+      });
+    }
+  }
+});

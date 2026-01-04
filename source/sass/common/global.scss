@@ -24,10 +24,10 @@ html {
   //   font-size: $fz-default;
   // }
 
-  // // максимальное значение 1439
-  @include vp-1439 {
-    font-size: $fz-default;
-  }
+  // // // максимальное значение 1439
+  // @include vp-1439 {
+  //   font-size: $fz-default;
+  // }
 
 
   // font-size: calc((100% - 390px - 17px) / (919 - 390) * ($max-size-1 - $fz-default) + $fz-default);

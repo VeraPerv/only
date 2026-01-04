@@ -4,19 +4,19 @@
   flex-wrap: wrap;
   align-items: flex-start;
 
-    &--wow .awards-title__text{
-      font-weight: 600;
-      font-size: 32px;
-      line-height: 29px;
-      letter-spacing: -0.03em;
+  &--wow .awards-title__text {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 29px;
+    letter-spacing: -0.03em;
 
-    @media(min-width: $tablet-desktop-between) {
+    @media (min-width: $tablet-desktop-between) {
       font-weight: 600;
       font-size: 48px;
       line-height: 43px;
     }
 
-    @media(min-width: $desktop-width) {
+    @media (min-width: $desktop-width) {
       font-size: size(56px);
       line-height: size(50px);
     }
@@ -33,11 +33,11 @@
   background-color: $banner-accent-color;
   transition: width 0.3s ease;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     height: 44px;
   }
 
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     width: 0;
     height: 64px;
 
@@ -46,22 +46,21 @@
         // width: 38px;
         // height: 38px;
 
-        @media(min-width: $desktop-width) {
+        @media (min-width: $desktop-width) {
           width: size(46px);
           height: size(24px);
         }
       }
-
     }
 
-      &--cssda {
+    &--cssda {
       svg {
         width: 51px;
         height: 32px;
       }
     }
 
-      &--runet {
+    &--runet {
       svg {
         width: 26px;
         height: 34px;
@@ -104,8 +103,7 @@
     }
   }
 
-  @media(min-width: $desktop-width) {
-    height: size(73px);
+  @media (min-width: $desktop-width) {
     border-radius: size(15px);
     height: size(70px);
 
@@ -114,17 +112,16 @@
         width: size(40px);
         height: size(40px);
       }
-
     }
 
-      &--cssda {
+    &--cssda {
       svg {
         width: size(38px);
         height: size(32px);
       }
     }
 
-      &--runet {
+    &--runet {
       svg {
         width: 26px;
         height: 34px;
@@ -192,13 +189,13 @@
     margin-right: 14px;
   }
 
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     font-size: 48px;
     line-height: 43px;
     color: $color-primary-opacity4;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     font-size: size(56px);
     line-height: size(50px);
     margin-right: size(22px);
@@ -218,12 +215,12 @@
   text-transform: lowercase;
   color: $color-primary-opacity6;
 
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     font-size: 14px;
     line-height: 17px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     font-size: size(16px);
     line-height: size(19px);
   }

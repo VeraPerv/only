@@ -2,7 +2,7 @@
   border-bottom: 1px solid $border-color;
   position: relative;
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     border-bottom: size(1px) solid $border-color;
   }
 }
@@ -11,6 +11,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
   // padding: size(10px) size(15px);
   // max-width: size(1440px);
   padding: 10px 15px;

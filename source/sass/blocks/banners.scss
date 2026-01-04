@@ -6,7 +6,7 @@
     padding: 0 20px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     padding: 0 size(30px);
   }
 }
@@ -19,17 +19,17 @@
   background-color: $color-white;
 
 
-  @media(min-width: $tablet-width) {
-    padding: 60px 25px 60px;
+  @media (min-width: $tablet-width) {
+    padding: 60px 25px;
     position: relative;
   }
 
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     padding: 60px 25px 142px;
     position: relative;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     padding: size(40px) size(25px) size(201px);
     min-height: size(330px);
   }
@@ -46,14 +46,15 @@
   position: absolute;
   bottom: 19px;
   left: calc(50% - 20px);
-  @media(min-width: $tablet-desktop-between) {
+
+  @media (min-width: $tablet-desktop-between) {
     margin: 0;
     gap: 10px;
     left: 30px;
     bottom: 24px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     left: size(40px);
     bottom: size(34px);
     gap: size(10px);
@@ -62,7 +63,7 @@
 
 
 .bunners-list__dev-icon {
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     width: 53px;
     height: 53px;
   }

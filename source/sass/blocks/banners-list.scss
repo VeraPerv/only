@@ -14,7 +14,7 @@
 }
 
 .banners-list__dev-item {
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     padding-top: 0;
     padding-left: 5px;
   }
@@ -29,12 +29,12 @@
   width: 40px;
   height: 32px;
 
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     width: 45px;
     height: 36px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     width: size(45px);
     height: size(36px);
     border-radius: size(12px);
@@ -43,6 +43,5 @@
       width: size(22px);
       height: size(28px);
     }
-
   }
 }

@@ -6,7 +6,7 @@
   flex-wrap: wrap;
   gap: 5px;
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     gap: size(2px);
   }
 }
@@ -30,7 +30,7 @@
     height: 60px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     width: size(67px);
     height: size(67px);
     border-radius: size(12px);
@@ -59,7 +59,7 @@
   &--logo {
     border: 2.5px solid $white-35;
 
-    @media(min-width: $desktop-width) {
+    @media (min-width: $desktop-width) {
       border: size(2.5px) solid $white-35;
     }
   }
@@ -86,7 +86,7 @@
 .projects-box__img-wrapper--severstal-logo {
   border: 2.5px solid $color-white7;
 
-  @media(min-width: $desktop-width) {
-      border: size(2.5px) solid $white-35;
+  @media (min-width: $desktop-width) {
+    border: size(2.5px) solid $white-35;
   }
 }

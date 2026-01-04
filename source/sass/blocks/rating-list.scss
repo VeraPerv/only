@@ -12,16 +12,15 @@
     gap: 15px 10px;
   }
 
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     grid-template-columns: 1fr 1fr 1fr;
     align-items: start;
-    gap: 20px 20px;
+    gap: 20px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr;
     gap: size(22px) size(20px);
-
   }
 }
 
@@ -31,7 +30,7 @@
     width: 100%;
   }
 
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     grid-column: unset;
   }
 }

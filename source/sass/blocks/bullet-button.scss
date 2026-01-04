@@ -9,12 +9,12 @@
   scale: 1;
   transition: scale 0.3s ease;
 
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     width: 8px;
     height: 8px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     width: size(10px);
     height: size(10px);
   }
@@ -27,7 +27,7 @@
   @media (hover: hover) {
     &:hover {
       scale: 1.2;
-      transition:  scale 0.3s ease;
+      transition: scale 0.3s ease;
     }
   }
 

@@ -4,9 +4,8 @@
     flex-direction: column;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     padding-left: size(44px);
-
   }
 }
 
@@ -19,37 +18,38 @@
   letter-spacing: -0.01em;
   position: relative;
   transition: color 0.3s ease;
-  @media (hover: hover) {
-      &:hover {
-        color: $color-primary-opacity6;
-        border-color: $color-primary-opacity6;
-        transition: color 0.3s ease, border-color 0.3s ease;
-      }
-    }
 
-    &:focus,
-    &:focus-visible {
-      outline: none;
+  @media (hover: hover) {
+    &:hover {
       color: $color-primary-opacity6;
       border-color: $color-primary-opacity6;
       transition: color 0.3s ease, border-color 0.3s ease;
     }
+  }
 
-    &:active {
-      color: $color-primary-opacity3;
-      border-color: $color-primary-opacity3;
-      transition: color 0.3s ease, border-color 0.3s ease;
-    }
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    color: $color-primary-opacity6;
+    border-color: $color-primary-opacity6;
+    transition: color 0.3s ease, border-color 0.3s ease;
+  }
+
+  &:active {
+    color: $color-primary-opacity3;
+    border-color: $color-primary-opacity3;
+    transition: color 0.3s ease, border-color 0.3s ease;
+  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 10px;
   }
 
-  @media(min-width: $tablet-desktop-between) {
+  @media (min-width: $tablet-desktop-between) {
     width: 148px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     font-size: size(18px);
     line-height: size(23px);
     width: size(172px);
@@ -67,11 +67,12 @@
     left: 0;
     right: 0;
     transition: background-color 0.3s ease;
-    @media(min-width: $tablet-width) {
+
+    @media (min-width: $tablet-width) {
       width: calc(100% - 9px);
     }
 
-    @media(min-width: $desktop-width) {
+    @media (min-width: $desktop-width) {
       height: size(1px);
       width: calc(100% - size(22px));
     }
@@ -96,22 +97,22 @@
   }
 
   @media (hover: hover) {
-      &:hover::after {
-        background-color: $color-primary-opacity6;
-        transition: background-color 0.3s ease;
-      }
-    }
-
-    &:focus::after,
-    &:focus-visible::after {
+    &:hover::after {
       background-color: $color-primary-opacity6;
       transition: background-color 0.3s ease;
     }
+  }
 
-    &:active::after {
-      background-color: $color-primary-opacity3;
-      transition: background-color 0.3s ease;
-    }
+  &:focus::after,
+  &:focus-visible::after {
+    background-color: $color-primary-opacity6;
+    transition: background-color 0.3s ease;
+  }
+
+  &:active::after {
+    background-color: $color-primary-opacity3;
+    transition: background-color 0.3s ease;
+  }
 }
 
 .telegram__telegram--disabled {
@@ -139,7 +140,7 @@
     margin-bottom: 9px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     margin-bottom: size(5px);
     font-size: size(13px);
     line-height: size(14px);

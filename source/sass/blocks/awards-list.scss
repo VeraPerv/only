@@ -2,13 +2,14 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-  @media(min-width: $tablet-desktop-between) {
+
+  @media (min-width: $tablet-desktop-between) {
     max-width: 250px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     max-width: size(250px);
-   }
+  }
 }
 
 .awards-list__link {
@@ -27,7 +28,7 @@
     background-color: $color-white;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     width: size(48px);
     height: size(48px);
   }
@@ -39,23 +40,23 @@
     }
   }
 
-    &:focus,
-    &:focus-visible {
-      outline: none;
-      background-color: $banner-accent-color;
-      transition: background-color 0.3s ease;
-    }
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    background-color: $banner-accent-color;
+    transition: background-color 0.3s ease;
+  }
 
-    &:active {
-      background-color: $banner-accent-color;
-      opacity: 0.3;
-      transition: opacity 0.3s ease, background-color 0.3s ease;
-    }
+  &:active {
+    background-color: $banner-accent-color;
+    opacity: 0.3;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+  }
 
-    &--disabled {
-      pointer-events: none;
-      opacity: 0.2;
-    }
+  &--disabled {
+    pointer-events: none;
+    opacity: 0.2;
+  }
 }
 
 
@@ -71,7 +72,7 @@
     max-width: 196px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     font-size: size(12px);
     line-height: size(13px);
     min-width: size(23px);
@@ -95,7 +96,7 @@
     gap: 0 6px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     gap: 0 size(6px);
     margin-bottom: size(10px);
 
@@ -103,6 +104,7 @@
       width: size(35px);
       height: size(24px);
     }
+
     &:nth-of-type(2) svg {
       width: size(40px);
       height: size(12px);
@@ -117,7 +119,8 @@
       width: size(21px);
       height: size(26px);
     }
-      &:nth-of-type(5) svg {
+
+    &:nth-of-type(5) svg {
       width: size(25px);
       height: size(29px);
     }

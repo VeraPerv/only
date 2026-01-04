@@ -29,41 +29,44 @@
   display: block;
   cursor: pointer;
 
-    @media (hover: hover) {
+  @media (hover: hover) {
     &:hover {
       .companies-list__img-wrapper {
         border-radius: 46px;
         transition: border-radius 0.3s ease;
 
-        @media(min-width: $desktop-width) {
+        @media (min-width: $desktop-width) {
           border-radius: size(52px);
           transition: border-radius 0.3s ease;
         }
       }
+
+      .companies-list__img-wrapper img {
+        scale: 1.08;
+        transition: scale 0.3s ease;
+      }
+    }
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+
+    .companies-list__img-wrapper {
+      border-radius: 46px;
+      transition: border-radius 0.3s ease;
+
+      @media (min-width: $desktop-width) {
+        border-radius: size(52px);
+        transition: border-radius 0.3s ease;
+      }
+    }
+
     .companies-list__img-wrapper img {
-      scale: 1.08;
+      scale: 1.03;
       transition: scale 0.3s ease;
     }
   }
-}
-
-&:focus,
-&:focus-visible {
-  outline: none;
-  .companies-list__img-wrapper {
-    border-radius: 46px;
-    transition: border-radius 0.3s ease;
-
-    @media(min-width: $desktop-width) {
-        border-radius: size(52px);
-        transition: border-radius 0.3s ease;
-    }
-  }
-  .companies-list__img-wrapper img {
-    scale: 1.03;
-    transition: scale 0.3s ease;
-  }
-}
 }
 
 .companies-list__img-wrapper {
@@ -141,7 +144,7 @@
     line-height: 20px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     font-size: size(18px);
     line-height: size(23px);
     padding: 0 size(20px);
@@ -163,7 +166,7 @@
     padding: 0 15px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     font-size: size(15px);
     line-height: size(20px);
     padding: 0 size(20px);

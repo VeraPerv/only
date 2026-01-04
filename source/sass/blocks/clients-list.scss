@@ -11,10 +11,11 @@
 
   @media (min-width: $tablet-desktop-between) {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  //   grid-template-areas:
-  //     "a b c d e"
-  //     "f g h i j"
-  //     "k l m n o";
+
+    //   grid-template-areas:
+    //     "a b c d e"
+    //     "f g h i j"
+    //     "k l m n o";
   }
 
   @media (min-width: $desktop-width) {
@@ -136,8 +137,8 @@
   }
 
   @media (min-width: $desktop-width) {
-      width: size(250px);
-      height: size(180px);
+    width: size(250px);
+    height: size(180px);
   }
 
   &::before {
@@ -152,7 +153,7 @@
     background-color: $color-white;
     transition: transform 0.4s ease, opacity 0.4s ease;
 
-    @media(min-width: $tablet-width) {
+    @media (min-width: $tablet-width) {
       width: 203px;
       height: 203px;
     }
@@ -198,7 +199,7 @@
         height: 45px;
       }
 
-      @media(min-width: $desktop-width) {
+      @media (min-width: $desktop-width) {
         width: size(162px);
         height: size(52px);
       }
@@ -214,7 +215,8 @@
       @media (min-width: $tablet-width) {
         width: 156px;
         height: 20px;
-        @media(min-width: $desktop-width) {
+
+        @media (min-width: $desktop-width) {
           width: size(123px);
           height: size(24px);
         }
@@ -232,7 +234,8 @@
         width: 127px;
         height: 39px;
       }
-      @media(min-width: $desktop-width) {
+
+      @media (min-width: $desktop-width) {
         width: size(149px);
         height: size(46px);
       }
@@ -249,6 +252,7 @@
         width: 156px;
         height: 20px;
       }
+
       @media (min-width: $desktop-width) {
         width: size(185px);
         height: size(23px);
@@ -267,7 +271,7 @@
         height: 50px;
       }
 
-      @media(min-width: $desktop-width) {
+      @media (min-width: $desktop-width) {
         width: size(108px);
         height: size(60px);
       }
@@ -285,7 +289,7 @@
         height: 53px;
       }
 
-      @media(min-width: $desktop-width) {
+      @media (min-width: $desktop-width) {
         width: size(125px);
         height: size(56px);
       }
@@ -302,7 +306,8 @@
         width: 132px;
         height: 31px;
       }
-      @media(min-width: $desktop-width) {
+
+      @media (min-width: $desktop-width) {
         width: size(157px);
         height: size(38px);
       }
@@ -338,7 +343,7 @@
         height: 53px;
       }
 
-        @media (min-width: $desktop-width) {
+      @media (min-width: $desktop-width) {
         width: size(63px);
         height: size(63px);
       }
@@ -409,6 +414,7 @@
         width: 130px;
         height: 30px;
       }
+
       @media (min-width: $desktop-width) {
         width: size(146px);
         height: size(82px);
@@ -444,6 +450,7 @@
         width: 172px;
         height: 21px;
       }
+
       @media (min-width: $desktop-width) {
         width: size(194px);
         height: size(24px);
