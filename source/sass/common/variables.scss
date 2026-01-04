@@ -9,7 +9,7 @@ $vp-390: 390px;
 $vp-920: 920px;
 $vp-1440: 1440px;
 $vp-580: 580px;
-$vp-768: 768px;// относительно этой ширины будет происходить масштабирование
+$vp-768: 768px;
 $vp-1600: 1600px;
 $vp-1439: 1439px;
 $vp-1280: 1280px;
@@ -17,12 +17,6 @@ $vp-1279: 1279px;
 $vp-768: 768px;
 $vp-1440: 1440px;
 $vp-1441: 1441px;
-
-// $fz-default: 16px;
-
-
-// $mobile-width-only: 919px;
-// $tablet-width-only: 1023px;
 
 /* Шрифты */
 $font-primary: "TT Runs Trial", "Arial", sans-serif;
@@ -35,7 +29,6 @@ $max-size-1: 42px;
 $max-size-2: 42px;
 
 /* Цвет */
-// $accent-color: #ff4b41;
 $color-primary: #0e0e0e;
 $background-primary: #f1f1f1;
 $color-white: #ffffff;

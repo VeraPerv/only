@@ -5,9 +5,11 @@
   display: flex;
   gap: 10px;
   transition: all 2s ease;
+  overflow-x: scroll;
 
   @media (min-width: $tablet-width) {
     gap: 15px;
+    overflow-x: unset;
   }
 
   @media (min-width: $tablet-desktop-between) {

@@ -10,7 +10,11 @@
 
   &--current {
     display: block;
+    @media(min-width: $desktop-width) {
+      min-height: size(469px);
+    }
   }
+
 }
 
 .banners-list__dev-item {

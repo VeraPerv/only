@@ -3,8 +3,9 @@
   padding: 0;
   list-style-type: none;
   display: flex;
-  overflow: hidden;
+  // overflow: hidden;
   gap: 10px;
+  overflow-x: auto;
 
 
   @media (min-width: $tablet-width) {
@@ -12,6 +13,7 @@
     grid-template-columns: size-tablet(357px) size-tablet(357px);
     gap: 59px 15px;
     justify-content: center;
+    overflow-x: hidden;
   }
 
   @media (min-width: $tablet-desktop-between) {

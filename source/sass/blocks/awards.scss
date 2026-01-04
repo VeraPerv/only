@@ -286,7 +286,7 @@
     @media (hover: hover) {
       &:hover {
         .awards-title__img-wrapper {
-          // margin-right: unset;
+          margin-right: size(21px);
         }
 
         .awards-title__text {
@@ -310,7 +310,7 @@
 
       @media (min-width: $desktop-width) {
         .awards-title__img-wrapper {
-          width: size(69px);
+          width: size(70px);
           margin-right: size(21px);
         }
       }
