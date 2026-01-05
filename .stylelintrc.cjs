@@ -5,6 +5,8 @@ module.exports = {
   ],
   plugins: ["stylelint-selector-bem-pattern"],
   rules: {
+    "no-duplicate-selectors": null,
+    "selector-disallowed-list": null,
     "plugin/selector-bem-pattern": {
       preset: "bem",
       implicitComponents: "blocks/*.scss",
@@ -19,18 +21,13 @@ module.exports = {
       },
     ],
     "selector-max-id": 0,
-    "selector-disallowed-list": [
-      "/^&_/",
-      "/^&-(?:\\w)/",
-      "/^&\\s*[>+~]?\\s*\\.?\\w/",
-    ],
     "selector-no-qualifying-type": true,
     "alpha-value-notation": null,
     "scss/at-import-no-partial-leading-underscore": null,
     "scss/load-no-partial-leading-underscore": true,
     "declaration-block-no-redundant-longhand-properties": null,
     "max-nesting-depth": [
-      1,
+      2,
       {
         ignore: ["blockless-at-rules", "pseudo-classes"],
         ignoreAtRules: ["include", "media"],

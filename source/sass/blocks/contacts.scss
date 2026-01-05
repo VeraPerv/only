@@ -133,10 +133,6 @@
     outline: none;
   }
 
-  &:active {
-    color: $color-primary-opacity3;
-  }
-
   &--disabled {
     opacity: 0.2;
     pointer-events: none;

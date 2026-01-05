@@ -113,6 +113,9 @@
   color: $color-primary;
   max-width: 319px;
   margin-bottom: 21px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.05s;
 
   @media (min-width: $tablet-width) {
     letter-spacing: -0.03em;
@@ -192,15 +195,18 @@
 }
 
 .banner__svg-wrapper--accent {
-  display: block;
   justify-content: center;
   align-items: center;
   border-radius: 120px;
   background-color: $banner-accent-color;
-
-  // width: 50px;
   width: auto;
   height: 37px;
+  display: flex;
+  opacity: 0;
+  transform: scaleX(0) scaleY(0.8);
+  transform-origin: left center;
+  padding: 0 15px;
+  transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.15s;
 
   @media (min-width: $tablet-desktop-between) {
     width: 57px;
@@ -248,15 +254,16 @@
   }
 }
 
-.banner__button {
-  // width: 193px;
-}
-
 .banner__animation-box {
   position: relative;
 }
 
 .banner__promo-wrapper {
+  opacity: 0;
+  transform: translateY(50px) scale(0.8);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-delay: 0.1s;
+
   &--1 {
     width: 148px;
     height: 102px;
@@ -264,6 +271,7 @@
     top: 176px;
     left: -86px;
     box-shadow: 0 10px 19px 0 rgba(0, 0, 0, 0.16);
+    transition-delay: 0.1s;
 
     @media (min-width: $tablet-desktop-between) {
       width: 233px;
@@ -294,6 +302,7 @@
     border-radius: 12px;
     overflow: hidden;
     background: linear-gradient(138deg, #1e2b9e 0%, #0e145a 35.94%, #0c1151 59.38%, #1e2b9e 100%);
+    transition-delay: 0.2s;
 
     @media (min-width: $tablet-desktop-between) {
       width: 150px;
@@ -322,6 +331,7 @@
     background: #f4f1ec;
     border-radius: 12px;
     overflow: hidden;
+    transition-delay: 0.3s;
 
     @media (min-width: $tablet-desktop-between) {
       border-radius: 20px;
@@ -348,6 +358,7 @@
     left: 60px;
     width: 206px;
     height: 163px;
+    transition-delay: 0.4s;
 
     @media (min-width: $tablet-desktop-between) {
       border-radius: 20px;
@@ -406,43 +417,9 @@
   }
 }
 
-
-/* Базовые стили для элементов анимации */
-.banner__promo-wrapper {
-  opacity: 0;
-  transform: translateY(50px) scale(0.8);
-  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition-delay: 0.1s; /* базовая задержка */
-}
-
-/* Стили для конкретных элементов с разными задержками */
-.banner__promo-wrapper--1 {
-  transition-delay: 0.1s;
-}
-
-.banner__promo-wrapper--2 {
-  transition-delay: 0.2s;
-}
-
-.banner__promo-wrapper--3 {
-  transition-delay: 0.3s;
-}
-
-.banner__promo-wrapper--4 {
-  transition-delay: 0.4s;
-}
-
-/* Состояние при достижении viewport */
 .is-animated--visible .banner__promo-wrapper {
   opacity: 1;
   transform: translateY(0) scale(1);
-}
-
-/* Дополнительно: плавное появление лейбла */
-.banner__label {
-  // opacity: 0;
-  // transform: translateY(20px);
-  // transition: all 0.6s ease-out 0.6s; /* задержка после основных элементов */
 }
 
 .is-animated--visible .banner__label {
@@ -450,12 +427,11 @@
   transform: translateY(0);
 }
 
-
-.banner__text {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.05s;
-}
+// .banner__text {
+//   opacity: 0;
+//   transform: translateY(30px);
+//   transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.05s;
+// }
 
 .is-animated--visible .banner__text {
   opacity: 1;
@@ -467,8 +443,6 @@
   transform: translateY(0);
 }
 
-
-/* НОВОЕ: Анимация для кнопки */
 .banner__button {
   width: 193px;
   opacity: 0;
@@ -486,33 +460,9 @@
   }
 }
 
-
 .is-animated--visible .banner__button {
   opacity: 1;
   transform: translateY(0);
-}
-
-/// анимация зеленого
-/// css
-
-/* НОВОЕ: Анимация для акцента (сжатие → расширение + толчок текста) */
-.banner__accent {
-  // overflow: hidden; /* Важно! чтобы текст не вылезал при сжатии */
-  // transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.15s;
-
-  // @media(min-width: $tablet-desktop-between) {
-  //   max-width: 480px;
-  //   margin-bottom: 28px;
-  // }
-}
-
-.banner__svg-wrapper--accent {
-  display: flex;
-  opacity: 0;
-  transform: scaleX(0) scaleY(0.8);
-  transform-origin: left center; /* ⚠️ КЛЮЧЕВОЕ! Расширение слева */
-  padding: 0 15px;
-  transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.15s;
 }
 
 .banner__slogan-wrapper {

@@ -28,6 +28,13 @@ const setTabIndex = () => {
 
 setTabIndex();
 
+const closeMobileMenu = () => {
+  mobileMenu.classList.remove('header-nav__list--open');
+  document.body.classList.remove('body--overflow');
+  nav.classList.remove('header-nav--open');
+  setTabIndex();
+};
+
 const initToggleMenu = () => {
   toggleButton.addEventListener('click', () => {
     mobileMenu.classList.toggle('header-nav__list--open');
@@ -35,13 +42,26 @@ const initToggleMenu = () => {
     nav.classList.toggle('header-nav--open');
     setTabIndex();
   });
+
+  document.addEventListener('click', (e) => {
+    if (mobileMenu.classList.contains('header-nav__list--open') &&
+        !nav?.contains(e.target) &&
+        !toggleButton?.contains(e.target)) {
+      closeMobileMenu();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileMenu.classList.contains('header-nav__list--open')) {
+      closeMobileMenu();
+    }
+  });
 };
 
 breakpoint.addEventListener('change', () => {
   if (breakpoint.matches) {
     setTabIndex();
   }
-}
-);
+});
 
 export {initToggleMenu};

@@ -18,14 +18,6 @@
   }
 }
 
-.awards__break {
-  display: none;
-
-  @media (min-width: $desktop-width) {
-    display: inherit;
-  }
-}
-
 .awards__text-wrapper {
   border-top: 1px solid $border-color;
   padding-top: 20px;
@@ -260,8 +252,6 @@
 
     @media (min-width: $desktop-width) {
       margin-right: size(12px);
-
-      // width: size(70px);
     }
   }
 
@@ -303,8 +293,6 @@
       @media (min-width: $tablet-desktop-between) {
         .awards-title__img-wrapper {
           width: 65px;
-
-          // margin-right: unset;
         }
       }
 

@@ -776,179 +776,19 @@
 .hero__contacts {
   @media (min-width: $tablet-desktop-between) {
     grid-column: 2 / 3;
-
-    // grid-row: 2 / 3;
     grid-row: 1 / 3;
   }
 }
 
-// .hero__video {
-//   // animation: growVideo 1s ease-in-out forwards;
-// }
-
-// @keyframes growVideo {
-//   0% {
-//     opacity: 0;
-//     transform: scale(0.01);
-//   }
-//   50% {
-//     opacity: 0.99;
-//     transform: scale(0.99);
-//   }
-//   100% {
-//     opacity: 1;
-//     transform: translate(0, 0) scale(1);
-//   }
-// }
-
-// .hero__video {
-//   // animation: growVideo 5s ease-in-out forwards;
-//   // transform-origin: center;
-// }
-
-// .hero__video-wrapper {
-//   border-radius: 15px;
-//   min-width: 225px;
-//   display: flex;
-//   min-height: 135px;
-//   // background-repeat: no-repeat;
-//   // background-size: 98%;
-//   overflow: hidden;
-
-//   @media (min-width: $tablet-width) {
-//     // width: 416px;
-//     // height: 226px;
-//     width: 100%;
-//     // max-height: 226px;
-//     min-height: 226px;
-//     border-radius: 12px;
-//     height: size-tablet(226px);
-//   }
-
-//   @media (min-width: $tablet-desktop-between) {
-//     // width: 456px;
-//     // height: 230px;
-//     min-width: 456px;
-//     // min-height: 230px;
-//     max-height: unset;
-//     height: size-tablet-desktop(226px);
-//   }
-
-//   @media(min-width: $desktop-width) {
-//     border-radius: size(20px);
-//     height: size-desktop(230px);
-//     width: size-desktop(456px);
-//   }
-// }
-
-// // .hero__video-wrapper {
-// //   /* базовые стили - предположим фиксированная высота */
-// //   height: 400px; /* или ваша текущая высота */
-// //   position: relative;
-// //   transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-// // }
-
-// // .hero__video-wrapper--sticky {
-// //   position: absolute !important; /* или fixed */
-// //   top: 0;
-// //   left: 0;
-// //   width: 100%;
-// //   height: 100vh; /* ✅ Высота всей секции */
-// //   z-index: 10;
-// //   .hero__video {
-// //     position: sticky;
-// //     top: 0;
-// //     left: 0;
-// //     bottom: 0;
-// //     right: 0;
-// //     width: 100%;
-// //     height: 100vh; /* ✅ Высота всей секции */
-// //   }
-// // }
-
-// // .hero {
-// //   position: relative; /* ✅ Контекст для absolute */
-// //   min-height: 100vh; /* ✅ Минимальная высота секции */
-// //   overflow: hidden; /* ✅ Скрываем переполнение */
-// // }
-
-// // .hero {
-// //   position: relative;
-// //   min-height: 100vh;
-// // }
-
-// // .hero__video-wrapper {
-// //   height: 400px; /* базовая высота */
-// //   position: relative;
-// //   transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-// //   z-index: 1;
-// // }
-
-// // .hero__video-wrapper--sticky {
-// //   position: fixed !important; /* ✅ fixed для sticky */
-// //   top: 0;
-// //   left: 0;
-// //   width: 100vw; /* ✅ ширина viewport */
-// //   height: 100vh; /* ✅ высота viewport */
-// //   z-index: 100;
-// // }
-
-// // .hero__video {
-// //   position: absolute;
-// //   top: 0;
-// //   left: 0;
-// //   width: 100%;
-// //   height: 100%;
-// //   object-fit: cover; /* ✅ видео заполняет контейнер */
-// // }
-
-
-// // .hero__video-wrapper {
-// //   /* ✅ Базовые стили */
-// //   transform-origin: center center;
-// //   transition: transform 0.12s linear; /* ✅ СУПЕР-ПЛАВНЫЙ scale */
-// //   will-change: transform;
-// // }
-
-// // .hero__video-wrapper[style*="position: sticky"] {
-// //   /* ✅ Scale по CSS переменной */
-// //   transform: scale(var(--scale, 1)) !important;
-// // }
-
-// // .hero__video-wrapper video {
-// //   width: 100%;
-// //   height: 100%;
-// //   object-fit: cover;
-// // }
-// .hero__video-wrapper {
-//   transform-origin: center center;
-//   transition: transform 0.08s linear; /* ✅ СУПЕР-ПЛАВНЫЙ */
-//   will-change: transform;
-//   transform: scale(var(--scale, 1)); /* ✅ Всегда scale */
-// }
-
-// // .hero__video-wrapper {
-// //   transform-origin: center center;
-// //   transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* ✅ Пружинит */
-// //   will-change: transform;
-// //   transform: scale(var(--scale, 1));
-// // }
-
-
-/// это все с библиотекой гсэп
 .hero__video-wrapper {
   position: relative;
   z-index: 5;
-
-  // width: 40vw;           /* Начальный размер */
-  // height: 50vh;
   width: 225px;
   height: 135px;
-  margin: 5% auto 82px;       /* Центрируем */
-  border-radius: 25px;   /* Скругление углов */
-  overflow: hidden;      /* Обрезаем видео по контейнеру */
-  will-change: transform; /* Оптимизация для анимации */
-  
+  margin: 5% auto 82px;
+  border-radius: 25px;
+  overflow: hidden;
+  will-change: transform;
 
   @media (min-width: $tablet-width) {
     width: 416px;
@@ -958,9 +798,6 @@
 
   @media (min-width: $tablet-desktop-between) {
     min-width: 456px;
-
-    //     // min-height: 230px;
-    //     max-height: unset;
     height: size-tablet-desktop(226px);
     grid-row: 2 / 3;
     grid-column: 1 / -1;
@@ -983,19 +820,15 @@
 .video__video {
   width: 100%;
   height: 100%;
-  object-fit: cover;     /* Видео заполняет контейнер */
+  object-fit: cover;
 }
 
-/* Родительская секция для скролла */
-.hero__wrapper {          /* Добавь этот класс к родителю */
-  // height: 200vh;         /* Длина секции для скролла */
+.hero__wrapper {
   position: relative;
 }
 
 .hero__wrapper {
   padding: 32px 15px 0;
-
-  // position: relative;
 
   @media (min-width: $tablet-width) {
     padding: 49px 20px 0;
@@ -1003,8 +836,6 @@
 
   @media (min-width: $tablet-desktop-between) {
     display: grid;
-
-    // grid-template-columns: 1fr 2fr 1fr;
     grid-template-columns: 2fr auto 2fr;
     padding: 61px 20px 0;
   }
